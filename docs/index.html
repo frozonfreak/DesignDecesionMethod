@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -46,7 +46,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'"
+      content="default-src 'none'; script-src 'none'; style-src 'self'; img-src 'self'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
     />
     <link rel="stylesheet" href="tokens.css" />
     <link rel="stylesheet" href="page.css" />
@@ -54,17 +54,45 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header" id="top">
-      <div class="wrap masthead">
+      <div class="masthead">
         <a class="brand" href="#top">
           <svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
             <rect x="4" y="6" width="14" height="3.5" rx="1.75" fill="currentColor" />
             <rect x="4" y="14.25" width="24" height="3.5" rx="1.75" fill="currentColor" />
             <rect x="4" y="22.5" width="18" height="3.5" rx="1.75" fill="currentColor" />
           </svg>
-          <span>Design Decision Method</span>
+          <span class="brand-name">Design Decision Method</span>
         </a>
-        <nav aria-label="On this page">
-          <ul class="nav-list">
+      </div>
+    </header>
+    <div class="page">
+      <main id="main" tabindex="-1">
+        <div class="sheet">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="wrap">
+            <p class="eyebrow">For independent developers and small teams, without a dedicated designer</p>
+            <h1 id="page-title">Design Decision Method</h1>
+            <p class="lead">
+              A lightweight workflow for people and AI agents to decide what a screen needs, how to organize it, and which interactions and visual direction fit, before drawing or coding.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" href="#start">Get started</a>
+              <a class="text-action" href="https://github.com/frozonfreak/DesignDecesionMethod">View on GitHub</a>
+            </div>
+            <p class="fit">
+              <strong>Where it fits.</strong>
+              An agent builds the interface, and you keep correcting what it shows and how the flow works.
+            </p>
+            <p class="release">
+              Release 2.2.4. Licensed under the
+              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/LICENSE">MIT License</a>.
+            </p>
+          </div>
+        </section>
+        <nav class="toc" aria-labelledby="toc-label">
+          <p class="toc-label" id="toc-label">Contents</p>
+          <ul class="toc-list">
+            <li><a href="#about">What it is for</a></li>
             <li><a href="#how">How it works</a></li>
             <li><a href="#webhig">WebHIG</a></li>
             <li><a href="#examples">Examples</a></li>
@@ -72,332 +100,366 @@
             <li><a href="#docs">Docs</a></li>
           </ul>
         </nav>
-      </div>
-    </header>
-    <main id="main" tabindex="-1">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="wrap">
-          <p class="eyebrow">For independent developers and small teams, without a dedicated designer</p>
-          <h1 id="page-title">Design Decision Method</h1>
-          <p class="lead">
-            A lightweight workflow for people and AI agents to decide what a screen needs, how to organize it, and which interactions and visual direction fit, before drawing or coding.
-          </p>
-          <div class="actions">
-            <a class="button button-primary" href="#start">Get started</a>
-            <a class="button button-secondary" href="https://github.com/frozonfreak/DesignDecesionMethod">View on GitHub</a>
-          </div>
-          <p class="fit">
-            <strong>Where it fits.</strong>
-            An agent builds the interface, and you keep correcting what it shows and how the flow works.
-          </p>
-          <p class="release">
-            Release 2.2.4. Licensed under the
-            <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/LICENSE">MIT License</a>.
-          </p>
-        </div>
-      </section>
+        <div class="sheet-body">
 
-      <section class="section" id="about" aria-labelledby="about-title">
-        <div class="wrap">
-          <h2 id="about-title">What it is for</h2>
-          <p>
-            It draws on established guidance. It does not create another UI library or visual standard. It addresses repeated UI guesswork: starting from a generic layout, overlooking information the screen needs, adding complexity that does not help the task, and making the same decisions again on the next project. Consequential choices are written down before building.
-          </p>
-          <p>
-            The reason to keep it is a shared approach across products and agents: simple to understand, informative enough to decide, and efficient to use, without explaining that approach from scratch each time. Whether it saves time has not been measured. It is a shared procedure. It is not mandatory for every small edit.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="how" aria-labelledby="how-title">
-        <div class="wrap">
-          <h2 id="how-title">How it works</h2>
-          <p>
-            These six steps are the workflow in
-            <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/SKILL.md">SKILL.md</a>,
-            in the same order. The agent procedure routes UI work across OOUX object mapping, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. It does not rank those sources, copy their branding, or claim research or compliance it has not done.
-          </p>
-          <p>
-            If guidance conflicts, resolve it from the project: accessibility and the cost of a mistake, then comprehension and the task, then effort, then visual consistency. This summary describes release 2.2.4.
-          </p>
-          <ol class="steps">
-            <li id="step-context">
-              <h3>Establish context</h3>
-              <p>
-                Read the brief and the product you already have. Name the audience, how often the task happens, what a mistake costs, and the device. Keep what you know separate from what you assume. Do not invent rules or capabilities the product lacks.
-              </p>
-            </li>
-            <li id="step-system">
-              <h3>Choose the visual system</h3>
-              <p>
-                Keep a system the project already has. When it has none, select from the platform. For other web work, the fallback is Material 3. Borrow an interaction pattern when it solves the task. Do not copy another organization's branding. GOV.UK branding is for government services only.
-              </p>
-            </li>
-            <li id="step-map">
-              <h3>Map objects before layout</h3>
-              <p>
-                When relationships would change the navigation, the routes, or the structure of the screen, map the objects people recognize, how they relate, and what someone can do with them. Skip the map when the change does not depend on those relationships, such as a copy edit or a restyle that leaves the structure alone. The map is a short working note. It is not a claim that the full ORCA method was completed.
-              </p>
-            </li>
-            <li id="step-record">
-              <h3>Write a decision record</h3>
-              <p>
-                For a choice that would be costly to undo, record task frequency, familiarity, the cost of a mistake, the device, the pattern you chose, and why. Judge the effort to read, remember, enter, navigate, and recover. When the project keeps design records, save them with the work. See the
-                <a href="design/project-page.md">design record for this page</a>.
-              </p>
-            </li>
-            <li id="step-views">
-              <h3>Structure each view</h3>
-              <p>
-                For each important view, state its purpose, the information required to decide, the actions, and the states that apply, including loading, empty, and error where they exist. Keep essential information visible. Adapt the layout to the device without dropping a capability the task needs.
-              </p>
-            </li>
-            <li id="step-validate">
-              <h3>Deliver and validate</h3>
-              <p>
-                Deliver the screen or the spec, the decisions, and a validation status. Label the evidence as proposed, heuristic review, automated check, manual test, or user research. Say what you did not test.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="webhig" aria-labelledby="webhig-title">
-        <div class="wrap">
-          <h2 id="webhig-title">How this differs from WebHIG</h2>
-          <p>
-            Design Decision Method decides how this particular experience should work.
-            <a href="https://github.com/frozonfreak/webhig">WebHIG</a>
-            defines applicable interface quality requirements. The two stay separate. This project does not copy WebHIG requirements into a second standard.
-          </p>
-          <div class="boundary">
-            <div class="boundary-item">
-              <h3>Role</h3>
-              <dl>
-                <div>
-                  <dt>Design Decision Method</dt>
-                  <dd>Decides how this particular experience should work.</dd>
-                </div>
-                <div>
-                  <dt>WebHIG</dt>
-                  <dd>Defines applicable interface quality requirements.</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="boundary-item">
-              <h3>Coverage</h3>
-              <dl>
-                <div>
-                  <dt>Design Decision Method</dt>
-                  <dd>Chooses information hierarchy, layouts and flows.</dd>
-                </div>
-                <div>
-                  <dt>WebHIG</dt>
-                  <dd>Governs accessibility, consistency, responsiveness, performance and motion.</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="boundary-item">
-              <h3>Record and checks</h3>
-              <dl>
-                <div>
-                  <dt>Design Decision Method</dt>
-                  <dd>Records why a choice fits the audience and task.</dd>
-                </div>
-                <div>
-                  <dt>WebHIG</dt>
-                  <dd>Provides requirements and checks for its implementation.</dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <p>
-            When a project has no interface guidelines, the method uses the Web Content Accessibility Guidelines (WCAG) 2.2 level AA for web, or the relevant native guidance, and records any other requirements that were not specified.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="examples" aria-labelledby="examples-title">
-        <div class="wrap">
-          <h2 id="examples-title">Examples</h2>
-          <p>
-            These are illustrations of how the procedure applies. They are not case studies, and they do not report measured results.
-          </p>
-          <ul class="examples">
-            <li id="example-settings">
-              <h3>Settings that change shape on every prompt</h3>
-              <p>
-                <strong>Situation.</strong>
-                You are the only developer. You ask an agent for an account settings screen. The first result is a grid of cards. You say it is too much. The next result is a different grid, with toggles you did not ask for.
-              </p>
-              <p>
-                <strong>What the method asks.</strong>
-                Name who changes settings, which ones they change often, and which mistakes are costly, such as deleting an account or changing billing. Map the objects people recognize, such as the account, a preference, and a connected service, before any layout. Record which settings stay visible and which sit behind a further step, and why.
-              </p>
-            </li>
-            <li id="example-dashboard">
-              <h3>A dashboard for a request that is not a dashboard</h3>
-              <p>
-                <strong>Situation.</strong>
-                A two-person team wants a page where a customer asks for a quote. The agent produces a sidebar, summary charts, and status tiles, because that layout is familiar from other products.
-              </p>
-              <p>
-                <strong>What the method asks.</strong>
-                The experience purpose is a short request, not operational monitoring. The object map is the quote request and the person sending it. Charts are out of scope, because nobody asked to monitor a workload. The record notes that offline use was not requested, so the design does not invent it.
-              </p>
-            </li>
-            <li id="example-corrections">
-              <h3>Corrections that disappear on the next prompt</h3>
-              <p>
-                <strong>Situation.</strong>
-                An agent builds a project landing page. You rewrite the order of the page, the first sentence, and which action is primary. The next prompt regenerates the page and drops those corrections.
-              </p>
-              <p>
-                <strong>What the method asks.</strong>
-                Write the corrections down as decisions: what a visitor must understand first, what supports the choice to continue, and what can wait. The following prompt starts from that record. A person still checks the result. The method does not measure how many prompts that removes.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" id="start" aria-labelledby="start-title">
-        <div class="wrap">
-          <h2 id="start-title">Get started</h2>
-          <p>
-            The skill follows the open Agent Skills format. Copy the whole folder, keeping the name <code>design-decision-method</code>, into your agent's skills directory. The <code>name</code> in <code>SKILL.md</code> must match that directory name.
-          </p>
-          <p>
-            Paths below were checked on 2026-10-05 against the cited docs. They can change, so confirm them again before relying on them. Copies installed in other hosts do not update when you change one copy, and no update service is configured.
-          </p>
-          <ul class="hosts">
-            <li id="install-claude-code">
-              <h3>Claude Code</h3>
-              <p class="check">
-                Checked on 2026-10-05 against the
-                <a href="https://code.claude.com/docs/en/skills.md">Claude Code skills</a>
-                documentation.
-              </p>
-              <ul class="paths">
-                <li>In the project: <code>.claude/skills/</code></li>
-                <li>For yourself: <code>~/.claude/skills/</code></li>
-              </ul>
-            </li>
-            <li id="install-cursor">
-              <h3>Cursor</h3>
-              <p class="check">
-                Checked on 2026-10-05 against the
-                <a href="https://cursor.com/docs/skills">Cursor skills</a>
-                documentation.
-              </p>
-              <ul class="paths">
-                <li>In the project: <code>.cursor/skills/</code> or <code>.agents/skills/</code></li>
-                <li>For yourself: the same two paths under your user home</li>
-              </ul>
-            </li>
-            <li id="install-gemini">
-              <h3>Gemini CLI</h3>
-              <p class="check">
-                Checked on 2026-10-05 against the
-                <a href="https://geminicli.com/docs/cli/skills.md">Gemini CLI skills</a>
-                documentation.
-              </p>
-              <ul class="paths">
-                <li>In the project: <code>.gemini/skills/</code> or <code>.agents/skills/</code></li>
-                <li>For yourself: <code>~/.gemini/skills/</code> or <code>~/.agents/skills/</code></li>
-              </ul>
-            </li>
-            <li id="install-codex">
-              <h3>Codex</h3>
-              <p class="check">
-                Project path checked on 2026-10-05 against the
-                <a href="https://developers.openai.com/codex/skills">Codex skills</a>
-                documentation. Personal directory: not verified.
-              </p>
-              <ul class="paths">
-                <li><code>.agents/skills/</code> in the repository, from the working directory up to the repo root</li>
-              </ul>
-            </li>
-            <li id="install-other">
-              <h3>Other hosts</h3>
-              <p class="check">Not verified. Confirm the skills directory in that host's own documentation.</p>
-            </li>
-            <li id="install-claude-ai">
-              <h3>Claude.ai</h3>
-              <p class="check">
-                Not verified against Claude.ai documentation in this release. The <code>.skill</code> export is a zip of this same folder for hosts that import a skill archive.
-              </p>
-            </li>
-          </ul>
-          <h3 id="install-without-skills">Agents without skill support</h3>
-          <p>
-            Paste the body of <code>SKILL.md</code> into your rules or instructions file, for example <code>AGENTS.md</code>, and keep <code>references/</code> and <code>assets/</code> in the repository so the paths resolve. A short pointer in persistent memory can remind an agent to load the skill. It cannot replace the files. The README gives this wording:
-          </p>
-          <blockquote cite="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/README.md">
+        <section class="section" id="about" aria-labelledby="about-title">
+          <div class="wrap">
+            <h2 id="about-title">What it is for</h2>
             <p>
-              Load the full Design Decision Method and its relevant references before UI/UX work. Establish audience, purpose, frequency, error consequences, and platform; apply the conditional object-map gate before layout; record consequential choices; apply project guidelines or disclose the fallback; validate purpose-specific outcomes and label tested versus untested results. Apply AI checks only to AI-enabled features.
+              It draws on established guidance. It does not create another UI library or visual standard.
             </p>
-          </blockquote>
-        </div>
-      </section>
+            <p>
+              It addresses repeated UI guesswork: starting from a generic layout, overlooking information the screen needs, adding complexity that does not help the task, and making the same decisions again on the next project.
+            </p>
+            <p>Consequential choices are written down before building.</p>
+            <p>
+              The reason to keep it is a shared approach across products and agents: simple to understand, informative enough to decide, and efficient to use, without explaining that approach from scratch each time.
+            </p>
+            <p>Whether it saves time has not been measured.</p>
+            <p>It is a shared procedure. It is not mandatory for every small edit.</p>
+          </div>
+        </section>
 
-      <section class="section" id="docs" aria-labelledby="docs-title">
-        <div class="wrap">
-          <h2 id="docs-title">Repository and docs</h2>
-          <p>
-            The procedure the agent reads is <code>SKILL.md</code>. This page is the introduction published from the <code>docs/</code> folder. Release notes, install details, and integrity checks stay in the repository.
-          </p>
-          <ul class="doc-list">
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod">Repository on GitHub</a>.
-              Source for release 2.2.4.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/SKILL.md">Agent procedure (SKILL.md)</a>.
-              The workflow, the visual-system table, and the object-map gate.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/README.md">README</a>.
-              Install notes, release integrity, and how the evaluation prompts are meant to be used.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/tree/main/references">Reference modules</a>.
-              Purpose, routing, visual systems, accessibility, AI interfaces, validation, and sources.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/assets/design-record-template.md">Design record template</a>.
-              Scaffold for an object map and a decision record.
-            </li>
-            <li>
-              <a href="design/project-page.md">Design record for this page</a>.
-              Markdown file for the decisions behind this introduction.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/CHANGELOG.md">Changelog</a>.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/tree/main/docs">docs folder on GitHub</a>.
-              Source for this page.
-            </li>
-            <li>
-              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/LICENSE">MIT License</a>.
-              Copyright 2026 Sastha K L.
-            </li>
-          </ul>
+        <section class="section" id="how" aria-labelledby="how-title">
+          <div class="wrap">
+            <h2 id="how-title">How it works</h2>
+            <p>
+              These six steps are the workflow in
+              <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/SKILL.md">SKILL.md</a>,
+              in the same order.
+            </p>
+            <p>
+              The agent procedure routes UI work across OOUX object mapping, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. It does not rank those sources, copy their branding, or claim research or compliance it has not done.
+            </p>
+            <p>
+              If guidance conflicts, resolve it from the project: accessibility and the cost of a mistake, then comprehension and the task, then effort, then visual consistency. This summary describes release 2.2.4.
+            </p>
+            <ol class="steps">
+              <li id="step-context">
+                <h3>Establish context</h3>
+                <p>
+                  Read the brief and the product you already have. Name the audience, how often the task happens, what a mistake costs, and the device.
+                </p>
+                <p>
+                  Keep what you know separate from what you assume. Do not invent rules or capabilities the product lacks.
+                </p>
+              </li>
+              <li id="step-system">
+                <h3>Choose the visual system</h3>
+                <p>Keep a system the project already has. When it has none, select from the platform.</p>
+                <p>
+                  For other web work, the fallback is Material 3. Borrow an interaction pattern when it solves the task. Do not copy another organization's branding.
+                </p>
+                <p>GOV.UK branding is for government services only.</p>
+              </li>
+              <li id="step-map">
+                <h3>Map objects before layout</h3>
+                <p>
+                  When relationships would change the navigation, the routes, or the structure of the screen, map the objects people recognize, how they relate, and what someone can do with them.
+                </p>
+                <p>
+                  Skip the map when the change does not depend on those relationships, such as a copy edit or a restyle that leaves the structure alone.
+                </p>
+                <p>The map is a short working note. It is not a claim that the full ORCA method was completed.</p>
+              </li>
+              <li id="step-record">
+                <h3>Write a decision record</h3>
+                <p>
+                  For a choice that would be costly to undo, record task frequency, familiarity, the cost of a mistake, the device, the pattern you chose, and why. Judge the effort to read, remember, enter, navigate, and recover.
+                </p>
+                <p>
+                  When the project keeps design records, save them with the work. See the
+                  <a href="design/project-page.md">design record for this page</a>.
+                </p>
+              </li>
+              <li id="step-views">
+                <h3>Structure each view</h3>
+                <p>
+                  For each important view, state its purpose, the information required to decide, the actions, and the states that apply, including loading, empty, and error where they exist.
+                </p>
+                <p>Keep essential information visible. Adapt the layout to the device without dropping a capability the task needs.</p>
+              </li>
+              <li id="step-validate">
+                <h3>Deliver and validate</h3>
+                <p>Deliver the screen or the spec, the decisions, and a validation status.</p>
+                <p>Label the evidence as proposed, heuristic review, automated check, manual test, or user research. Say what you did not test.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section" id="webhig" aria-labelledby="webhig-title">
+          <div class="wrap">
+            <h2 id="webhig-title">How this differs from WebHIG</h2>
+            <p>
+              Design Decision Method decides how this particular experience should work.
+              <a href="https://github.com/frozonfreak/webhig">WebHIG</a>
+              defines applicable interface quality requirements.
+            </p>
+            <p>The two stay separate. This project does not copy WebHIG requirements into a second standard.</p>
+            <div class="boundary">
+              <div class="boundary-item">
+                <h3>Role</h3>
+                <dl>
+                  <div>
+                    <dt>Design Decision Method</dt>
+                    <dd>Decides how this particular experience should work.</dd>
+                  </div>
+                  <div>
+                    <dt>WebHIG</dt>
+                    <dd>Defines applicable interface quality requirements.</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="boundary-item">
+                <h3>Coverage</h3>
+                <dl>
+                  <div>
+                    <dt>Design Decision Method</dt>
+                    <dd>Chooses information hierarchy, layouts and flows.</dd>
+                  </div>
+                  <div>
+                    <dt>WebHIG</dt>
+                    <dd>Governs accessibility, consistency, responsiveness, performance and motion.</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="boundary-item">
+                <h3>Record and checks</h3>
+                <dl>
+                  <div>
+                    <dt>Design Decision Method</dt>
+                    <dd>Records why a choice fits the audience and task.</dd>
+                  </div>
+                  <div>
+                    <dt>WebHIG</dt>
+                    <dd>Provides requirements and checks for its implementation.</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <p>
+              When a project has no interface guidelines, the method uses the Web Content Accessibility Guidelines (WCAG) 2.2 level AA for web, or the relevant native guidance, and records any other requirements that were not specified.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="examples" aria-labelledby="examples-title">
+          <div class="wrap">
+            <h2 id="examples-title">Examples</h2>
+            <p>These are illustrations of how the procedure applies. They are not case studies, and they do not report measured results.</p>
+            <ul class="examples">
+              <li id="example-settings">
+                <h3>Settings that change shape on every prompt</h3>
+                <p>
+                  <strong class="tag">Situation.</strong>
+                  You are the only developer. You ask an agent for an account settings screen. The first result is a grid of cards. You say it is too much. The next result is a different grid, with toggles you did not ask for.
+                </p>
+                <p>
+                  <strong class="tag">What the method asks.</strong>
+                  Name who changes settings, which ones they change often, and which mistakes are costly, such as deleting an account or changing billing.
+                </p>
+                <p>Map the objects people recognize, such as the account, a preference, and a connected service, before any layout.</p>
+                <p>Record which settings stay visible and which sit behind a further step, and why.</p>
+              </li>
+              <li id="example-dashboard">
+                <h3>A dashboard for a request that is not a dashboard</h3>
+                <p>
+                  <strong class="tag">Situation.</strong>
+                  A two-person team wants a page where a customer asks for a quote. The agent produces a sidebar, summary charts, and status tiles, because that layout is familiar from other products.
+                </p>
+                <p>
+                  <strong class="tag">What the method asks.</strong>
+                  The experience purpose is a short request, not operational monitoring. The object map is the quote request and the person sending it.
+                </p>
+                <p>Charts are out of scope, because nobody asked to monitor a workload. The record notes that offline use was not requested, so the design does not invent it.</p>
+              </li>
+              <li id="example-corrections">
+                <h3>Corrections that disappear on the next prompt</h3>
+                <p>
+                  <strong class="tag">Situation.</strong>
+                  An agent builds a project landing page. You rewrite the order of the page, the first sentence, and which action is primary. The next prompt regenerates the page and drops those corrections.
+                </p>
+                <p>
+                  <strong class="tag">What the method asks.</strong>
+                  Write the corrections down as decisions: what a visitor must understand first, what supports the choice to continue, and what can wait.
+                </p>
+                <p>The following prompt starts from that record. A person still checks the result. The method does not measure how many prompts that removes.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="start" aria-labelledby="start-title">
+          <div class="wrap">
+            <h2 id="start-title">Get started</h2>
+            <p>
+              The skill follows the open Agent Skills format. Copy the whole folder, keeping the name
+              <code>design-decision-method</code>, into your agent's skills directory. The
+              <code>name</code> in <code>SKILL.md</code> must match that directory name.
+            </p>
+            <p>
+              Paths below were checked on 2026-10-05 against the cited docs. They can change, so confirm them again before relying on them. Copies installed in other hosts do not update when you change one copy, and no update service is configured.
+            </p>
+            <ul class="hosts">
+              <li id="install-claude-code">
+                <h3>Claude Code</h3>
+                <p class="check">
+                  Checked on 2026-10-05 against the
+                  <a href="https://code.claude.com/docs/en/skills.md">Claude Code skills</a>
+                  documentation.
+                </p>
+                <div class="paths">
+                  <div class="path">
+                    <p class="path-label">In the project</p>
+                    <pre><code>.claude/skills/</code></pre>
+                  </div>
+                  <div class="path">
+                    <p class="path-label">For yourself</p>
+                    <pre><code>~/.claude/skills/</code></pre>
+                  </div>
+                </div>
+              </li>
+              <li id="install-cursor">
+                <h3>Cursor</h3>
+                <p class="check">
+                  Checked on 2026-10-05 against the
+                  <a href="https://cursor.com/docs/skills">Cursor skills</a>
+                  documentation.
+                </p>
+                <div class="paths">
+                  <div class="path">
+                    <p class="path-label">In the project</p>
+                    <pre><code>.cursor/skills/</code></pre>
+                    <p class="path-or">or</p>
+                    <pre><code>.agents/skills/</code></pre>
+                  </div>
+                  <div class="path">
+                    <p class="path-label">For yourself</p>
+                    <p>The same two paths under your user home.</p>
+                  </div>
+                </div>
+              </li>
+              <li id="install-gemini">
+                <h3>Gemini CLI</h3>
+                <p class="check">
+                  Checked on 2026-10-05 against the
+                  <a href="https://geminicli.com/docs/cli/skills.md">Gemini CLI skills</a>
+                  documentation.
+                </p>
+                <div class="paths">
+                  <div class="path">
+                    <p class="path-label">In the project</p>
+                    <pre><code>.gemini/skills/</code></pre>
+                    <p class="path-or">or</p>
+                    <pre><code>.agents/skills/</code></pre>
+                  </div>
+                  <div class="path">
+                    <p class="path-label">For yourself</p>
+                    <pre><code>~/.gemini/skills/</code></pre>
+                    <p class="path-or">or</p>
+                    <pre><code>~/.agents/skills/</code></pre>
+                  </div>
+                </div>
+              </li>
+              <li id="install-codex">
+                <h3>Codex</h3>
+                <p class="check">
+                  Project path checked on 2026-10-05 against the
+                  <a href="https://developers.openai.com/codex/skills">Codex skills</a>
+                  documentation. Personal directory: not verified.
+                </p>
+                <div class="paths">
+                  <div class="path">
+                    <p class="path-label">In the repository, from the working directory up to the repo root</p>
+                    <pre><code>.agents/skills/</code></pre>
+                  </div>
+                </div>
+              </li>
+              <li id="install-other">
+                <h3>Other hosts</h3>
+                <p class="check">Not verified. Confirm the skills directory in that host's own documentation.</p>
+              </li>
+              <li id="install-claude-ai">
+                <h3>Claude.ai</h3>
+                <p class="check">
+                  Not verified against Claude.ai documentation in this release. The <code>.skill</code> export is a zip of this same folder for hosts that import a skill archive.
+                </p>
+              </li>
+            </ul>
+            <h3 id="install-without-skills">Agents without skill support</h3>
+            <p>
+              Paste the body of <code>SKILL.md</code> into your rules or instructions file, for example <code>AGENTS.md</code>, and keep <code>references/</code> and <code>assets/</code> in the repository so the paths resolve.
+            </p>
+            <p>A short pointer in persistent memory can remind an agent to load the skill. It cannot replace the files. The README gives this wording:</p>
+            <blockquote cite="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/README.md">
+              <pre><code>Load the full Design Decision Method and its relevant references before UI/UX work. Establish audience, purpose, frequency, error consequences, and platform; apply the conditional object-map gate before layout; record consequential choices; apply project guidelines or disclose the fallback; validate purpose-specific outcomes and label tested versus untested results. Apply AI checks only to AI-enabled features.</code></pre>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="section" id="docs" aria-labelledby="docs-title">
+          <div class="wrap">
+            <h2 id="docs-title">Repository and docs</h2>
+            <p>
+              The procedure the agent reads is <code>SKILL.md</code>. This page is the introduction published from the <code>docs/</code> folder. Release notes, install details, and integrity checks stay in the repository.
+            </p>
+            <ul class="doc-list">
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod">Repository on GitHub</a>
+                <p>Source for release 2.2.4.</p>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/SKILL.md">Agent procedure (SKILL.md)</a>
+                <p>The workflow, the visual-system table, and the object-map gate.</p>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/README.md">README</a>
+                <p>Install notes, release integrity, and how the evaluation prompts are meant to be used.</p>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/tree/main/references">Reference modules</a>
+                <p>Purpose, routing, visual systems, accessibility, AI interfaces, validation, and sources.</p>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/assets/design-record-template.md">Design record template</a>
+                <p>Scaffold for an object map and a decision record.</p>
+              </li>
+              <li>
+                <a href="design/project-page.md">Design record for this page</a>
+                <p>Markdown file for the decisions behind this introduction.</p>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/CHANGELOG.md">Changelog</a>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/tree/main/docs">docs folder on GitHub</a>
+                <p>Source for this page.</p>
+              </li>
+              <li>
+                <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/LICENSE">MIT License</a>
+                <p>Copyright 2026 Sastha K L.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
         </div>
-      </section>
-    </main>
+        </div>
+      </main>
+    </div>
     <footer class="site-footer">
-      <div class="wrap">
-        <p>
-          Design Decision Method is licensed under the
-          <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/LICENSE">MIT License</a>.
-          Copyright 2026 Sastha K L.
-        </p>
-        <p>
-          Release 2.2.4.
-          <a href="https://github.com/frozonfreak/DesignDecesionMethod">View the repository on GitHub</a>.
-        </p>
+      <div class="frame">
+        <div class="wrap">
+          <p>
+            Design Decision Method is licensed under the
+            <a href="https://github.com/frozonfreak/DesignDecesionMethod/blob/main/LICENSE">MIT License</a>.
+            Copyright 2026 Sastha K L.
+          </p>
+          <p>
+            Release 2.2.4.
+            <a href="https://github.com/frozonfreak/DesignDecesionMethod">View the repository on GitHub</a>.
+          </p>
+        </div>
       </div>
     </footer>
   </body>

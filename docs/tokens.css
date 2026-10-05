@@ -1,4 +1,6 @@
-/* Hand-authored tokens in Material 3 roles. Not a Material library and not Material branding. */
+/* Semantic tokens for the project page.
+   Raw palette values live only in this file. Page CSS uses the roles below.
+   Light and dark follow prefers-color-scheme. There is no theme toggle. */
 
 :root {
   color-scheme: light;
@@ -15,24 +17,37 @@
   --on-primary-container: #062818;
   --outline: #5c655c;
   --outline-variant: #746f66;
-  --focus-ring: #083526;
   --inverse-surface: #1c1b16;
   --inverse-on-surface: #f4f1ea;
   --link: #0f5132;
 
+  --code-bg: var(--surface-container-high);
+  --code-fg: var(--on-surface);
+  --focus-ring: var(--on-surface);
+  --focus-gap: var(--surface-container);
+
   --font-body: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 
-  --type-display: clamp(1.7rem, 1rem + 2.4vw, 3.25rem);
-  --type-headline: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
-  --type-title: 1.25rem;
+  --weight-regular: 400;
+  --weight-emphasis: 600;
+  --weight-heading: 700;
+
+  --type-display: clamp(2rem, 1.35rem + 2.2vw, 2.75rem);
+  --type-headline: clamp(1.625rem, 1.4rem + 0.7vw, 2rem);
+  --type-title: 1.375rem;
+  --type-lead: 1.25rem;
   --type-body: 1.125rem;
-  --type-lead: 1.1875rem;
-  --type-label: 0.9375rem;
+  --type-label: 1rem;
+  --type-code: 1rem;
 
-  --line-body: 1.6;
-  --line-tight: 1.2;
+  --line-display: 1.15;
+  --line-heading: 1.25;
+  --line-lead: 1.5;
+  --line-body: 1.65;
+  --line-code: 1.5;
 
+  --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-s: 0.75rem;
@@ -40,14 +55,28 @@
   --space-l: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --space-3xl: 4rem;
+  --space-3xl: 4.5rem;
 
-  --measure: 42rem;
-  --target-min: 3rem;
+  /* 68ch sits inside the 60–75ch reading measure. */
+  --measure: 68ch;
+  --content-max: calc(var(--measure) + 2 * var(--space-m));
+  --toc-size: 15rem;
+  --scroll-margin: 4.5rem;
+
+  --target-min: 1.5rem;
+  --target-touch: 2.75rem;
+
+  --radius-xs: 0.25rem;
   --radius-s: 0.5rem;
-  --border-width: 1px;
-  --focus-width: 3px;
-  --focus-offset: 3px;
+  --border-width: 0.0625rem;
+  --border-strong: 0.125rem;
+  --rule-width: 0.25rem;
+
+  --focus-width: 0.1875rem;
+  --focus-offset: 0.1875rem;
+  --underline-offset: 0.18em;
+  --underline-thickness: 0.0625rem;
+  --underline-thickness-hover: 0.125rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,7 +95,6 @@
     --on-primary-container: #d7efe3;
     --outline: #a3b0a6;
     --outline-variant: #7c827a;
-    --focus-ring: #c6ffe6;
     --inverse-surface: #e8e6df;
     --inverse-on-surface: #101210;
     --link: #8fd4b0;
@@ -77,7 +105,38 @@
   :root {
     --on-surface-variant: var(--on-surface);
     --outline-variant: var(--outline);
-    --border-width: 2px;
+    --border-width: var(--border-strong);
+    --focus-width: var(--rule-width);
     --focus-ring: var(--on-surface);
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --scroll-margin: var(--space-m);
+  }
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+
+    --surface: #ffffff;
+    --surface-container: #ffffff;
+    --surface-container-high: #f4f1ea;
+    --on-surface: #000000;
+    --on-surface-variant: #1c1b16;
+    --primary: #0f5132;
+    --on-primary: #ffffff;
+    --primary-hover: #083526;
+    --primary-container: #ffffff;
+    --on-primary-container: #062818;
+    --outline: #1c1b16;
+    --outline-variant: #1c1b16;
+    --inverse-surface: #000000;
+    --inverse-on-surface: #ffffff;
+    --link: #0f5132;
+    --focus-ring: #000000;
+    --focus-gap: #ffffff;
   }
 }
