@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.4 — 2026-10-05
+
+Licenses the repository under the MIT License. The procedure is unchanged.
+
+- **License.** `LICENSE` is the MIT License, copyright Sastha K L. The README and the reading page state that and point to it.
+
 ## 2.2.3 — 2026-10-05
 
 Publishes a reading page with the same introduction as the README. The procedure is unchanged.

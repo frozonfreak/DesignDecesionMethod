@@ -1,12 +1,13 @@
 {
-  "version": "2.2.3",
+  "version": "2.2.4",
   "updated": "2026-10-05",
-  "canonical_sha256": "cc628a45ac88459fa29fa240bffb9fb4da8de69169415d0dc88c7c531dceaee9",
+  "canonical_sha256": "fb8e0c2af124f61d34fed68779721177327382b8efd06c320be85970c683b88a",
   "algorithm": "SHA-256 of sorted relative UTF-8 paths, NUL, exact file bytes, NUL; excludes manifest",
   "files": {
-    "CHANGELOG.md": "e2c98e640406d321ed2062f44ca9d7249b432b1f723d153bb503eddf7011f3c1",
-    "README.md": "1371516bdca2d7ce35c7789afc4cfc9f9cd7f6df4f76b863ca2235a606f58fd7",
-    "SKILL.md": "41cf723a03a19f8f25e8f8e3e34e7a14cff34660ca1cd7f479229ece3e9bee16",
+    "CHANGELOG.md": "ca80c7021c44e3b685f838693f9d7abd69964f0c5d678fdec0576c3eaafe97fb",
+    "LICENSE": "04cc7f554dfcc8d63ec42721dce4c549c092c051a17005ef5708677731ecf682",
+    "README.md": "d4b9e512e4c9e297afcdc756d0f916a6510893c9faad1a87e588101915271e64",
+    "SKILL.md": "4aaa0fb35dee0daf51e751727db82268f380b331538dc984894d27d30ccfa432",
     "agents/openai.yaml": "39407aabd0d553c81405fa0e27dda00d5b7ce23c3680bfb700531ea15db6f631",
     "assets/design-record-template.md": "5aa86aad324bd1fdfec51b63a0afb54d64b911970924c29572544048484a8b3a",
     "evals/evals.json": "bc72d4fa3811c3bf660e18d2b7b8aae3581fbc96b43b7b6b89963b6a2b2e4b68",
