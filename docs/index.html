@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design Decision Method</title>
+    <meta
+      name="description"
+      content="A reusable workflow for deciding what information a screen needs, how to organize it, and which interactions and visual direction fit the project."
+    />
+    <link rel="canonical" href="https://frozonfreak.github.io/DesignDecesionMethod/" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="page.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <p class="site-name">Design Decision Method</p>
+      <nav aria-label="On this page">
+        <ol class="contents">
+          <li><a href="#what">What is it?</a></li>
+          <li><a href="#solves">What does it solve?</a></li>
+          <li><a href="#why">Why do we need it?</a></li>
+          <li><a href="#webhig">How is it different from WebHIG?</a></li>
+        </ol>
+      </nav>
+    </header>
+    <main id="main">
+      <h1>Design Decision Method</h1>
+      <p>
+        A reusable workflow for people and AI agents. Release 2.2.3.
+        Time savings have not been measured.
+      </p>
+
+      <h2 id="what">What is it?</h2>
+      <p>
+        Design Decision Method is a reusable workflow for people and AI agents
+        to decide what information a screen needs, how to organize it, and
+        which interactions and visual direction fit the project. It draws on
+        established guidance. It does not create another UI library or visual
+        standard.
+      </p>
+
+      <h2 id="solves">What does it solve?</h2>
+      <p>
+        It addresses repeated UI guesswork: starting from generic layouts,
+        overlooking essential information, adding unnecessary complexity, and
+        revisiting the same decisions across projects. It makes consequential
+        choices explicit before building.
+      </p>
+
+      <h2 id="why">Why do we need it?</h2>
+      <p>
+        For our work, it carries the same design philosophy across products and
+        agents: simple to understand, informative enough to decide, and
+        efficient to use. It reduces the need to explain that philosophy from
+        scratch each time. Whether it actually saves time still needs
+        measurement. It is useful as a shared procedure, and it is not
+        mandatory for every small edit.
+      </p>
+
+      <h2 id="webhig">How is it different from WebHIG?</h2>
+      <table class="comparison">
+        <caption>Responsibilities of Design Decision Method and WebHIG</caption>
+        <thead>
+          <tr>
+            <th scope="col">Design Decision Method</th>
+            <th scope="col">WebHIG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Decides how this particular experience should work</td>
+            <td>Defines applicable interface quality requirements</td>
+          </tr>
+          <tr>
+            <td>Chooses information hierarchy, layouts and flows</td>
+            <td>
+              Governs accessibility, consistency, responsiveness, performance
+              and motion
+            </td>
+          </tr>
+          <tr>
+            <td>Records why a choice fits the audience and task</td>
+            <td>Provides requirements and checks for its implementation</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        The two stay separate. This project does not copy
+        <a href="https://github.com/frozonfreak/webhig">WebHIG</a>
+        requirements into a second standard. When a project has no interface
+        guidelines, the method uses WCAG 2.2 AA for web, or the relevant native
+        guidance, and records any other requirements that were not specified.
+      </p>
+      <p class="next-step">
+        <a href="https://github.com/frozonfreak/DesignDecesionMethod">Open the repository</a>
+        for the procedure, install steps, and release notes.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <p>Licensing remains undecided. This page is not an open-source release.</p>
+    </footer>
+  </body>
+</html>

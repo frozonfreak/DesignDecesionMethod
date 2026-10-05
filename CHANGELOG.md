@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.3 — 2026-10-05
+
+Publishes a reading page with the same introduction as the README. The procedure is unchanged.
+
+- **Page.** `docs/` explains what the method is, what it addresses, why this team uses it, and how its role differs from WebHIG. GitHub Pages publishes that folder.
+
 ## 2.2.2 — 2026-10-05
 
 Explains the method for people opening the repository. The procedure is unchanged.

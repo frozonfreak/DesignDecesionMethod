@@ -1,0 +1,72 @@
+/* Tier 1 raw values live only in this file. Pages use the semantic tokens below. */
+
+:root {
+  --pr-paper: #f7f6f3;
+  --pr-white: #ffffff;
+  --pr-ink: #1a1916;
+  --pr-muted: #44423c;
+  --pr-link: #0b3d91;
+  --pr-line: #c8c4bb;
+  --pr-raised: #ffffff;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+
+  --font-body: "Segoe UI", "Source Sans 3", sans-serif;
+  --size-body: 1.125rem;
+  --size-small: 1rem;
+  --size-heading: 1.5rem;
+  --size-title: 2.25rem;
+  --border-width: 1px;
+  --line-body: 1.6;
+  --line-title: 1.2;
+  --measure: 40rem;
+  --target-min: 1.5rem;
+  --focus-width: 0.125rem;
+  --focus-offset: 0.1875rem;
+
+  --duration-fast: 100ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --surface-base: var(--pr-paper);
+  --surface-raised: var(--pr-raised);
+  --text-primary: var(--pr-ink);
+  --text-muted: var(--pr-muted);
+  --text-link: var(--pr-link);
+  --border-subtle: var(--pr-line);
+  --focus-ring: var(--pr-link);
+
+  --page-bg: var(--surface-base);
+  --page-fg: var(--text-primary);
+  --header-bg: var(--surface-raised);
+  --skip-bg: var(--text-primary);
+  --skip-fg: var(--surface-raised);
+  --table-header-bg: var(--surface-raised);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pr-paper: #141311;
+    --pr-white: #1c1b18;
+    --pr-ink: #f4f1ea;
+    --pr-muted: #c8c2b6;
+    --pr-link: #9ec1ff;
+    --pr-line: #3d3a34;
+    --pr-raised: #1c1b18;
+
+    --surface-base: var(--pr-paper);
+    --surface-raised: var(--pr-raised);
+    --text-primary: var(--pr-ink);
+    --text-muted: var(--pr-muted);
+    --text-link: var(--pr-link);
+    --border-subtle: var(--pr-line);
+    --focus-ring: var(--pr-link);
+    --skip-bg: var(--pr-ink);
+    --skip-fg: var(--pr-paper);
+  }
+}

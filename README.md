@@ -22,9 +22,11 @@ For our work, it carries the same design philosophy across products and agents: 
 
 The two stay separate. This repository does not copy WebHIG requirements into a second standard. When a project has no interface guidelines, the method uses WCAG 2.2 AA for web, or the relevant native guidance, and records any other requirements that were not specified.
 
+These four points are also published as a page from the `docs/` folder: https://frozonfreak.github.io/DesignDecesionMethod/
+
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
-Current release: 2.2.2.
+Current release: 2.2.3.
 
 ## Contents
 
