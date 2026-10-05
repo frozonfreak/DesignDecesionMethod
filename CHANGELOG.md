@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.2 — 2026-10-05
+
+Explains the method for people opening the repository. The procedure is unchanged.
+
+- **Introduction.** States what the workflow is, the repeated guesswork it addresses, and why this team keeps it: a shared philosophy across products and agents. Time savings remain unmeasured.
+- **WebHIG.** Records the separate responsibilities. This method decides the experience; WebHIG defines applicable interface quality requirements.
+
 ## 2.2.1 — 2026-10-05
 
 Bounded corrections to selection order, object-map scope, presentation scope, source freshness, visual emphasis, and evaluation expectations.

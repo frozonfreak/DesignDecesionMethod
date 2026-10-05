@@ -1,12 +1,12 @@
 {
-  "version": "2.2.1",
+  "version": "2.2.2",
   "updated": "2026-10-05",
-  "canonical_sha256": "7fd72c084b2cda57eabfcc6ae3aca3a61382119db9c385a7ff2b7ebe45d18276",
+  "canonical_sha256": "9a533b50b06943767b355d26f554998c359e853d2a799a4b934acfe42ceef972",
   "algorithm": "SHA-256 of sorted relative UTF-8 paths, NUL, exact file bytes, NUL; excludes manifest",
   "files": {
-    "CHANGELOG.md": "2fdbe773baa1d974c19075ced8beb9a42eb6c112227ce06859e62b05ec5850b7",
-    "README.md": "4e0850ca15446935e805cfc89bece2c40002e7f3a28ee0cb09bb7f1cba132a20",
-    "SKILL.md": "353abe84d31288d7c7c392e5302f46ca8188cfc3888d9122d36b808401673d20",
+    "CHANGELOG.md": "4d131f11a9a564d56a92d84c8c87419507e2967127b3e6c89efaace27b0af310",
+    "README.md": "25a79f02203c4e6475dfa5a6196c2f8155722929e893e650d2265221b7c87672",
+    "SKILL.md": "1c6d982cb2995e77a68f6659283052ff39f37bc7e09b0d7c5882a79c2a8093a2",
     "agents/openai.yaml": "39407aabd0d553c81405fa0e27dda00d5b7ce23c3680bfb700531ea15db6f631",
     "assets/design-record-template.md": "5aa86aad324bd1fdfec51b63a0afb54d64b911970924c29572544048484a8b3a",
     "evals/evals.json": "bc72d4fa3811c3bf660e18d2b7b8aae3581fbc96b43b7b6b89963b6a2b2e4b68",

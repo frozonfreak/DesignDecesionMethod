@@ -1,10 +1,30 @@
 # Design Decision Method
 
-An agent skill that makes design decisions explicit before a screen is drawn or coded. It routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status.
+## What is it?
 
-It does not invent a visual system, rank the sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
+Design Decision Method is a reusable workflow for people and AI agents to decide what information a screen needs, how to organize it, and which interactions and visual direction fit the project. It draws on established guidance. It does not create another UI library or visual standard.
 
-Current release: 2.2.1.
+## What does it solve?
+
+It addresses repeated UI guesswork: starting from generic layouts, overlooking essential information, adding unnecessary complexity, and revisiting the same decisions across projects. It makes consequential choices explicit before building.
+
+## Why do we need it?
+
+For our work, it carries the same design philosophy across products and agents: simple to understand, informative enough to decide, and efficient to use. It reduces the need to explain that philosophy from scratch each time. Whether it actually saves time still needs measurement. It is useful as a shared procedure, and it is not mandatory for every small edit.
+
+## How is it different from WebHIG?
+
+| Design Decision Method | WebHIG |
+|---|---|
+| Decides how this particular experience should work | Defines applicable interface quality requirements |
+| Chooses information hierarchy, layouts and flows | Governs accessibility, consistency, responsiveness, performance and motion |
+| Records why a choice fits the audience and task | Provides requirements and checks for its implementation |
+
+The two stay separate. This repository does not copy WebHIG requirements into a second standard. When a project has no interface guidelines, the method uses WCAG 2.2 AA for web, or the relevant native guidance, and records any other requirements that were not specified.
+
+The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
+
+Current release: 2.2.2.
 
 ## Contents
 
