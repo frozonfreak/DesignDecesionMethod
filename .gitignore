@@ -1,0 +1,7 @@
+dist/
+__pycache__/
+*.pyc
+.cache/
+evals/output/
+/design-decision-method.zip
+/design-decision-method.skill
