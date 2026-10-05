@@ -1,5 +1,7 @@
 # Design record: project page
 
+The colour theme in this record was replaced by a later visual restyle. Read [sibling-theme.md](sibling-theme.md) for the current tokens, mark, and contrast notes. The reading layout in this record still applies: 68ch measure, contents after the hero, sticky contents from 64rem, install paths in `pre`/`code`, and one filled action.
+
 Skill: design-decision-method 2.2.4 · Date: 2026-10-05 · Visual system: Material 3 roles, hand-authored CSS (no Material library installed) · Project guidelines: Web HIG Quick Reference v1.12.5, archetype content, surface document
 
 ## 1. Context
