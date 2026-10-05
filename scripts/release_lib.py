@@ -27,6 +27,7 @@ ALGORITHM = "SHA-256 of sorted relative UTF-8 paths, NUL, exact file bytes, NUL;
 # Explicit skill package. Repository scripts, CI, and VCS files are not included.
 INCLUDE_FILES = (
     "CHANGELOG.md",
+    "LICENSE",
     "README.md",
     "SKILL.md",
     "agents/openai.yaml",

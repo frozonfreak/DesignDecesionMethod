@@ -4,7 +4,7 @@ description: >-
   Decide and record design choices before building any UI. Use whenever a task involves designing, reviewing, or implementing screens, flows, forms, navigation, dashboards, landing pages, wireframes, mockups, prototypes, or UI copy for web, Android, iOS, or cross-platform products (operational, editorial, exploratory, commerce, creative, collaborative, or AI-enabled), even if the user never mentions design methods. Routes work across OOUX/ORCA object mapping, GOV.UK, Carbon, Material 3, platform guidance such as Apple's HIG, and the project's own guidelines; requires an object map and decision record before layout when relationships shape structure; checks accessibility against WCAG 2.2 AA. Not for standalone logo, icon, or social-image generation, or for inventing a new visual system.
 compatibility: Any agent that supports the Agent Skills format (SKILL.md). No network access or special tools required; writing files is optional and has an inline fallback.
 metadata:
-  version: "2.2.3"
+  version: "2.2.4"
   updated: "2026-10-05"
   formerly: "verso"
 ---

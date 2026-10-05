@@ -26,7 +26,7 @@ These four points are also published as a page from the `docs/` folder: https://
 
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
-Current release: 2.2.3.
+Current release: 2.2.4.
 
 ## Contents
 
@@ -46,6 +46,7 @@ design-decision-method/
 ├── agents/openai.yaml                optional metadata for hosts that read it
 ├── release-manifest.json             file hashes
 ├── CHANGELOG.md
+├── LICENSE                           MIT License
 └── README.md
 ```
 
@@ -104,4 +105,4 @@ Design systems change. Re-check the snapshot in `references/visual-systems.md` a
 
 ## License
 
-Licensing remains undecided. No license was supplied with the baseline, and this repository does not choose one. Public availability without a license is not an open-source release.
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
