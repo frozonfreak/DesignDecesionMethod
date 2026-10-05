@@ -136,13 +136,14 @@ a:visited {
 .nav-list a {
   display: inline-flex;
   align-items: center;
-  min-block-size: var(--target-min);
-  min-inline-size: var(--target-min);
+  min-block-size: 2.75rem;
+  min-inline-size: 2.75rem;
   padding-inline: var(--space-2xs);
+  font-size: 1rem;
 }
 
 .hero {
-  padding-block: var(--space-xl) var(--space-2xl);
+  padding-block: var(--space-l) var(--space-xl);
   border-block-end: var(--border-width) solid var(--outline-variant);
 }
 
@@ -154,7 +155,6 @@ a:visited {
   line-height: var(--line-tight);
 }
 
-h1,
 h2,
 h3 {
   text-wrap: balance;
@@ -166,47 +166,43 @@ h1 {
   line-height: 1.15;
   font-weight: 650;
   letter-spacing: -0.015em;
+  text-wrap: wrap;
 }
 
 .lead {
-  margin: 0 0 var(--space-l);
-  font-size: var(--type-lead);
+  margin: 0 0 var(--space-m);
+  font-size: var(--type-body);
   line-height: 1.5;
 }
 
 .fit {
   margin: 0 0 var(--space-l);
-  padding: var(--space-s) var(--space-m);
+  padding: var(--space-xs) var(--space-s);
   background: var(--primary-container);
   color: var(--on-primary-container);
   border-inline-start: 4px solid var(--primary);
   border-radius: var(--radius-s);
 }
 
-.fit-label {
-  display: block;
-  margin-block-end: var(--space-2xs);
-  font-weight: 650;
-}
-
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-s);
-  margin: 0 0 var(--space-l);
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-m);
 }
 
 .button {
   display: inline-flex;
-  flex: 1 1 12rem;
+  flex: 1 1 calc(50% - 0.5rem);
   align-items: center;
   justify-content: center;
   min-block-size: var(--target-min);
-  min-inline-size: var(--target-min);
-  padding: var(--space-s) var(--space-l);
+  min-inline-size: 0;
+  padding: 0.625rem 0.75rem;
   border: 2px solid transparent;
   border-radius: var(--radius-s);
   font: inherit;
+  font-size: 1rem;
   font-weight: 650;
   line-height: 1.2;
   text-align: center;
@@ -417,11 +413,17 @@ blockquote {
 
 @media (min-width: 40rem) {
   .hero {
-    padding-block: var(--space-3xl);
+    padding-block: var(--space-2xl) var(--space-3xl);
+  }
+
+  .lead {
+    font-size: var(--type-lead);
+    margin-block-end: var(--space-l);
   }
 
   .button {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
+    padding-inline: var(--space-l);
   }
 
   .boundary-item dl {
