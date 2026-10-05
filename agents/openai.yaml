@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Decision Method"
+  short_description: "Choose information, interactions and visual direction"
+  default_prompt: "Use the design-decision-method skill to design this interface from its audience, purpose and constraints."

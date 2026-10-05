@@ -1,0 +1,122 @@
+{
+  "skill_name": "design-decision-method",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design the booking flow for a small clinic's web app. Patients book, move, and cancel appointments with a clinician at a location. Receptionists manage the same appointments all day.",
+      "expected_output": "An object map comes before any layout and drives the routes. Occasional patients and frequent receptionists are treated differently, with a decision record and a validation status that names what was not tested.",
+      "files": [],
+      "expectations": [
+        "Object map covers Patient, Appointment, Clinician, and Location before layout",
+        "Patients get a clear sequence with review and confirmation",
+        "Receptionists get an efficient list where a selected item stays visible under a filter",
+        "Accessibility target of WCAG 2.2 AA is stated, with tested and untested items listed"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design an expressive mobile architecture journal with essays, author profiles and photography. Retain existing serif typography and monochrome palette. No accounts or transactions.",
+      "expected_output": "Editorial hierarchy and meaningful photography, preserving the existing visual direction, with reading and discovery criteria and no invented dashboard or accounts.",
+      "files": [],
+      "expectations": [
+        "Preserves the existing serif and monochrome direction",
+        "Editorial hierarchy and purposeful photography",
+        "Object map produced or skipped with a reason before structure",
+        "Reading and discovery acceptance criteria",
+        "No invented dashboard, accounts, or transactions"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Specify a shop product page for custom desks. Existing brand system. Buyers compare dimensions and materials; shipping cost is known only after postcode. No fabricated reviews or delivery promises.",
+      "expected_output": "Supports an informed choice and shows total-cost uncertainty honestly, within the existing brand system and without invented guarantees.",
+      "files": [],
+      "expectations": [
+        "Handles unknown shipping cost until a postcode is given",
+        "Retains the brand system",
+        "No fabricated reviews or delivery promises",
+        "Responsive comparison of dimensions and materials"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Specify an expert diagram editor with keyboard, canvas objects, undo and save status. Desktop editing; mobile viewing only. No AI/collaboration.",
+      "expected_output": "Gives creative control with keyboard alternatives, preserves edits, reports save status truthfully, and respects the stated desktop and mobile scope.",
+      "files": [],
+      "expectations": [
+        "Keyboard alternatives for canvas manipulation",
+        "Undo and truthful save status",
+        "Does not add AI or collaboration",
+        "Mobile is view-only as stated"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Redesign a Material order queue for expert tablet operators. Filters can hide the selected order. Keep its identity and actions available. No offline sending.",
+      "expected_output": "Borrows data patterns without switching to a Carbon appearance, keeps the selected order and its actions visible, and respects connectivity limits.",
+      "files": [],
+      "expectations": [
+        "Keeps the Material appearance while borrowing data patterns",
+        "The selected order and its actions stay visible when a filter hides it from the list",
+        "Does not add offline sending",
+        "Recovery states and validation evidence are stated"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Change only the wording of an existing confirmation button; layout, behaviour and relationships stay unchanged.",
+      "expected_output": "Skips the object map with a one-line reason, retains the existing system, and does not produce a large specification.",
+      "files": [],
+      "expectations": [
+        "Records Map: skipped with a reason",
+        "Does not produce a large specification",
+        "Retains the existing system"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Specify a report editor that streams AI proposals while users edit. Regeneration must preserve edits. Email sending needs explicit authorisation; no numerical confidence provided.",
+      "expected_output": "Applies the AI checks: edit and regeneration conflicts are visible, proposal and execution are separate, and no confidence or success is invented.",
+      "files": [],
+      "expectations": [
+        "AI checks applied because the feature is AI-enabled",
+        "Regeneration never overwrites user edits and conflicts are visible",
+        "Drafting is separate from sending, and sending needs explicit authorisation",
+        "No fake confidence figures or premature success states"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Build a SwiftUI settings screen for a notes app with a floating toolbar. Make it feel current.",
+      "expected_output": "Chooses Apple HIG and system controls for the supported OS, uses translucent material only in the controls layer, and handles reduced transparency and increased contrast.",
+      "files": [],
+      "expectations": [
+        "Selects Apple HIG, not Material",
+        "Checks the supported OS and SDK before adopting newer materials",
+        "Glass or translucency kept to controls and navigation, not content",
+        "Reduced transparency and increased contrast are handled with an opaque fallback"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Make a personal portfolio homepage for a freelance photographer.",
+      "expected_output": "Treats the page as communication and evaluation, not a dashboard, with a stated visual direction and a clear contact route.",
+      "files": [],
+      "expectations": [
+        "Does not invent an operational dashboard",
+        "Object map skipped or minimal with a reason",
+        "Focus on visitor questions and a contact route",
+        "No compliance or research claims"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Design a logo for my bakery.",
+      "expected_output": "Negative trigger case: the skill should not be applied, because standalone logo generation is out of scope.",
+      "files": [],
+      "expectations": [
+        "Does not run the object-map gate or produce a decision record"
+      ]
+    }
+  ]
+}

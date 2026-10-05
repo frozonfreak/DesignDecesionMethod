@@ -1,0 +1,21 @@
+{
+  "version": "2.2.0",
+  "updated": "2026-10-05",
+  "canonical_sha256": "1edd69bcb299a0596ea564b1faa8572e1249489257c3c36a3987a83f3b1d70aa",
+  "algorithm": "SHA-256 of sorted relative UTF-8 paths, NUL, exact file bytes, NUL; excludes manifest",
+  "files": {
+    "CHANGELOG.md": "17aeb932a1b9aea449d8d00054129e34e79a116361bc26220d3a42723a512bda",
+    "README.md": "201f3c8aafb7e534ded55c29352da414f65ace5c449ae709b0c7855a3c28325c",
+    "SKILL.md": "902a6419f928c21df0267f17d26e82bea9293ca0aeb0b4fec6d6eae4da6125d2",
+    "agents/openai.yaml": "39407aabd0d553c81405fa0e27dda00d5b7ce23c3680bfb700531ea15db6f631",
+    "assets/design-record-template.md": "f9707630a985d76d212c563be2de178507c237406419caaabddad78fe6a877e1",
+    "evals/evals.json": "1aedc8ee74d75e4acd47094348238ef1761adde7680bf345be250d9eb29a225f",
+    "references/acceptance-and-validation.md": "78883df54402cfdcd76f8ad59eed4ae911010d0055bce96c4701a290d2100a08",
+    "references/accessibility.md": "484f740c994ee3d0f677cd2a124ba2ea2b72a67e710a8d3a7be7c3b36585f2f6",
+    "references/ai-interfaces.md": "f6b6ab21ffcd7e3d89bf12e6c9999b244e8139794297200f6bba27e198c9c0ea",
+    "references/modern-design.md": "e1c2120376454b7f9777247bda100e0230b2dece73a8c2d4197336dd23c10308",
+    "references/routing.md": "81fa5ffde06002113dcd67fe8bdf9924587712cb48e09a9bec9c6eb7fa72c5b1",
+    "references/sources.md": "cb053a9f2bd2c4d277ebd95fcdc861d8bd00cfd863a1704351de7bb5239e51f8",
+    "references/visual-systems.md": "5c432b32c98d3c36273e6f64dcd5eae609e3d2b42d4dd69053f563e7134c36a0"
+  }
+}
