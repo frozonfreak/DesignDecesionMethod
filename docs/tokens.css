@@ -1,72 +1,83 @@
-/* Tier 1 raw values live only in this file. Pages use the semantic tokens below. */
+/* Hand-authored tokens in Material 3 roles. Not a Material library and not Material branding. */
 
 :root {
-  --pr-paper: #f7f6f3;
-  --pr-white: #ffffff;
-  --pr-ink: #1a1916;
-  --pr-muted: #44423c;
-  --pr-link: #0b3d91;
-  --pr-line: #c8c4bb;
-  --pr-raised: #ffffff;
+  color-scheme: light;
+
+  --surface: #e7e0d4;
+  --surface-container: #fffcf7;
+  --surface-container-high: #d5cebf;
+  --on-surface: #1c1b16;
+  --on-surface-variant: #3f463f;
+  --primary: #0f5132;
+  --on-primary: #ffffff;
+  --primary-hover: #083526;
+  --primary-container: #d7efe3;
+  --on-primary-container: #062818;
+  --outline: #5c655c;
+  --outline-variant: #746f66;
+  --focus-ring: #083526;
+  --inverse-surface: #1c1b16;
+  --inverse-on-surface: #f4f1ea;
+  --link: #0f5132;
+
+  --font-body: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --type-display: clamp(2.125rem, 1.45rem + 2.2vw, 3.25rem);
+  --type-headline: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+  --type-title: 1.25rem;
+  --type-body: 1.125rem;
+  --type-lead: 1.1875rem;
+  --type-label: 0.9375rem;
+
+  --line-body: 1.6;
+  --line-tight: 1.2;
 
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-s: 0.75rem;
   --space-m: 1rem;
   --space-l: 1.5rem;
-  --space-xl: 2.5rem;
-  --space-2xl: 4rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
 
-  --font-body: "Segoe UI", "Source Sans 3", sans-serif;
-  --size-body: 1.125rem;
-  --size-small: 1rem;
-  --size-heading: 1.5rem;
-  --size-title: 2.25rem;
+  --measure: 42rem;
+  --target-min: 3rem;
+  --radius-s: 0.5rem;
   --border-width: 1px;
-  --line-body: 1.6;
-  --line-title: 1.2;
-  --measure: 40rem;
-  --target-min: 1.5rem;
-  --focus-width: 0.125rem;
-  --focus-offset: 0.1875rem;
-
-  --duration-fast: 100ms;
-  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
-
-  --surface-base: var(--pr-paper);
-  --surface-raised: var(--pr-raised);
-  --text-primary: var(--pr-ink);
-  --text-muted: var(--pr-muted);
-  --text-link: var(--pr-link);
-  --border-subtle: var(--pr-line);
-  --focus-ring: var(--pr-link);
-
-  --page-bg: var(--surface-base);
-  --page-fg: var(--text-primary);
-  --header-bg: var(--surface-raised);
-  --skip-bg: var(--text-primary);
-  --skip-fg: var(--surface-raised);
-  --table-header-bg: var(--surface-raised);
+  --focus-width: 3px;
+  --focus-offset: 3px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --pr-paper: #141311;
-    --pr-white: #1c1b18;
-    --pr-ink: #f4f1ea;
-    --pr-muted: #c8c2b6;
-    --pr-link: #9ec1ff;
-    --pr-line: #3d3a34;
-    --pr-raised: #1c1b18;
+    color-scheme: dark;
 
-    --surface-base: var(--pr-paper);
-    --surface-raised: var(--pr-raised);
-    --text-primary: var(--pr-ink);
-    --text-muted: var(--pr-muted);
-    --text-link: var(--pr-link);
-    --border-subtle: var(--pr-line);
-    --focus-ring: var(--pr-link);
-    --skip-bg: var(--pr-ink);
-    --skip-fg: var(--pr-paper);
+    --surface: #101210;
+    --surface-container: #232824;
+    --surface-container-high: #313832;
+    --on-surface: #e8e6df;
+    --on-surface-variant: #c8c6bc;
+    --primary: #8fd4b0;
+    --on-primary: #063222;
+    --primary-hover: #b7efd4;
+    --primary-container: #164d36;
+    --on-primary-container: #d7efe3;
+    --outline: #a3b0a6;
+    --outline-variant: #7c827a;
+    --focus-ring: #c6ffe6;
+    --inverse-surface: #e8e6df;
+    --inverse-on-surface: #101210;
+    --link: #8fd4b0;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --on-surface-variant: var(--on-surface);
+    --outline-variant: var(--outline);
+    --border-width: 2px;
+    --focus-ring: var(--on-surface);
   }
 }
