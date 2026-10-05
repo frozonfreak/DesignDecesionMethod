@@ -1,51 +1,114 @@
-/* Semantic tokens for the project page.
-   Raw palette values live only in this file. Page CSS uses the roles below.
-   Light and dark follow prefers-color-scheme. There is no theme toggle. */
+/* Colour theme mirrored from the Web HIG docs site.
+   Source: frozonfreak/webhig docs/css/site.css (commit 0eba4f0).
+   Primitive hex values are copied from that file. No new hex values.
+   The Web HIG site stylesheet has no prefers-color-scheme block.
+   Dark semantics below reassign those same primitives.
+   Where a site pair misses WCAG 2.2 AA, the next primitive that passes is used.
+   That substitution is recorded in docs/design/sibling-theme.md. */
 
 :root {
   color-scheme: light;
 
-  --surface: #e7e0d4;
-  --surface-container: #fffcf7;
-  --surface-container-high: #d5cebf;
-  --on-surface: #1c1b16;
-  --on-surface-variant: #3f463f;
-  --primary: #0f5132;
-  --on-primary: #ffffff;
-  --primary-hover: #083526;
-  --primary-container: #d7efe3;
-  --on-primary-container: #062818;
-  --outline: #5c655c;
-  --outline-variant: #746f66;
-  --inverse-surface: #1c1b16;
-  --inverse-on-surface: #f4f1ea;
-  --link: #0f5132;
+  /* Tier 1 — primitives, copied from webhig docs/css/site.css */
+  --pr-slate-50: #f8fafc;
+  --pr-slate-200: #e2e8f0;
+  --pr-slate-300: #cbd5e1;
+  --pr-slate-400: #94a3b8;
+  --pr-slate-500: #64748b;
+  --pr-slate-600: #475569;
+  --pr-slate-700: #334155;
+  --pr-slate-800: #1e293b;
+  --pr-slate-900: #0f172a;
+  --pr-blue-50: #eff6ff;
+  --pr-blue-100: #dbeafe;
+  --pr-blue-400: #60a5fa;
+  --pr-blue-600: #1d4ed8;
+  --pr-blue-700: #1e40af;
+  --pr-white: #ffffff;
+  --pr-emerald-50: #ecfdf5;
+  --pr-emerald-700: #047857;
+  --pr-amber-50: #fffbeb;
+  --pr-amber-200: #fde68a;
+  --pr-amber-800: #92400e;
+  --pr-rose-700: #be123c;
+  --pr-gray-100: #f4f6f9;
+  --pr-gray-150: #f1f5f9;
 
-  --code-bg: var(--surface-container-high);
-  --code-fg: var(--on-surface);
-  --focus-ring: var(--on-surface);
-  --focus-gap: var(--surface-container);
+  --overlay-light: rgba(255, 255, 255, 0.06);
+  --overlay-accent: rgba(96, 165, 250, 0.12);
+  --overlay-accent-strong: rgba(96, 165, 250, 0.15);
+  --shadow-color: rgba(15, 23, 42, 0.05);
+  --shadow-color-md: rgba(15, 23, 42, 0.06);
 
-  --font-body: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  /* Tier 2 — semantic tokens, light baseline from the same file.
+     --muted is slate-600, not the site's slate-500: slate-500 on --bg is 4.40:1.
+     --border-strong is slate-500: the site's slate-200 border is 1.23:1 on white. */
+  --bg: var(--pr-gray-100);
+  --surface: var(--pr-white);
+  --surface-elevated: var(--pr-white);
+  --text: var(--pr-slate-900);
+  --text-secondary: var(--pr-slate-700);
+  --muted: var(--pr-slate-600);
+  --border: var(--pr-slate-200);
+  --border-strong: var(--pr-slate-500);
+  --accent: var(--pr-blue-600);
+  --accent-hover: var(--pr-blue-700);
+  --accent-soft: var(--pr-blue-50);
+  --accent-muted: var(--pr-blue-100);
+  --link: var(--pr-blue-600);
+  --link-hover: var(--pr-blue-700);
+  --sidebar-bg: var(--pr-slate-900);
+  --sidebar-text: var(--pr-slate-400);
+  --sidebar-text-active: var(--pr-white);
+  --sidebar-accent: var(--pr-blue-400);
+  --sidebar-label: var(--sidebar-accent);
+  --on-inverse: var(--pr-white);
+  --on-inverse-muted: var(--pr-slate-200);
+  --code-bg: var(--pr-gray-150);
+  --code-border: transparent;
+  --code-block-bg: var(--pr-slate-800);
+  --code-block-fg: var(--pr-slate-200);
+  --code-inline-fg: var(--pr-rose-700);
+  --focus-ring: var(--pr-blue-600);
+  --header-border: var(--overlay-light);
+  --hero-gradient-start: var(--pr-white);
+  --hero-gradient-mid: var(--pr-slate-50);
+  --hero-gradient-end: var(--pr-blue-50);
+  --mark-bg: var(--pr-blue-600);
+  --mark-fg: var(--pr-white);
+  --selection-bg: var(--pr-blue-100);
+  --selection-fg: var(--pr-slate-900);
+
+  --shadow-sm: 0 1px 2px var(--shadow-color);
+  --shadow-md: 0 4px 12px var(--shadow-color-md);
+  --radius: 12px;
+  --radius-control: 8px;
+  --radius-xs: 4px;
+
+  /* Same family list as webhig docs/css/site.css. Inter is not fetched.
+     font-src stays 'none'. See sibling-theme.md. */
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
 
   --weight-regular: 400;
   --weight-emphasis: 600;
   --weight-heading: 700;
+  --weight-display: 800;
 
   --type-display: clamp(2rem, 1.35rem + 2.2vw, 2.75rem);
-  --type-headline: clamp(1.625rem, 1.4rem + 0.7vw, 2rem);
-  --type-title: 1.375rem;
+  --type-headline: 1.625rem;
+  --type-title: 1.0625rem;
   --type-lead: 1.25rem;
   --type-body: 1.125rem;
   --type-label: 1rem;
   --type-code: 1rem;
+  --type-eyebrow: 1rem;
 
-  --line-display: 1.15;
+  --line-display: 1.12;
   --line-heading: 1.25;
   --line-lead: 1.5;
   --line-body: 1.65;
-  --line-code: 1.5;
+  --line-code: 1.6;
 
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
@@ -55,59 +118,79 @@
   --space-l: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --space-3xl: 4.5rem;
+  --space-3xl: 4rem;
 
   /* 68ch sits inside the 60–75ch reading measure. */
   --measure: 68ch;
   --content-max: calc(var(--measure) + 2 * var(--space-m));
-  --toc-size: 15rem;
+  --nav-width: 16.5rem;
   --scroll-margin: 4.5rem;
 
   --target-min: 1.5rem;
   --target-touch: 2.75rem;
 
-  --radius-xs: 0.25rem;
-  --radius-s: 0.5rem;
-  --border-width: 0.0625rem;
-  --border-strong: 0.125rem;
-  --rule-width: 0.25rem;
-
-  --focus-width: 0.1875rem;
-  --focus-offset: 0.1875rem;
-  --underline-offset: 0.18em;
-  --underline-thickness: 0.0625rem;
-  --underline-thickness-hover: 0.125rem;
+  --border-width: 1px;
+  --focus-width: 3px;
+  --focus-offset: 2px;
+  --underline-offset: 3px;
+  --underline-thickness: 1px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
 
-    --surface: #101210;
-    --surface-container: #232824;
-    --surface-container-high: #313832;
-    --on-surface: #e8e6df;
-    --on-surface-variant: #c8c6bc;
-    --primary: #8fd4b0;
-    --on-primary: #063222;
-    --primary-hover: #b7efd4;
-    --primary-container: #164d36;
-    --on-primary-container: #d7efe3;
-    --outline: #a3b0a6;
-    --outline-variant: #7c827a;
-    --inverse-surface: #e8e6df;
-    --inverse-on-surface: #101210;
-    --link: #8fd4b0;
+    /* Reassignment of site.css primitives only.
+       Link and focus use blue-400: blue-600 on slate-900 is 2.66:1.
+       Inline code uses blue-400: rose-700 on slate-900 is 2.84:1.
+       HIG.md dark brand #3b82f6 is not a site.css primitive and is 3.98:1 on slate-800. */
+    --bg: var(--pr-slate-900);
+    --surface: var(--pr-slate-800);
+    --surface-elevated: var(--pr-slate-800);
+    --text: var(--pr-slate-50);
+    --text-secondary: var(--pr-slate-300);
+    --muted: var(--pr-slate-400);
+    --border: var(--pr-slate-400);
+    --border-strong: var(--pr-slate-400);
+    --accent: var(--pr-blue-600);
+    --accent-hover: var(--pr-blue-700);
+    --accent-soft: var(--overlay-accent-strong);
+    --accent-muted: var(--pr-blue-400);
+    --link: var(--pr-blue-400);
+    --link-hover: var(--pr-blue-100);
+    --sidebar-bg: var(--pr-slate-900);
+    --sidebar-text: var(--pr-slate-300);
+    --sidebar-text-active: var(--pr-white);
+    --sidebar-accent: var(--pr-blue-400);
+    --sidebar-label: var(--pr-blue-400);
+    --on-inverse: var(--pr-white);
+    --on-inverse-muted: var(--pr-slate-200);
+    --code-bg: var(--pr-slate-900);
+    --code-border: var(--pr-slate-400);
+    --code-block-bg: var(--pr-slate-900);
+    --code-block-fg: var(--pr-slate-200);
+    --code-inline-fg: var(--pr-blue-400);
+    --focus-ring: var(--pr-blue-400);
+    --header-border: var(--pr-slate-400);
+    --hero-gradient-start: var(--pr-slate-900);
+    --hero-gradient-mid: var(--pr-slate-800);
+    --hero-gradient-end: var(--pr-slate-800);
+    --mark-bg: var(--pr-blue-600);
+    --mark-fg: var(--pr-white);
+    --selection-bg: var(--pr-blue-700);
+    --selection-fg: var(--pr-slate-50);
   }
 }
 
 @media (prefers-contrast: more) {
   :root {
-    --on-surface-variant: var(--on-surface);
-    --outline-variant: var(--outline);
-    --border-width: var(--border-strong);
-    --focus-width: var(--rule-width);
-    --focus-ring: var(--on-surface);
+    --muted: var(--text);
+    --text-secondary: var(--text);
+    --sidebar-text: var(--sidebar-text-active);
+    --border: var(--text);
+    --border-strong: var(--text);
+    --header-border: var(--sidebar-text-active);
+    --focus-width: 4px;
   }
 }
 
@@ -121,22 +204,30 @@
   :root {
     color-scheme: light;
 
-    --surface: #ffffff;
-    --surface-container: #ffffff;
-    --surface-container-high: #f4f1ea;
-    --on-surface: #000000;
-    --on-surface-variant: #1c1b16;
-    --primary: #0f5132;
-    --on-primary: #ffffff;
-    --primary-hover: #083526;
-    --primary-container: #ffffff;
-    --on-primary-container: #062818;
-    --outline: #1c1b16;
-    --outline-variant: #1c1b16;
-    --inverse-surface: #000000;
-    --inverse-on-surface: #ffffff;
-    --link: #0f5132;
-    --focus-ring: #000000;
-    --focus-gap: #ffffff;
+    --bg: var(--pr-white);
+    --surface: var(--pr-white);
+    --surface-elevated: var(--pr-white);
+    --text: var(--pr-slate-900);
+    --text-secondary: var(--pr-slate-900);
+    --muted: var(--pr-slate-900);
+    --border: var(--pr-slate-900);
+    --border-strong: var(--pr-slate-900);
+    --accent: var(--pr-blue-700);
+    --accent-hover: var(--pr-blue-700);
+    --accent-soft: var(--pr-white);
+    --accent-muted: var(--pr-slate-900);
+    --link: var(--pr-blue-700);
+    --link-hover: var(--pr-blue-700);
+    --code-bg: var(--pr-white);
+    --code-border: var(--pr-slate-900);
+    --code-block-bg: var(--pr-white);
+    --code-block-fg: var(--pr-slate-900);
+    --code-inline-fg: var(--pr-slate-900);
+    --focus-ring: var(--pr-slate-900);
+    --hero-gradient-start: var(--pr-white);
+    --hero-gradient-mid: var(--pr-white);
+    --hero-gradient-end: var(--pr-white);
+    --selection-bg: var(--pr-white);
+    --selection-fg: var(--pr-slate-900);
   }
 }
