@@ -24,16 +24,24 @@ Use these official entry points to look up exact rules. Checking an entry point 
 
 ## Verification record
 
-For each consequential source you rely on, record the URL, the version if stated, the date accessed, and the reviewed scope: entry point checked, specific guidance reviewed, or unverified. Write "not stated" for anything missing, and never infer freshness from an access date. If retrieval fails, continue with a reviewable proposal and name the uncertainty.
+For each consequential source you rely on, record these separately:
+
+- exact source URL
+- publication date, or "not stated"
+- last-update date, or "not stated"
+- access date
+- available version, or "not stated"
+- reviewed scope: entry point, a named pattern or section, or not reviewed
+- verification status for that scope, or "not verified"
+
+Do not infer freshness from an access date. Do not treat a landing-page or entry-point check as verification of the patterns, components, or release notes it links to. If retrieval fails, continue with a reviewable proposal and name the uncertainty.
 
 ## Provenance of the 2026-10-05 snapshot
 
-Primary pages read: the GOV.UK Design System site and its what's-new page, the Carbon site, the W3C WCAG 3 draft and news page, the Apple Liquid Glass documentation page, and the Agent Skills specification.
+The working notes are in `references/visual-systems.md`. This review accessed sources on 2026-10-05 and does not repeat claims that were not checked.
 
-Secondary reports used, to be confirmed against the publisher: a news report on the Material 3 Expressive announcement, a community note on Compose Expressive API availability, and third-party summaries of the version 27 Liquid Glass refinements.
-
-Not verified: the exact Liquid Glass changes in the version 27 releases, which GOV.UK Frontend 6.x release is newest today, and how any specific jurisdiction treats WCAG versions in law.
+Checked, at the scope named in the snapshot: the GOV.UK what's-new page, two Carbon MCP pages, the WCAG 2.2 Recommendation status, and the WCAG 3 introduction. Material 3 Expressive details and Apple Liquid Glass version details were not verified and were removed from the snapshot. How any specific jurisdiction treats WCAG versions in law was not verified.
 
 ## Evals
 
-`evals/evals.json` ships test prompts. Their presence is not evidence that they have run. Report actual run scope and results separately, and do not imply a comparison or user-study outcome.
+`evals/evals.json` ships test prompts. The performing agent receives only each case's `prompt`. `expected_output` and `expectations` are for the grader. Case 10 is an automatic-trigger test: do not name or invoke this method in that prompt. Presence of the file is not evidence that the cases have run. Report actual run scope and results separately, and do not imply a comparison or user-study outcome.

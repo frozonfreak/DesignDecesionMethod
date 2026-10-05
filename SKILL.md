@@ -4,7 +4,7 @@ description: >-
   Decide and record design choices before building any UI. Use whenever a task involves designing, reviewing, or implementing screens, flows, forms, navigation, dashboards, landing pages, wireframes, mockups, prototypes, or UI copy for web, Android, iOS, or cross-platform products (operational, editorial, exploratory, commerce, creative, collaborative, or AI-enabled), even if the user never mentions design methods. Routes work across OOUX/ORCA object mapping, GOV.UK, Carbon, Material 3, platform guidance such as Apple's HIG, and the project's own guidelines; requires an object map and decision record before layout when relationships shape structure; checks accessibility against WCAG 2.2 AA. Not for standalone logo, icon, or social-image generation, or for inventing a new visual system.
 compatibility: Any agent that supports the Agent Skills format (SKILL.md). No network access or special tools required; writing files is optional and has an inline fallback.
 metadata:
-  version: "2.2.0"
+  version: "2.2.1"
   updated: "2026-10-05"
   formerly: "verso"
 ---
@@ -33,32 +33,34 @@ Use the first row that applies:
 
 | Situation | Decision |
 |---|---|
+| The brief explicitly requests a different direction | Honour that request. Identify accessibility and platform constraints and the migration scope, and record consequential conflicts. |
 | A suitable existing system, brand, or platform direction | Retain and extend it. Verify its actual tokens, components, and supported versions. |
-| The brief explicitly requests a different direction | Assess the change against constraints. Record migration scope and consequential conflicts. |
 | Native Apple interface (iOS, iPadOS, macOS, visionOS), no existing system | Apple HIG and system controls for the supported OS and SDK. Do not mandate the newest material or an OS upgrade. |
 | Android or Compose, no existing system | Material 3. Use Expressive only where the brief or project calls for it and the installed library supports it. |
 | UK government service | GOV.UK Design System at the installed Frontend version. |
 | A documented bespoke or editorial brand direction | Define coherent, reusable, role-based visual decisions. Keep familiar, accessible behaviour. |
 | Other web or cross-platform work with no system | Material 3 as the fallback, with implementation support checked. |
 
-Borrow GOV.UK and Carbon patterns when they solve the task. Workload alone does not require adopting their visual identity, and GOV.UK branding is for government services only. Do not mix competing visual identities, or generations of one system, on one surface. A deliberate adapter or staged migration needs explicit consistency and behaviour checks.
+Choosing a visual system is separate from borrowing an interaction pattern. Borrow GOV.UK and Carbon patterns when they solve the task. Workload alone does not require adopting their visual identity, and GOV.UK branding is for government services only. Do not mix competing visual identities, or generations of one system, on one surface. A deliberate adapter or staged migration needs explicit consistency and behaviour checks.
 
 Read `references/visual-systems.md` for current versions and adoption checks.
 
-**Presentation direction (new visual surfaces only).** Write one short paragraph, about five lines: the experience purpose, what must be understood first, composition and density, imagery or motion if any, and device adaptation. Skip it when you are inheriting an existing surface unchanged, and omit dimensions that do not apply. Reading or exploration need not end in a transaction or a single primary button.
+**Presentation direction.** When a change affects purpose, hierarchy, composition, density, or responsive behaviour, write a compact direction statement: the experience purpose, what must be understood first, composition and density, imagery or motion if any, and device adaptation. This includes an existing themed screen when those decisions change. Keep it brief and proportional to the change, and omit dimensions that do not apply. Skip it when the change does not affect those decisions. Reading or exploration need not end in a transaction or a single primary button.
 
 ### 3. Object map (gate before layout)
 
-Required before wireframes, mockups, or code when any of these is true:
+Produce or reuse a verified map before wireframes, mockups, or code when meaningful relationships affect the navigation, routes, or screen structure being designed or changed. Existing product complexity alone does not require a map for an unrelated copy or styling fix.
 
-- two or more object types that people move between;
-- an object reachable from more than one place;
+Treat these as structural signals, scoped to the requested change:
+
+- two or more object types that people move between in that change;
+- an object reachable from more than one place in the structure being designed or changed;
 - top-level navigation that is new or changing;
-- a form or screen that creates or edits a record relating to objects elsewhere in the product. One object on screen does not by itself justify skipping.
+- a form or screen that creates or edits a record relating to objects elsewhere in the product, when that relationship affects the structure being changed.
 
-Skip it when none apply and the change is a copy-only fix, a purely visual restyle, or a component-level fix with unchanged structure. If unsure, produce a three-row map rather than skip.
+One object on screen does not by itself justify skipping when one of these signals applies to the change. Skip the map when none of them apply, including a copy-only fix, a purely visual restyle, or a component-level fix with unchanged structure.
 
-Map user-recognisable objects, relationships, decision-relevant attributes, and actions, from the user's mental model rather than the database schema. Derive screens and routes from the map instead of backfilling it after layout. Reuse a verified existing map and record what changed. This is a lightweight adaptation, not a claim of completing the full ORCA method.
+Map user-recognisable objects, relationships, decision-relevant attributes, and actions, from the user's mental model rather than the database schema. Use the smallest map that is sufficient for the change. Derive screens and routes from the map instead of backfilling it after layout. Reuse a verified existing map and record what changed. This is a lightweight adaptation, not a claim of completing the full ORCA method.
 
 Record `Map: produced / reused / skipped — <reason>` in one line. Use `assets/design-record-template.md`. Save it as `docs/design/<slug>.md` when the project's conventions and scope support a saved record, and otherwise deliver a compact inline record. The template is a scaffold, not mandatory overhead.
 

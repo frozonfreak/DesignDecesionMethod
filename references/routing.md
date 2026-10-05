@@ -16,11 +16,11 @@ These are recommendations from this skill, not exclusive capabilities of the ups
 
 ## Context changes the choice
 
-- **Portfolio or marketing site.** Clarify the visitor's questions and routes with content-first guidance. Map objects only if projects or services relate to each other. Do not invent an operational dashboard.
-- **Routine data entry** (daily logs, harvest records, check-ins). Connect the entered record to the objects it belongs to using the object map. Prefer one short form if it is efficient. Borrow GOV.UK wording and recovery, and Carbon form states.
-- **Operations or campaign tooling.** Map the product, campaign, and channel relationships. Use Carbon-style data patterns. Use guided content for first-time connection and for review before anything is sent.
-- **Unfamiliar application.** Use a clear sequence and a confirmation step. Establish object relationships only as far as navigation needs them. Avoid premature bulk controls.
-- **Native mobile screen.** Use the platform's guidance for navigation and controls. Use the object map only to decide what each tab or destination represents.
+- **Portfolio or marketing site.** Clarify the visitor's questions and routes with content-first guidance. Produce a map only when relationships among projects or services affect the navigation or page structure being designed. Do not invent an operational dashboard, and do not assume the map must be skipped.
+- **Routine data entry** (daily logs, harvest records, check-ins) when that flow's structure is being designed or changed. Connect the entered record to the objects it belongs to with the smallest sufficient map. Prefer one short form if it is efficient. Borrow GOV.UK wording and recovery, and Carbon form states, without adopting their visual identity.
+- **Operations or campaign tooling** when those relationships affect the structure being designed or changed. Map the product, campaign, and channel relationships that the change depends on. Use Carbon-style data patterns without switching visual identity unless the brief asks for that. Use guided content for first-time connection and for review before anything is sent.
+- **Unfamiliar application.** Use a clear sequence and a confirmation step. Establish object relationships only as far as the navigation being designed needs them. Avoid premature bulk controls.
+- **Native mobile screen.** Use the platform's guidance for navigation and controls. Use a map only to decide what each tab or destination being designed represents.
 
 ## Reuse a pattern when the task and context match, not because its screenshot looks good
 

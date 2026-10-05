@@ -14,7 +14,7 @@ Skill: design-decision-method <version> · Date: <YYYY-MM-DD> · Visual system: 
 
 ## 2. Object map
 
-Apply the gate in `SKILL.md` (two or more related object types, an object reachable from several places, new top-level navigation, or a record that relates to objects elsewhere). One screen or one object does not by itself justify skipping. Record `Map: produced / reused / skipped — <reason>`.
+Apply the gate in `SKILL.md`. Produce or reuse a verified map when meaningful relationships affect the navigation, routes, or screen structure being designed or changed. Treat the four conditions there as structural signals scoped to that change. Existing product complexity alone does not require a map for an unrelated copy or styling fix. Use the smallest sufficient map. Record `Map: produced / reused / skipped — <reason>`.
 
 | Object | Relationships | Decision-relevant attributes | Actions |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Adaptation lines (only where departing from a cited source rule):
 
 - Source rule / this design instead / why:
 
-Presentation direction (new visual surfaces only, about five lines: purpose, hierarchy, composition and density, imagery or motion, device adaptation):
+Presentation direction (when purpose, hierarchy, composition, density, or responsive behaviour changes, including on an existing themed screen; brief and proportional; skip when those decisions are unchanged):
 
 Visual roles and tokens, or exact verified inherited tokens/components. New focus, errors and disabled/read-only behaviour still need checks:
 

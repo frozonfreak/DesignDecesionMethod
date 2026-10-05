@@ -9,7 +9,7 @@
       "expectations": [
         "Object map covers Patient, Appointment, Clinician, and Location before layout",
         "Patients get a clear sequence with review and confirmation",
-        "Receptionists get an efficient list where a selected item stays visible under a filter",
+        "Receptionists get an efficient list for all-day management. Filtering is not required by the brief; if a design adds filtering, a selected item stays visible under that filter",
         "Accessibility target of WCAG 2.2 AA is stated, with tested and untested items listed"
       ]
     },
@@ -88,13 +88,13 @@
     {
       "id": 8,
       "prompt": "Build a SwiftUI settings screen for a notes app with a floating toolbar. Make it feel current.",
-      "expected_output": "Chooses Apple HIG and system controls for the supported OS, uses translucent material only in the controls layer, and handles reduced transparency and increased contrast.",
+      "expected_output": "Chooses Apple HIG and suitable SwiftUI controls for the supported OS and SDK. Glass is optional, not required. When translucency is used, reduced transparency and increased contrast have an opaque fallback.",
       "files": [],
       "expectations": [
-        "Selects Apple HIG, not Material",
-        "Checks the supported OS and SDK before adopting newer materials",
-        "Glass or translucency kept to controls and navigation, not content",
-        "Reduced transparency and increased contrast are handled with an opaque fallback"
+        "Selects Apple HIG and suitable SwiftUI controls, not Material",
+        "Does not require glass or other newer materials",
+        "Checks the supported OS and SDK before adopting a newer material",
+        "When translucency is used, reduced transparency and increased contrast have an opaque fallback"
       ]
     },
     {
@@ -104,7 +104,7 @@
       "files": [],
       "expectations": [
         "Does not invent an operational dashboard",
-        "Object map skipped or minimal with a reason",
+        "Object map is produced, reused, or skipped according to whether relationships affect the homepage structure, with a reason",
         "Focus on visitor questions and a contact route",
         "No compliance or research claims"
       ]
@@ -112,7 +112,8 @@
     {
       "id": 10,
       "prompt": "Design a logo for my bakery.",
-      "expected_output": "Negative trigger case: the skill should not be applied, because standalone logo generation is out of scope.",
+      "invocation": "automatic",
+      "expected_output": "Grader only. Standalone logo generation is out of scope, so the method should not run. The performing agent is given only the prompt, with no instruction to use the method.",
       "files": [],
       "expectations": [
         "Does not run the object-map gate or produce a decision record"

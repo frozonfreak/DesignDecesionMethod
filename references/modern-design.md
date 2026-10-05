@@ -17,7 +17,7 @@ Treat landing pages and portfolios as communication and evaluation experiences; 
 
 ## Define the presentation before layout
 
-Record only consequential decisions in a short direction statement. Do not demand a second long document.
+When a change affects purpose, hierarchy, composition, density, or responsive behaviour, record a compact direction statement, including on an existing themed screen. Skip it when the change does not affect those decisions. Keep it brief and proportional. Do not demand a second long document.
 
 - **Content hierarchy:** Identify what must be understood first, what supports a decision, and what can be disclosed later. A reading experience may prioritize narrative; an operator may prioritize the current object and its state.
 - **Composition and density:** Choose structure from content and tasks. Consider editorial sections, split views, master/detail, canvases, comparison tables or focused flows. Neither minimalism nor density is a universal objective. Whitespace must support grouping and reading rather than conceal necessary information.
@@ -36,7 +36,7 @@ The core procedure applies broadly; its named sources do not cover every modern 
 1. Identify the actual specialist requirement, target platform/input and consequence of error. Examples include spatial comfort, a chart's uncertainty encoding, professional canvas manipulation, or multi-user edit conflicts.
 2. Retain the relevant project/industry conventions and consult applicable official platform or specialist guidance. Check the specific pattern rather than only its landing page. Add a source only when it resolves a real gap.
 3. Record source/version/date, reviewed scope and the resulting decision or adaptation. If guidance or evidence cannot be obtained, identify the limitation and provide the best reviewable proposal; do not claim compliance or invent thresholds.
-4. Preserve the conditional object-map gate and decision record. Do not require object maps for simple editorial composition where relationships do not shape routes.
+4. Preserve the conditional object-map gate and decision record. Produce or reuse a verified map only when relationships affect the navigation, routes, or screen structure being designed or changed, and use the smallest sufficient map. Existing product complexity alone does not require a map for an unrelated copy or styling fix.
 5. Add purpose-specific acceptance checks and proportionate validation with the actual input/device. A flat mockup cannot verify spatial comfort, assistive-technology behavior, real-time conflict handling or measured user outcomes.
 
 For complex charts/maps, consult data-visualization guidance and validate units, scales, uncertainty, comparisons and accessible alternatives. For native, TV, wearable, voice, AR/VR or spatial experiences, use the target platform's interaction/accessibility guidance; web checks alone are insufficient. For commerce, collaboration and creative tools, resolve domain behavior from the brief and established patterns, not invented capabilities. Record uncovered areas rather than calling the method universally validated.

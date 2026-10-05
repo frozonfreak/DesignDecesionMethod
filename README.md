@@ -4,6 +4,8 @@ An agent skill that makes design decisions explicit before a screen is drawn or 
 
 It does not invent a visual system, rank the sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
+Current release: 2.2.1.
+
 ## Contents
 
 ```
@@ -27,19 +29,17 @@ design-decision-method/
 
 ## Install
 
-The skill follows the open Agent Skills format. Copy the whole folder, keeping the name `design-decision-method`, into your agent's skills directory.
+The skill follows the open Agent Skills format. Copy the whole folder, keeping the name `design-decision-method`, into your agent's skills directory. The `name` in `SKILL.md` must match that directory name. Paths below were checked on 2026-10-05 against the cited docs. They can change, so confirm them again before relying on them.
 
-| Agent | Project directory | Personal directory |
+| Agent | Where to put `design-decision-method/` | Verification |
 |---|---|---|
-| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
-| Codex | `.agents/skills/` | `~/.agents/skills/` |
-| Gemini CLI | `.gemini/skills/` (also reads `.agents/skills/`) | `~/.gemini/skills/` |
-| Cursor | `.cursor/skills/` | `~/.cursor/skills/` |
-| Others | Often `.agents/skills/` | |
+| Claude Code | `.claude/skills/` in the project, or `~/.claude/skills/` for yourself | Checked [Claude Code skills](https://code.claude.com/docs/en/skills.md) |
+| Cursor | `.cursor/skills/` or `.agents/skills/` in the project, or the same two paths under your user home | Checked [Cursor skills](https://cursor.com/docs/skills) |
+| Gemini CLI | `.gemini/skills/` or `.agents/skills/` in the project, or `~/.gemini/skills/` or `~/.agents/skills/` | Checked [Gemini CLI skills](https://geminicli.com/docs/cli/skills.md) |
+| Codex | `.agents/skills/` in the repository, from the working directory up to the repo root | Project path checked on [Codex skills](https://developers.openai.com/codex/skills). Personal directory: not verified |
+| Others | Confirm in that host's own docs | not verified |
 
-These paths come from third-party documentation and change between releases, so confirm them against your agent's own docs.
-
-**Claude.ai.** Upload the `.skill` file, which is this same folder as a zip.
+**Claude.ai.** Not verified against Claude.ai documentation in this release. The `.skill` export is a zip of this same folder for hosts that import a skill archive.
 
 **Agents without skill support.** Paste the body of `SKILL.md` into your rules or instructions file (for example `AGENTS.md`), and keep `references/` and `assets/` in the repository so the paths resolve. A short pointer in persistent memory can remind an agent to load the skill, but it cannot replace the files:
 
@@ -52,17 +52,34 @@ These paths come from third-party documentation and change between releases, so 
 - Copies installed in other hosts do not update when you change one copy, and no update service is configured.
 - When delegating to another agent, give it the same release, the project brief, and the relevant evidence.
 - Any content change needs a new version in `SKILL.md` metadata, the manifest, and the changelog.
+- There is no automated freshness service. Re-check a source when you rely on it, and record what you actually opened.
 
 ## Check it
 
-Validate the format with the reference validator from the Agent Skills project:
+The Agent Skills specification documents this format check, for a folder named `design-decision-method`. It was not run for this release. A narrower host validator must not be used to reject portable fields such as `compatibility` and `metadata`.
 
 ```
 skills-ref validate ./design-decision-method
 ```
 
-`evals/evals.json` holds ten prompts, one of which is a negative-trigger case (a logo request should not use the skill). Run each prompt in a separate context with and without the skill, using the same brief and model, then check the expectations and note failures. This measures process, not usability. The prompts have not been run, so nothing here is benchmarked.
+`evals/evals.json` holds ten prompts. Give the performing agent only the `prompt` field. Do not include `expected_output` or `expectations`; those are grader-only. Run each prompt in a separate context. For a with-method and without-method comparison, use the same brief, model, and tools, and save the outputs. Case 10, "Design a logo for my bakery.", is an automatic-trigger test: do not mention this method in that prompt. This checks whether the method stays unused for a standalone logo. It does not measure usability or time saved.
+
+These cases have not been run for 2.2.1, so nothing here is benchmarked. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
+
+From the repository root, after Python 3 is available:
+
+```
+python scripts/validate_release.py
+python scripts/test_integrity.py
+python scripts/package_release.py
+```
+
+`validate_release.py` checks YAML and JSON structure, version agreement, evaluation ids and fields, local references, manifest coverage, file hashes, and the canonical checksum. `test_integrity.py` repeats that check, then confirms a missing file and an altered file are rejected. `package_release.py` writes `dist/design-decision-method.zip` and `dist/design-decision-method.skill`, each with the enclosing `design-decision-method/` folder. The export contains the skill files listed above. Repository scripts, CI, and ignore rules stay in git and are not part of the skill package. On Windows, `py -3` works in place of `python`.
 
 ## Keeping it current
 
-Design systems change. Re-check the snapshot in `references/visual-systems.md` against the sources in `references/sources.md`, update `metadata.updated`, and regenerate the manifest.
+Design systems change. Re-check the snapshot in `references/visual-systems.md` against the exact source URL, and record the publication date, last-update date, access date, available version, reviewed scope, and verification status. Use "not stated" or "not verified" when that is the honest value. Update `metadata.updated` and regenerate the manifest. Do not treat a landing-page check as pattern verification.
+
+## License
+
+Licensing remains undecided. No license was supplied with the baseline, and this repository does not choose one. Public availability without a license is not an open-source release.
