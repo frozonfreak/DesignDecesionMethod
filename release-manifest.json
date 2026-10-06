@@ -1,12 +1,12 @@
 {
   "version": "2.2.4",
   "updated": "2026-10-05",
-  "canonical_sha256": "fb8e0c2af124f61d34fed68779721177327382b8efd06c320be85970c683b88a",
+  "canonical_sha256": "8df877ec50c8f433201180c08fbf6e4408e707bbede4b591130aaacaf80edc66",
   "algorithm": "SHA-256 of sorted relative UTF-8 paths, NUL, exact file bytes, NUL; excludes manifest",
   "files": {
     "CHANGELOG.md": "ca80c7021c44e3b685f838693f9d7abd69964f0c5d678fdec0576c3eaafe97fb",
     "LICENSE": "04cc7f554dfcc8d63ec42721dce4c549c092c051a17005ef5708677731ecf682",
-    "README.md": "d4b9e512e4c9e297afcdc756d0f916a6510893c9faad1a87e588101915271e64",
+    "README.md": "e1afc208cc043f9f45808749a814009c44c74fd6710e5c10c778b61765befae6",
     "SKILL.md": "4aaa0fb35dee0daf51e751727db82268f380b331538dc984894d27d30ccfa432",
     "agents/openai.yaml": "39407aabd0d553c81405fa0e27dda00d5b7ce23c3680bfb700531ea15db6f631",
     "assets/design-record-template.md": "5aa86aad324bd1fdfec51b63a0afb54d64b911970924c29572544048484a8b3a",

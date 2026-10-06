@@ -2,6 +2,8 @@
 
 The colour theme in this record was replaced by a later visual restyle. Read [sibling-theme.md](sibling-theme.md) for the current tokens, mark, and contrast notes. The reading layout in this record still applies: 68ch measure, contents after the hero, sticky contents from 64rem, install paths in `pre`/`code`, and one filled action.
 
+The WebHIG comparison described below was replaced by a short companion section after Get started. The section id is still `#webhig`. The wording and table on the page are the current ones.
+
 Skill: design-decision-method 2.2.4 · Date: 2026-10-05 · Visual system: Material 3 roles, hand-authored CSS (no Material library installed) · Project guidelines: Web HIG Quick Reference v1.12.5, archetype content, surface document
 
 ## 1. Context
@@ -37,9 +39,9 @@ Routes derived from the map:
 - `#top` — Method identity, audience, one primary action (Get started → `#start`), and a secondary link (View on GitHub → repository)
 - `#about` — what repeated guesswork the Method addresses, including the unmeasured time savings
 - `#how` — the six Steps, in workflow order
-- `#webhig` — Method compared with WebHIG
 - `#examples` — three Examples
 - `#start` — Install paths, including hosts marked not verified
+- `#webhig` — short companion after Get started: DDM decides what to design and why; WebHIG gives requirements for how a web interface should behave
 - `#docs` — Links to the repository, the procedure, the references, this record, and the license
 
 ## 3. Decisions
