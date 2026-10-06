@@ -428,8 +428,7 @@ p:last-child {
 
 .steps > li > h3,
 .examples > li > h3,
-.hosts > li > h3,
-.boundary-item > h3 {
+.hosts > li > h3 {
   margin-block-start: 0;
 }
 
@@ -440,8 +439,7 @@ p:last-child {
 }
 
 .examples > li,
-.hosts > li,
-.boundary-item {
+.hosts > li {
   padding: 1.25rem;
   background: var(--surface);
   border: var(--border-width) solid var(--border-strong);
@@ -449,36 +447,81 @@ p:last-child {
   box-shadow: var(--shadow-sm);
 }
 
-.boundary {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-m);
-  margin-block: var(--space-l);
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
-.boundary-item dl {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-m);
-  margin: var(--space-s) 0 0;
+.table-scroll {
+  max-inline-size: 100%;
+  overflow-x: auto;
+  background: var(--surface);
+  border: var(--border-width) solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
 }
 
-.boundary-item dl > div,
-.boundary-item dt,
-.boundary-item dd {
-  min-inline-size: 0;
+.table-scroll:focus-visible {
+  outline-offset: var(--focus-offset);
 }
 
-.boundary-item dt {
-  margin-block-end: var(--space-2xs);
-  color: var(--text);
+.companion-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-secondary);
   font-size: var(--type-label);
-  font-weight: var(--weight-heading);
-  line-height: var(--line-heading);
+  line-height: var(--line-body);
 }
 
-.boundary-item dd {
-  margin: 0;
+.companion-table caption {
+  padding: var(--space-s) var(--space-m) var(--space-xs);
+  caption-side: top;
+  color: var(--muted);
+  font-size: var(--type-label);
+  font-weight: var(--weight-emphasis);
+  line-height: var(--line-heading);
+  text-align: start;
+}
+
+.companion-table th,
+.companion-table td {
+  padding: 0.875rem 1rem;
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  border-block-end: var(--border-width) solid var(--border-strong);
+}
+
+.companion-table thead th {
+  color: var(--text);
+  font-weight: var(--weight-heading);
+  background: var(--accent-soft);
+}
+
+.companion-table tbody th {
+  color: var(--text);
+  font-weight: var(--weight-heading);
+}
+
+.companion-table tr:last-child th,
+.companion-table tr:last-child td {
+  border-block-end: 0;
+}
+
+.companion-table :is(th, td):nth-child(1) {
+  width: 24%;
+}
+
+.companion-table :is(th, td):nth-child(2),
+.companion-table :is(th, td):nth-child(3) {
+  width: 38%;
 }
 
 .tag {
@@ -649,11 +692,6 @@ blockquote {
   .section {
     padding-block: var(--space-3xl);
   }
-
-  .boundary-item dl {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--space-l);
-  }
 }
 
 @media (min-width: 64rem) {
@@ -738,7 +776,8 @@ blockquote {
   .fit,
   .hosts > li,
   .examples > li,
-  .boundary-item,
+  .table-scroll,
+  .companion-table thead th,
   pre,
   :not(pre) > code,
   .toc,
@@ -762,6 +801,7 @@ blockquote {
   .check,
   .path-or,
   .release,
+  .companion-table caption,
   .doc-list p,
   .site-footer p,
   .version-badge,

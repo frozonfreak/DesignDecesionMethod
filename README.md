@@ -12,17 +12,7 @@ It addresses repeated UI guesswork: starting from generic layouts, overlooking e
 
 For our work, it carries the same design philosophy across products and agents: simple to understand, informative enough to decide, and efficient to use. It reduces the need to explain that philosophy from scratch each time. Whether it actually saves time still needs measurement. It is useful as a shared procedure, and it is not mandatory for every small edit.
 
-## How is it different from WebHIG?
-
-| Design Decision Method | WebHIG |
-|---|---|
-| Decides how this particular experience should work | Defines applicable interface quality requirements |
-| Chooses information hierarchy, layouts and flows | Governs accessibility, consistency, responsiveness, performance and motion |
-| Records why a choice fits the audience and task | Provides requirements and checks for its implementation |
-
-The two stay separate. This repository does not copy WebHIG requirements into a second standard. When a project has no interface guidelines, the method uses WCAG 2.2 AA for web, or the relevant native guidance, and records any other requirements that were not specified.
-
-These four points are also published as a page from the `docs/` folder: https://frozonfreak.github.io/DesignDecesionMethod/
+The opening points above are also published as a page from the `docs/` folder: https://frozonfreak.github.io/DesignDecesionMethod/
 
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
@@ -67,6 +57,19 @@ The skill follows the open Agent Skills format. Copy the whole folder, keeping t
 **Agents without skill support.** Paste the body of `SKILL.md` into your rules or instructions file (for example `AGENTS.md`), and keep `references/` and `assets/` in the repository so the paths resolve. A short pointer in persistent memory can remind an agent to load the skill, but it cannot replace the files:
 
 > Load the full Design Decision Method and its relevant references before UI/UX work. Establish audience, purpose, frequency, error consequences, and platform; apply the conditional object-map gate before layout; record consequential choices; apply project guidelines or disclose the fallback; validate purpose-specific outcomes and label tested versus untested results. Apply AI checks only to AI-enabled features.
+
+## WebHIG
+
+Design Decision Method (DDM) helps you decide what to design and why. You can use it on its own.
+
+For web projects, [WebHIG](https://frozonfreak.github.io/webhig/) gives detailed requirements for how the resulting interface should behave. This repository does not copy those requirements into a second standard.
+
+DDM can work with other applicable interface guidelines. When a project has no interface guidelines, the method uses WCAG 2.2 AA for web, or the relevant native guidance, and records any other requirements that were not specified.
+
+| | What it helps you do | Example |
+|---|---|---|
+| WebHIG | Build interfaces that behave clearly, consistently and accessibly | Make errors understandable and preserve entered information when saving fails |
+| Design Decision Method (DDM) | Choose an interface that fits the people and task | Decide whether a task needs one form or a step-by-step flow |
 
 ## Release and integrity
 
