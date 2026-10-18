@@ -16,7 +16,7 @@ The opening points above are also published as a page from the `docs/` folder: h
 
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
-Current release: 2.2.4.
+Current release: 2.2.5.
 
 ## Contents
 
@@ -90,7 +90,7 @@ skills-ref validate ./design-decision-method
 
 `evals/evals.json` holds ten prompts. Give the performing agent only the `prompt` field. Do not include `expected_output` or `expectations`; those are grader-only. Run each prompt in a separate context. For a with-method and without-method comparison, use the same brief, model, and tools, and save the outputs. Case 10, "Design a logo for my bakery.", is an automatic-trigger test: do not mention this method in that prompt. This checks whether the method stays unused for a standalone logo. It does not measure usability or time saved.
 
-These cases have not been run for 2.2.1, so nothing here is benchmarked. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
+The ten cases have not been run for 2.2.5; no behavioural evaluation results or with-method/without-method comparison are reported. Running those existing cases in separate contexts and saving outputs is the next evaluation priority before expanding the method. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
 
 From the repository root, after Python 3 is available:
 

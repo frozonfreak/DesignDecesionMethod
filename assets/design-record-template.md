@@ -37,6 +37,10 @@ Presentation direction (when purpose, hierarchy, composition, density, or respon
 
 Visual roles and tokens, or exact verified inherited tokens/components. New focus, errors and disabled/read-only behaviour still need checks:
 
+When adopting a component or pattern: exact source/library/version, maturity (upstream status or "not stated"), adoption reason, and any fallback or further validation needed:
+
+When text limits apply: counting unit and locale, displayed limit and backend rule, supported languages/browser fallback, and boundary-test status:
+
 ## 4. Acceptance criteria
 
 | Task, audience, device | Expected outcome | Check or metric | Target (proposed or evidence-based) | Method | Result (or "not tested") |

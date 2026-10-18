@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.5 — 2026-10-18
+
+Reference maintenance; the six-step workflow, conditional object-map gate, pattern/identity separation, evidence levels, and WCAG 2.2 AA default are unchanged.
+
+- **Sources.** Reviewed the 6–18 October window: GOV.UK Frontend 6.6.0, Carbon 11.118.0, and Compose Material 3 1.5.0-beta01, with 1.4.0 stable recorded separately. Carbon v12 entries remain upcoming; Android availability does not establish web support. Apple's 13 October Widgets and Live Activities announcement routes those surfaces to a specialist lookup; detailed guidance is not verified here.
+- **Adoption.** Record component maturity when adopting a pattern. Where text limits apply, check counting semantics, backend validation, supported languages, and browser fallbacks. GOV.UK lifecycle guidance predates this review window.
+- **Agent review.** Added a conditional post-task review check for consequential agent actions. This is a method-authored adaptation informed by the September Trace2Flow abstract, not a universal graph requirement or evidence that DDM improves outcomes.
+- **Release consistency.** Updated the README, skill metadata, manifest, and exports together. Preserves the 2.2.4 MIT license and the updated WebHIG explanation from main.
+- **Evaluation.** Corrected the stale 2.2.1 statement. The existing ten behavioural cases remain unrun for 2.2.5; package and integrity checks are separate evidence.
+
 ## 2.2.4 — 2026-10-05
 
 Licenses the repository under the MIT License. The procedure is unchanged.

@@ -2,7 +2,7 @@
 
 Choose a system for the supported platform, brand, and requirements. The selection rules live in `SKILL.md`. This file holds current-state lookups and adoption checks.
 
-## Currency snapshot (accessed 2026-10-05)
+## Currency snapshot (reviewed 2026-10-18; individual access dates below)
 
 These are dated lookups, not permanent defaults. Before relying on one, check the project's installed version and the exact source below. Record publication date, last-update date, and access date separately. Write "not stated" when the page does not give a field, and "not verified" when that source was not checked. A landing page or what's-new entry does not verify the patterns, components, or release notes it links to.
 
@@ -10,36 +10,38 @@ These are dated lookups, not permanent defaults. Before relying on one, check th
 
 ### GOV.UK Frontend
 
-- Exact URL: https://design-system.service.gov.uk/community/whats-new/
-- Publication date: not stated for the page. The February 2026 section states that v6.0.0 updated colours to the web palette in the GOV.UK brand guidelines.
-- Last-update date: the newest section on the page is August 2026. A page-level modified timestamp was not stated.
-- Access date: 2026-10-05
-- Available version: v6.5.0 is the newest version stated on that page (August 2026). v6.1.0 (March 2026) is an earlier 6.x release, not the newest version stated there.
-- Reviewed scope: the what's-new entry point only.
-- Verification status: entry point checked. Individual release notes, component patterns, and the GitHub release list were not verified.
-- Build implication: read the release notes for the installed version before upgrading. Only government services use the GOV.UK look.
+- Exact URL: https://github.com/alphagov/govuk-frontend/releases/tag/v6.6.0
+- Publication date: 2026-10-15
+- Last-update date: not stated separately for the release notes
+- Access date: 2026-10-18
+- Available version: 6.6.0, released (not a prerelease)
+- Reviewed scope: release notes, including the character-count change and backend-limit caution.
+- Verification status: release notes checked; no component runtime or upgrade tested.
+- Build implication: optional `countType` uses `Intl.Segmenter` for user-perceived characters or word boundaries. Check backend counting before enabling it and verify the unsupported-browser fallback.
+- Related sources: https://design-system.service.gov.uk/community/whats-new/ (August 2026 section); https://design-system.service.gov.uk/community/component-lifecycle-statuses/; https://design-system.service.gov.uk/components/language-navigation/
+- Related verification: accessed 2026-10-18; lifecycle definitions and Language navigation's Trial status checked. The August entry predates the review window; publication and last-update dates for the detailed pages are not stated. Implementation and user testing were not performed.
 
 ### Carbon
 
-- Exact URL: https://www.carbondesignsystem.com/getting-started/carbon-mcp/prompts
-- Publication date: not stated
-- Last-update date: not stated
-- Access date: 2026-10-05
-- Available version: that page names Carbon React v11 and Carbon Web Components v11. Whether a newer major exists was not verified.
-- Reviewed scope: the prompts page, plus the MCP onboarding page at https://www.carbondesignsystem.com/getting-started/carbon-mcp/onboarding-and-setup
-- Verification status: those two pages checked. They document a Carbon MCP server. Component patterns, a v12 roadmap, and AI-component availability were not verified. Do not treat the v11 migration guide as proof of the current major.
-- Build implication: match the installed major version. Do not adopt an unreleased major from an unverified roadmap.
+- Exact URL: https://github.com/carbon-design-system/carbon/releases/tag/v11.118.0
+- Publication date: 2026-10-07
+- Last-update date: not stated separately for the release notes
+- Access date: 2026-10-18
+- Available version: repository release 11.118.0; its React package is `@carbon/react` 1.118.0. Do not use the repository tag as an npm package version.
+- Reviewed scope: release notes, especially React new features, fixes, and the separate upcoming-v12 section.
+- Verification status: release notes checked; individual components and runtime behaviour not tested. This is a dated release check, not proof about every Carbon package's current major.
+- Build implication: empty states and notification status icon descriptions appear among current features/fixes. Entries labelled "Upcoming in v12" do not establish released support. Match the project's actual package and version.
 
-### Material 3 Expressive
+### Material 3 / Compose implementation
 
-- Exact URL: https://m3.material.io/
-- Publication date: not stated
-- Last-update date: not stated
-- Access date: 2026-10-05
-- Available version: not verified
-- Reviewed scope: not reviewed
-- Verification status: not verified. Earlier claims about a May 2025 announcement, Android 16, Wear OS 6, and Compose API availability were not re-checked against the official source and are not retained.
-- Build implication: opt in only where the brief or project calls for it and the installed library supports it. Keep a baseline Material 3 fallback. Confirm in the official docs before relying on a specific Expressive API.
+- Exact URL: https://developer.android.com/jetpack/androidx/releases/compose-material3
+- Publication date: 2026-10-07 for 1.5.0-beta01
+- Last-update date: release table states 2026-10-07; page-level modification date not verified
+- Access date: 2026-10-18
+- Available version: stable 1.4.0; prerelease 1.5.0-beta01, recorded separately from stable
+- Reviewed scope: release table and 1.5.0-beta01 notes covering app-bar/slider compatibility and shape/carousel API changes.
+- Verification status: Android implementation notes checked; full Material design guidance, individual Expressive API status, and web-library support not verified.
+- Build implication: check the exact artifact and API before adoption. An Android beta does not establish equivalent web support or justify a project upgrade. Prefer supported stable implementations; opt into Expressive only when justified and supported.
 
 ### Apple Liquid Glass
 
@@ -51,6 +53,17 @@ These are dated lookups, not permanent defaults. Before relying on one, check th
 - Reviewed scope: not reviewed
 - Verification status: not verified. Earlier claims about iOS 26, a version 27 refinement, and where the material sits were not re-checked against Apple's documentation and are not retained.
 - Build implication: do not mandate the newest material or an OS upgrade. If a project already uses translucency, check legibility, reduced transparency, increased contrast, and an opaque fallback for the supported OS and SDK.
+
+### Apple Widgets and Live Activities
+
+- Exact URL: https://developer.apple.com/design/whats-new/
+- Publication date: 2026-10-13 for the two announcements
+- Last-update date: not stated for the page
+- Access date: 2026-10-18
+- Available version: not stated; these are guidance announcements, not SDK releases
+- Reviewed scope: announcement entries for Widgets and Live Activities only
+- Verification status: announcements checked; linked specialist guidance and specifications not reviewed
+- Build implication: for those surfaces, look up the exact supported platforms, specifications, and limited-width layouts before designing. The announcement alone does not verify the requirements.
 
 ### WCAG
 
@@ -82,6 +95,10 @@ A deployment target alone does not establish adoption of a visual system. Record
 Separate structural patterns from visual identity. Carbon filtering can be adapted into a Material or bespoke interface without Carbon branding. Native platform conventions can coexist with brand typography and imagery when behaviour and accessibility stay coherent. A documented bespoke system is valid, and utility CSS alone does not define one.
 
 ## Check before adopting
+
+When adopting a component or pattern, record its exact source/library/version and upstream maturity: stable, trial, experimental, deprecated, or the source's own status. Use "not stated" or "not verified" rather than inferring stability from availability. Record why a non-stable option fits and what fallback or further validation it needs. GOV.UK currently distinguishes Trial and Stable; the broader labels here are a cross-system check, not GOV.UK's taxonomy. A stable library release does not establish every component's maturity.
+
+When a form has character or word limits, verify that the displayed counter, accepted input, backend validation, and error message agree on the counting unit and locale. Check supported languages (for example Tamil and English), combining marks, emoji, limit boundaries, and browser/no-JavaScript fallbacks where relevant. If the backend is unavailable, mark consistency unverified and propose boundary tests; do not claim that visual inspection proves it. This check applies to text limits, not every UI change.
 
 - **Material 3.** Specific guidance, installed implementation support, tokens, and behaviour. Expressive options only where justified.
 - **Apple HIG.** Supported OS and SDK, the existing design, whether the material suits the content, and accessibility preferences.
