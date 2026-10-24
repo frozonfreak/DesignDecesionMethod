@@ -1,0 +1,67 @@
+{
+  "skill_name": "design-decision-method",
+  "source": "ULPG v0.4.0 fictional scenarios",
+  "status": "unrun",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Search-first travel marketplace: New visitors search by destination and dates; returning visitors repeat a known search. Mobile use matters. Booking costs and conditions must precede commitment. Propose a page structure and consequential decisions within this brief. State assumptions and what could actually be verified from the supplied information.",
+      "files": [],
+      "expected_output": "A proportional page proposal grounded in the supplied brief, with truthful evidence limits.",
+      "expectations": [
+        "Justifies task-first entry without requiring a marketing hero.",
+        "Preserves mobile search, returning search routes, costs and conditions; no invented account or tracking.",
+        "Applies the DDM map gate only where changed relationships affect structure.",
+        "Reports proposed/heuristic evidence without claiming executed runtime checks or user outcomes."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Luxury product launch: A known physical product leads the page; new visitors still need identification. Use approved brand imagery and concise copy. Provide specifications, price and availability before purchase. Propose a page structure and consequential decisions within this brief. State assumptions and what could actually be verified from the supplied information.",
+      "files": [],
+      "expected_output": "A proportional page proposal grounded in the supplied brief, with truthful evidence limits.",
+      "expectations": [
+        "Permits product-first entry with identification for unfamiliar visitors.",
+        "Retains approved identity, accurate imagery, specifications, price, availability and ownership of changing claims.",
+        "Applies the DDM map gate only where changed relationships affect structure.",
+        "Reports proposed/heuristic evidence without claiming executed runtime checks or user outcomes."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Complex enterprise SaaS: Several product families serve different tasks. New evaluators need capability/limitations evidence; returning users need existing account access. Sales and self-service routes both exist. An optional AI demo uses sample data. Propose a page structure and consequential decisions within this brief. State assumptions and what could actually be verified from the supplied information.",
+      "files": [],
+      "expected_output": "A proportional page proposal grounded in the supplied brief, with truthful evidence limits.",
+      "expectations": [
+        "Justifies family/audience discovery and supported sales, self-service and account routes.",
+        "Labels simulated AI/sample behavior, never claims real execution and supplies meaningful fallback and relevant states.",
+        "Applies the DDM map gate only where changed relationships affect structure.",
+        "Reports proposed/heuristic evidence without claiming executed runtime checks or user outcomes."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Editorial nonprofit: Visitors arrive through a featured story or deep link, then read and explore related topics. Returning readers seek known articles. There is no purchase goal. Sources and dates matter; historical material is retained. Propose a page structure and consequential decisions within this brief. State assumptions and what could actually be verified from the supplied information.",
+      "files": [],
+      "expected_output": "A proportional page proposal grounded in the supplied brief, with truthful evidence limits.",
+      "expectations": [
+        "Permits editorial-first entry, deep links and related topics without a transactional CTA.",
+        "Keeps sources/dates, known-article discovery, accessible reading and historical-versus-current claim distinctions.",
+        "Applies the DDM map gate only where changed relationships affect structure.",
+        "Reports proposed/heuristic evidence without claiming executed runtime checks or user outcomes."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Small local ecommerce store: A modest product range needs accurate prices, stock, delivery area, fulfillment conditions and straightforward purchase paths. The owner can maintain direct category links; no demo is needed. Propose a page structure and consequential decisions within this brief. State assumptions and what could actually be verified from the supplied information.",
+      "files": [],
+      "expected_output": "A proportional page proposal grounded in the supplied brief, with truthful evidence limits.",
+      "expectations": [
+        "Uses proportionate direct discovery without requiring search, large menus or a demo.",
+        "Retains prices, stock, delivery, returns and purchase routes; identifies freshness ownership and triggers.",
+        "Applies the DDM map gate only where changed relationships affect structure.",
+        "Reports proposed/heuristic evidence without claiming executed runtime checks or user outcomes."
+      ]
+    }
+  ]
+}

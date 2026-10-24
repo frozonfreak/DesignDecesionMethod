@@ -4,7 +4,7 @@ description: >-
   Decide and record design choices before building any UI. Use whenever a task involves designing, reviewing, or implementing screens, flows, forms, navigation, dashboards, landing pages, wireframes, mockups, prototypes, or UI copy for web, Android, iOS, or cross-platform products (operational, editorial, exploratory, commerce, creative, collaborative, or AI-enabled), even if the user never mentions design methods. Routes work across OOUX/ORCA object mapping, GOV.UK, Carbon, Material 3, platform guidance such as Apple's HIG, and the project's own guidelines; requires an object map and decision record before layout when relationships shape structure; checks accessibility against WCAG 2.2 AA. Not for standalone logo, icon, or social-image generation, or for inventing a new visual system.
 compatibility: Any agent that supports the Agent Skills format (SKILL.md). No network access or special tools required; writing files is optional and has an inline fallback.
 metadata:
-  version: "2.3.0"
+  version: "2.4.0"
   updated: "2026-10-24"
   formerly: "verso"
 ---
@@ -26,6 +26,8 @@ Read the brief, the existing product (code, tokens, components, screenshots) and
 Identify the experience purpose: operational work, reading and storytelling, exploration, evaluation and purchase, creation and editing, or participation and collaboration. Mixed-purpose products can use a different approach per flow. Read `references/modern-design.md` for purpose-based presentation and specialist requirements.
 
 Separate what you know from what you assume. Do not invent business rules, authorisation requirements, or product capabilities, and label optional additions. Ask the user only about gaps that would materially change the design, and keep working on everything else. If you cannot ask, list the assumptions in the deliverable. Do not import one domain's conventions into another (for example, an operations dashboard for a portfolio site).
+
+For landing pages and related entry pages, conditionally load `modules/landing-pages/GUIDE.md` and its applicable topic files. Reuse established decisions for narrow edits; do not load the module for unrelated UI work. The module retains ULPG's normative levels and landing-page-specific authority while this core owns the method and object-map gate.
 
 ### 2. Choose the visual system
 
@@ -114,6 +116,7 @@ Choose the least complex solution that is adequate.
 | When | Read |
 |---|---|
 | Establishing experience purpose, composition, or specialist requirements | `references/modern-design.md` |
+| Landing pages, homepages, product/campaign/service introductions, portfolios or editorial entry pages | `modules/landing-pages/GUIDE.md` |
 | Marketing communication needs audience-specific visitor questions or evidence prompts | `references/audience-and-page-patterns.md` |
 | Choosing between guidance sources, or unsure which pattern fits | `references/routing.md` |
 | Choosing or adopting a visual system or version | `references/visual-systems.md` |

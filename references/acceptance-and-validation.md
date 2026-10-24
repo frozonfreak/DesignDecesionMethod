@@ -16,17 +16,9 @@ Label each target as evidence-based (from the brief, a standard, or data) or pro
 
 ## Communication and landing-page checks
 
-Select only checks relevant to the page's purpose and the change. Define the audience, task, device, expected outcome and proposed or evidence-based target using the record format above.
+For landing pages and related entry experiences, use `modules/landing-pages/validation.md` relative to the skill root as the authority for page-specific acceptance and non-regression checks. Its outcome (pass/fail/not applicable/unverified) is separate from the validation method. Keep DDM's general evidence levels below; the module's “heuristically reviewed”, “automatically checked”, “manually tested” and “user-research validated” correspond to those same levels, not stronger evidence. A proposed result is unverified.
 
-| Outcome | Possible check | Interpretation limits |
-|---|---|---|
-| Initial comprehension | Ask representative visitors to explain audience, offer and relevant next step after a brief exposure; a five-second test is one optional method | Exposure duration is a study choice, not a universal acceptance limit; follow with deeper questions where needed |
-| Findability | Ask visitors to locate a relevant capability, work sample, term or audience route; observe first-click choice where useful | A visible link alone does not establish successful discovery |
-| Credible evidence | Review claim-to-source links and ask visitors to distinguish supported capabilities, proposals and unknowns | Factual review and visitor trust are different observations; neither permits fabricated proof |
-| Informed action or comparison | Check whether visitors understand material cost, prerequisites, limitations and what happens next before choosing | More clicks or signups do not by themselves establish an informed choice |
-| Activation path, where applicable | Walk the real route from the page into signup, onboarding or first useful task, including handoff and recovery | A mockup can show a proposed route; actual activation, conversion and retention require analytics or appropriate research |
-
-For a heuristic review, report content presence and likely obstacles. Report comprehension and task results only when participants were actually observed. State analytics scope, period and limitations when using measured outcomes; do not infer them from visual polish.
+Use the module's optional review template or the existing project record, without requiring duplicate reports. Continue to label each DDM review finding keep, change or defer, independently of its ULPG outcome and method.
 
 ## Evidence levels
 

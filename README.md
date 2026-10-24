@@ -16,7 +16,7 @@ The opening points above are also published as a page from the `docs/` folder: h
 
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
-Current release: 2.3.0.
+Current release: 2.4.0.
 
 ## Contents
 
@@ -32,6 +32,8 @@ design-decision-method/
 │   ├── ai-interfaces.md              only for AI-enabled features
 │   ├── acceptance-and-validation.md  criteria format and evidence levels
 │   └── sources.md                    lookup routes and verification
+├── modules/landing-pages/            conditionally loaded ULPG 0.4.0 (see GUIDE.md)
+├── evals/landing-pages/              five combined scenarios and protocol.md
 ├── assets/design-record-template.md  object map and decision record
 ├── evals/evals.json                  test prompts
 ├── agents/openai.yaml                optional metadata for hosts that read it
@@ -40,6 +42,14 @@ design-decision-method/
 ├── LICENSE                           MIT License
 └── README.md
 ```
+
+## Integrated landing-page module
+
+DDM 2.4.0 includes ULPG v0.4.0 as a first-class, conditionally loaded module, integration revision 1. Copy the entire package, including `modules/`, when installing; agents without skill support must keep that folder alongside the core references. Unrelated work does not load it. Small edits reuse established decisions and assess only affected requirements.
+
+`modules/landing-pages/GUIDE.md` routes to entry-and-navigation.md, content-and-trust.md, interaction-and-demonstrations.md, technical-quality.md and validation.md. All twenty ULPG sections retain their wording and levels. `traceability.md` and `traceability.json` map section/requirement retention; `PROVENANCE.md` records source and boundaries. `references.md`, LICENSE, templates (page-brief.md, review.md, decision-record.md, performance-budget.md and third-party-inventory.md), and examples (editorial-review.md and entry-pattern-regression.md) travel with the module. The module remains internally versioned separately from DDM; Web HIG is independent.
+
+The original seventeen cases remain unchanged in evals/evals.json. `evals/landing-pages/cases.json` supplies five same-brief fixtures; `evals/landing-pages/protocol.md` defines the three preservation suites. Source retention and packaging can be checked automatically. Paired agent behavior and implemented-page outcomes remain unverified; this integration does not retire the ULPG repository. The root DDM license remains unchanged, and the module retains ULPG contributors' separate MIT notice.
 
 ## Install
 
@@ -55,7 +65,7 @@ The skill follows the open Agent Skills format. Copy the whole folder, keeping t
 
 **Claude.ai.** Not verified against Claude.ai documentation in this release. The `.skill` export is a zip of this same folder for hosts that import a skill archive.
 
-**Agents without skill support.** Paste the body of `SKILL.md` into your rules or instructions file (for example `AGENTS.md`), and keep `references/` and `assets/` in the repository so the paths resolve. A short pointer in persistent memory can remind an agent to load the skill, but it cannot replace the files:
+**Agents without skill support.** Paste the body of `SKILL.md` into your rules or instructions file (for example `AGENTS.md`), and keep `references/`, `modules/` and `assets/` in the repository so the paths resolve. A short pointer in persistent memory can remind an agent to load the skill, but it cannot replace the files:
 
 > Load the full Design Decision Method and its relevant references before UI/UX work. Establish audience, purpose, frequency, error consequences, and platform; apply the conditional object-map gate before layout; record consequential choices; apply project guidelines or disclose the fallback; validate purpose-specific outcomes and label tested versus untested results. Apply AI checks only to AI-enabled features.
 
@@ -83,7 +93,7 @@ DDM can work with other applicable interface guidelines. When a project has no i
 
 ## Check it
 
-The Agent Skills specification documents this format check, for a folder named `design-decision-method`. The `skills-ref` tool was unavailable for 2.3.0, so this check was not run. The installed skill-creator quick validator was attempted and rejected the pre-existing `compatibility` field; it is narrower than the portable format. That result is not treated as a reason to remove existing portable metadata. The repository's release and integrity checks passed, and both archives were generated; these are package checks, not behavioural evidence.
+The Agent Skills specification documents this format check, for a folder named `design-decision-method`. The `skills-ref` tool was unavailable for 2.3.0; no portable-format validator result is claimed for 2.4.0. The installed skill-creator quick validator was attempted and rejected the pre-existing `compatibility` field; it is narrower than the portable format. That result is not treated as a reason to remove existing portable metadata. The repository's release and integrity checks passed, and both archives were generated; these are package checks, not behavioural evidence.
 
 ```
 skills-ref validate ./design-decision-method
@@ -91,7 +101,7 @@ skills-ref validate ./design-decision-method
 
 `evals/evals.json` holds seventeen prompts: the original ten and seven communication/landing-page cases. Give the performing agent only the `prompt` field. Do not include `expected_output` or `expectations`; those are grader-only. Run each prompt in a separate context. Case 10, "Design a logo for my bakery.", is an automatic-trigger test: do not mention or force-load this method in that prompt. Keep normal skill discovery available to test whether the method stays unused. This does not measure usability or time saved.
 
-The original ten cases have not been run for 2.2.5, and all seventeen remain unrun for 2.3.0. No behavioural comparison, non-regression claim or user-outcome result is reported. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
+The original ten cases have not been run for 2.2.5, all seventeen remain unrun for 2.3.0, and paired comparisons against 2.4.0 remain unrun. No behavioural comparison, non-regression claim or user-outcome result is reported. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
 
 For the planned baseline/candidate comparison:
 
@@ -108,7 +118,7 @@ python scripts/test_integrity.py
 python scripts/package_release.py
 ```
 
-`validate_release.py` checks YAML and JSON structure, version agreement, evaluation ids and fields, local references, manifest coverage, file hashes, and the canonical checksum. `test_integrity.py` repeats that check, then confirms a missing file and an altered file are rejected. `package_release.py` writes `dist/design-decision-method.zip` and `dist/design-decision-method.skill`, each with the enclosing `design-decision-method/` folder. The export contains the skill files listed above. Repository scripts, CI, and ignore rules stay in git and are not part of the skill package. On Windows, `py -3` works in place of `python`.
+`validate_release.py` checks YAML and JSON structure, version agreement, evaluation ids and fields, nested local references and Markdown links, module source retention, manifest coverage, file hashes, and the canonical checksum. `test_integrity.py` confirms that altered/missing files, weakened source requirements, broken nested links and rewritten baseline cases are rejected, and validates an extracted export. `package_release.py` writes `dist/design-decision-method.zip` and `dist/design-decision-method.skill`, each with the enclosing `design-decision-method/` folder. The export contains the skill files listed above. Repository scripts, CI, and ignore rules stay in git and are not part of the skill package. On Windows, `py -3` works in place of `python`.
 
 ## Keeping it current
 

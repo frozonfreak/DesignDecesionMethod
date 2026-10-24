@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.4.0 — 2026-10-24
+
+Integrates ULPG v0.4.0 as a first-class, conditionally loaded landing-page module (integration revision 1).
+
+- Retains all twenty source sections verbatim, normative levels, source section identifiers, license, technical measurement contract, templates and fictional examples. Adds per-section and requirement-line traceability.
+- Core method, object-map gating and visual-system selection remain in DDM. Consolidates former landing-page guidance into the specialist authority; preserves proportional scope and Web HIG independence.
+- Preserves all seventeen existing evaluations byte-for-byte and adds five combined same-brief fixtures plus a three-suite comparison protocol. Behavioral and implemented-page preservation remain unverified.
+- Extends nested resource/link validation, retention checks, manifest coverage and archive contents to include the module and scenario suite. No source repository retirement, publishing or external standards refresh is included.
+
 ## 2.3.0 — 2026-10-24
 
 Adds optional landing-page decision guidance. The six-step method, system-selection priority, conditional object-map gate, evidence levels and independence from WebHIG are unchanged.

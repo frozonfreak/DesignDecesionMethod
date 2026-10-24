@@ -31,27 +31,9 @@ Retain an established coherent visual system or explicit brand/platform brief, a
 
 ## Communication and landing-page decisions
 
-Use this method-authored heuristic when a brief involves marketing communication, a landing page or a content-led introduction. Scale it to the requested change; it is not a mandatory section template or conversion checklist.
+For landing pages and related entry experiences, read `modules/landing-pages/GUIDE.md` relative to the skill root and only the topic files applicable to the requested change. That module owns entry patterns, discovery/navigation, communication hierarchy, representation selection, truthful demonstrations, freshness and landing-page validation. Do not maintain a second landing-page rule set here.
 
-Identify whether visitors need to understand, read, browse, evaluate, sign up, purchase or contact someone. Mixed purposes can branch. Rank their actual questions: who is this for, what does it offer, how does it work, what distinguishes it, what supports the claims, what does it cost, and what happens next? Use `references/audience-and-page-patterns.md` only when domain prompts would help.
-
-Treat the first viewport as a priority region, not a fixed canvas. Make essential audience, offer and distinguishing information readily discoverable, with a next action where the purpose calls for one. A reading page need not have a transactional CTA. On mobile, a large demonstration can follow the first viewport if essential context and relevant actions remain easy to reach. Avoid fixed fold heights, text/image ratios, section counts and headline word quotas.
-
-Build depth around successive questions: immediate orientation, evaluation, decision, then supporting reference. These are information priorities, not four required sections. Keep price, prerequisites, risks, limitations and recovery at the point where they affect a decision; progressive disclosure must not conceal them.
-
-Choose a representation for the question it answers:
-
-| Representation | Useful when | Evidence and limits |
-|---|---|---|
-| Actual product screenshot | Showing a software workflow or interface capability | Use a true, relevant screen; label concepts as proposals, and avoid illegible decorative screens |
-| Photography | Showing product detail, people, place or contextual identity | Verify relevance and usage rights; stock imagery cannot establish product capability |
-| Diagram | Explaining relationships, sequence or a connected workflow | Match actual relationships and distinguish proposed from supported behaviour |
-| Table | Comparing plans, specifications or alternatives | Use comparable attributes and expose material costs, exclusions and unknowns |
-| Chart | Explaining measured trends or differences | Require source data, units, periods and appropriate uncertainty; never invent metrics |
-| Video | Demonstrating change over time or a process that still images cannot explain well | Provide applicable captions, alternatives and loading fallbacks; do not make essential facts video-only |
-| Text | Explaining nuance, conditions or a story directly | Use prose when media adds no useful information |
-
-Use the existing object-map gate when audience branches, plans, products or roles change navigation or structure. A copy-only hero adjustment with unchanged structure skips the map with the existing one-line reason. Apply AI-specific guidance only if the actual feature involves AI. Define relevant outcomes using `references/acceptance-and-validation.md`; aesthetics alone cannot establish conversion or retention.
+The purpose-based presentation and extension guidance in this reference still applies generally. DDM's conditional object-map gate remains in SKILL.md. `references/audience-and-page-patterns.md` supplies optional domain questions, not additional requirements or page templates.
 
 ## Extend for specialized requirements
 

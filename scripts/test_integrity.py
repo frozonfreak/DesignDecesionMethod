@@ -34,6 +34,10 @@ def main() -> int:
         temp = Path(temp_name)
         altered = temp / "altered"
         copy_release(root, altered)
+        runtime_output = altered / "evals/output/comparison.json"
+        runtime_output.parent.mkdir(parents=True)
+        runtime_output.write_text('{"status": "unrun"}', encoding="utf-8")
+        require(not validate_release(altered), "ignored evaluation evidence was treated as package content")
         skill = altered / "SKILL.md"
         skill.write_bytes(skill.read_bytes() + b"\n")
         altered_errors = validate_release(altered)
@@ -79,6 +83,51 @@ def main() -> int:
             "missing landing-page evaluations were accepted",
         )
 
+        module = temp / "module"
+        copy_release(root, module)
+        topic = module / "modules/landing-pages/interaction-and-demonstrations.md"
+        original = topic.read_text(encoding="utf-8")
+        topic.write_bytes(original.replace(
+            "- **MUST:** Distinguish simulated completion from real execution in feedback as well as initial labels.",
+            "- **SHOULD:** Distinguish simulated completion from real execution in feedback as well as initial labels.",
+        ).encode("utf-8"))
+        write_manifest(module)
+        require(
+            any("source retention failed" in error for error in validate_release(module)),
+            "weakened demonstration requirement survived manifest regeneration",
+        )
+        topic.write_bytes(original.encode("utf-8"))
+
+        entry = module / "modules/landing-pages/GUIDE.md"
+        original_entry = entry.read_text(encoding="utf-8")
+        entry.write_bytes(original_entry.replace(
+            "(templates/page-brief.md)", "(templates/nonexistent.md)",
+        ).encode("utf-8"))
+        write_manifest(module)
+        require(
+            any("unpackaged resource" in error for error in validate_release(module)),
+            "broken nested module link was accepted",
+        )
+        entry.write_bytes(original_entry.encode("utf-8"))
+
+        original_evals = module / "evals/evals.json"
+        changed_cases = json.loads(original_evals.read_text(encoding="utf-8"))
+        changed_cases["evals"][0]["prompt"] = "Replacement brief"
+        original_evals.write_bytes((json.dumps(changed_cases) + "\n").encode("utf-8"))
+        write_manifest(module)
+        require(
+            any("original seventeen" in error for error in validate_release(module)),
+            "rewritten DDM baseline evaluation was accepted",
+        )
+
+        copy_release(root, module)
+        template = module / "modules/landing-pages/templates/third-party-inventory.md"
+        template.unlink()
+        require(
+            any("missing promised file" in error and "third-party-inventory" in error for error in validate_release(module)),
+            "missing nested template was accepted",
+        )
+
         payload = archive_bytes(root)
         archive_path = temp / f"{SKILL_DIR}.zip"
         archive_path.write_bytes(payload)
@@ -89,6 +138,9 @@ def main() -> int:
                 archived = f"{SKILL_DIR}/{rel}"
                 require(archived in names, f"export omitted {rel}")
                 require(archive.read(archived) == (root / rel).read_bytes(), f"export bytes differ for {rel}")
+            extracted = temp / "extracted"
+            archive.extractall(extracted)
+        require(not validate_release(extracted / SKILL_DIR), "export fails standalone validation")
 
     print("integrity checks passed")
     return 0

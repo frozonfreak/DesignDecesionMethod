@@ -12,6 +12,7 @@ These are recommendations from this skill, not exclusive capabilities of the ups
 | Native look and behaviour on Apple platforms | Apple HIG | Navigation, controls and conventions appropriate to the supported platform/version | Mimicking the material on other platforms |
 | Consistent appearance on Android or web with no existing system | Material 3 | Colour roles, type, shape, components, states, adaptive layout | Ad hoc styling, mixing systems |
 | Interaction quality in a specific product | The project's own guidelines (for example a project Web HIG) | Accessibility, behaviour, responsiveness, performance | Inventing a version, requirements, or compliance |
+| Landing-page entry, communication, discovery, demonstrations or freshness | `modules/landing-pages/GUIDE.md` (skill-root path) | Applicable ULPG sections and requirement levels | Full-page process for a narrow copy fix; mandatory hero/CTA templates |
 | Any AI or agent feature | `ai-interfaces.md` | Capability clarity, provenance, correction, authorised actions | Adding AI controls to non-AI products |
 
 ## Context changes the choice

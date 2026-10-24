@@ -11,6 +11,9 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from urllib.parse import unquote
+
+from module_checks import validate_landing_module
 
 try:
     import yaml
@@ -41,12 +44,33 @@ INCLUDE_FILES = (
     "references/routing.md",
     "references/sources.md",
     "references/visual-systems.md",
+    "evals/landing-pages/cases.json",
+    "evals/landing-pages/protocol.md",
+    "modules/landing-pages/GUIDE.md",
+    "modules/landing-pages/PROVENANCE.md",
+    "modules/landing-pages/LICENSE",
+    "modules/landing-pages/entry-and-navigation.md",
+    "modules/landing-pages/content-and-trust.md",
+    "modules/landing-pages/interaction-and-demonstrations.md",
+    "modules/landing-pages/technical-quality.md",
+    "modules/landing-pages/validation.md",
+    "modules/landing-pages/references.md",
+    "modules/landing-pages/traceability.json",
+    "modules/landing-pages/traceability.md",
+    "modules/landing-pages/templates/page-brief.md",
+    "modules/landing-pages/templates/review.md",
+    "modules/landing-pages/templates/decision-record.md",
+    "modules/landing-pages/templates/performance-budget.md",
+    "modules/landing-pages/templates/third-party-inventory.md",
+    "modules/landing-pages/examples/editorial-review.md",
+    "modules/landing-pages/examples/entry-pattern-regression.md",
 )
 
-SCAN_DIRS = ("agents", "assets", "evals", "references")
+SCAN_DIRS = ("agents", "assets", "evals", "references", "modules")
 LOCAL_REF = re.compile(
-    r"(?<![A-Za-z0-9:/._~-])((?:references|assets|evals|agents)/[A-Za-z0-9_.-]+)"
+    r"(?<![A-Za-z0-9:/._~-])((?:references|assets|evals|agents|modules)/(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+\.(?:md|json|yaml))"
 )
+MARKDOWN_LINK = re.compile(r"\[[^\]]*\]\(([^\s)]+)\)")
 VERSION_HEADING = re.compile(r"^## (\d+\.\d+\.\d+)\s+—", re.M)
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -97,6 +121,7 @@ def manifest_document(root: Path) -> dict:
     return {
         "version": metadata.get("version"),
         "updated": metadata.get("updated"),
+        "modules": {"landing-pages": {"version": "0.4.0", "integration_revision": 1}},
         "canonical_sha256": canonical_sha256(root),
         "algorithm": ALGORITHM,
         "files": file_hashes(root),
@@ -113,13 +138,11 @@ def write_manifest(root: Path) -> None:
 
 
 def package_members(root: Path) -> list[tuple[str, bytes]]:
-    directories = {
-        f"{SKILL_DIR}/",
-        f"{SKILL_DIR}/agents/",
-        f"{SKILL_DIR}/assets/",
-        f"{SKILL_DIR}/evals/",
-        f"{SKILL_DIR}/references/",
-    }
+    directories = {f"{SKILL_DIR}/"}
+    for rel in INCLUDE_FILES:
+        for parent in Path(rel).parents:
+            if parent != Path("."):
+                directories.add(f"{SKILL_DIR}/{parent.as_posix()}/")
     members = [(name, b"") for name in directories]
     for rel in (*INCLUDE_FILES, MANIFEST_NAME):
         members.append((f"{SKILL_DIR}/{rel}", read_bytes(root, rel)))
@@ -151,6 +174,8 @@ def validate_release(root: Path) -> list[str]:
             if not path.is_file():
                 continue
             rel = path.relative_to(root).as_posix()
+            if rel.startswith("evals/output/"):
+                continue  # Runtime evidence is deliberately outside the skill package.
             if rel not in INCLUDE_FILES:
                 errors.append(f"file is outside the canonical include set: {rel}")
 
@@ -223,6 +248,8 @@ def validate_release(root: Path) -> list[str]:
         errors.append("manifest coverage does not match the canonical include set")
     if manifest.get("algorithm") != ALGORITHM:
         errors.append("manifest algorithm text does not match the canonical convention")
+    if manifest.get("modules") != {"landing-pages": {"version": "0.4.0", "integration_revision": 1}}:
+        errors.append("landing-pages module version or integration revision mismatch")
     if manifest.get("version") != version:
         errors.append(
             f"version mismatch: SKILL.md metadata.version is {version!r}, manifest is {manifest.get('version')!r}"
@@ -339,5 +366,21 @@ def validate_release(root: Path) -> list[str]:
             seen.add(match)
             if match not in INCLUDE_FILES:
                 errors.append(f"{rel} references missing local resource {match}")
+
+        if rel.endswith(".md"):
+            for href in MARKDOWN_LINK.findall(text):
+                href = unquote(href.strip("<>"))
+                if href.startswith("#") or re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:", href):
+                    continue
+                target = ((root / rel).parent / href.split("#", 1)[0]).resolve()
+                try:
+                    local = target.relative_to(root).as_posix()
+                except ValueError:
+                    errors.append(f"{rel} links outside the package: {href}")
+                    continue
+                if local not in (*INCLUDE_FILES, MANIFEST_NAME):
+                    errors.append(f"{rel} links to an unpackaged resource: {href}")
+
+    errors.extend(validate_landing_module(root))
 
     return errors

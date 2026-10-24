@@ -1,0 +1,1664 @@
+{
+  "module_version": "0.4.0",
+  "integration_revision": 1,
+  "source_repository": "https://github.com/frozonfreak/ULPG",
+  "source_ref": "a42a2faa0b097639f96e4a3e9c3d399084ebadcf",
+  "source_guide_sha256": "1ae2019cc17d168ecd28f275ac9a24a46305455a049a9fc80305f4e4daba260f",
+  "ddm_baseline_ref": "5fab8fd00a9feb8f020e81a697aeaad35d43dfdd",
+  "ddm_baseline_evals_sha256": "c7fc13e8c4398892f8794b1966c10f1a01626cd1a64251a709991b664fa3d7dc",
+  "sections": [
+    {
+      "section": 1,
+      "title": "Purpose",
+      "authority": "modules/landing-pages/GUIDE.md",
+      "normalized_utf8_sha256": "36afc2d456fa94f75e05de61f01098146e46ef17de84d625e65dc0401e4e8e1c",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 2,
+      "title": "Requirement levels",
+      "authority": "modules/landing-pages/validation.md",
+      "normalized_utf8_sha256": "78d23cf4376ca9a5de8103d4e2481a73386b1dae0fecc0819acb071b7f1d76e7",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 3,
+      "title": "Establish context before design",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "normalized_utf8_sha256": "7a6269b6dee5ba6708a2d2665fa1d48de478be7cb0271b2f331bd44d79200a65",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 4,
+      "title": "Information hierarchy",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "normalized_utf8_sha256": "a35ee0b3aee678a73f8a5a6c5519e52b186061f2163595358da2e526f9e28f08",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 5,
+      "title": "Text and information density",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "normalized_utf8_sha256": "24d6c6852b8bb53116d6eb0b0f9d615d12323b70d1d2ec9476a7e8584b4862b5",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 6,
+      "title": "Visual representation",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "normalized_utf8_sha256": "857c254ab4f6bbebdd83f077ddc543956ad14172f235d2a00b7fbd485cbeb1e7",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 7,
+      "title": "Visual identity and color",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "normalized_utf8_sha256": "6537feb2823d91f8a9f8cd2cc25fc5b5240fb01398afce39e1d501f87b734ff1",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 8,
+      "title": "Calls to action, visitor journeys and compliance UI",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "normalized_utf8_sha256": "086dd4d1f7fc3566ca3dacadbb7f24b15271bf3c7ee223e7524ef1737c5568c4",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 9,
+      "title": "Evidence, trust and credibility",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "normalized_utf8_sha256": "3b5eaaa016b97f4ad38f10296962200977c7223dd7724d80a4b81ce33886a1e9",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 10,
+      "title": "Responsive, accessible and localized experiences",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "normalized_utf8_sha256": "ffbcb97c7004ef91915bd23e3a839cfe2672e84a0c6219e11a701b4c6a0d1c51",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 11,
+      "title": "Motion and interaction",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "normalized_utf8_sha256": "a471151e80180dfb34ef5ec5f90037528c3571935b0bae9b586ded5544d1ee55",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 12,
+      "title": "Performance and technical quality",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "normalized_utf8_sha256": "c70797316b5f7e3148e633f0c59828b84faeec839707a50d4dbfae4413616304",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 13,
+      "title": "SEO and content discoverability",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "normalized_utf8_sha256": "cc69261ff9bddbdab52df52c899741e98c47255ac8d9412b21fa4d22957d5ec1",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 14,
+      "title": "Page-type adaptations",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "normalized_utf8_sha256": "6e085ee2225916eb3755ff26bf0a5a9e129cd2d0a3992506f4d0850d84ea05f4",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 15,
+      "title": "Validation and quality assurance",
+      "authority": "modules/landing-pages/validation.md",
+      "normalized_utf8_sha256": "f74264e12f4ef130ba85e964a6316e8fbfdaf3da34957068c9c0612a0f3590da",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 16,
+      "title": "Non-regression policy",
+      "authority": "modules/landing-pages/validation.md",
+      "normalized_utf8_sha256": "afad6a9e12270fa645c8ec1ad6a1bbf4c73a0c992d5dc4e94f4c1580a4c55d42",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 17,
+      "title": "Relationship to DDM and Web HIG",
+      "authority": "modules/landing-pages/validation.md",
+      "normalized_utf8_sha256": "856465bbb937b04a60d7a1bd5b1ad7c32efbf485937e0c95d7ee5e0b53e03508",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 18,
+      "title": "Design acceptance checklist",
+      "authority": "modules/landing-pages/validation.md",
+      "normalized_utf8_sha256": "7629c704cc8971f0b0d81bfd1d712d2f1f12f3c055b9790a57bc6c1fdd86df0c",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 19,
+      "title": "Guiding principle",
+      "authority": "modules/landing-pages/GUIDE.md",
+      "normalized_utf8_sha256": "a9f55bd9f7042abd08c272e2a0d7029fa5ee9c5f5160f6be1c3e1c90770b8044",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    },
+    {
+      "section": 20,
+      "title": "Glossary",
+      "authority": "modules/landing-pages/GUIDE.md",
+      "normalized_utf8_sha256": "2a2f24609f5ff0533114e1e5daf4c3e979916322ec987e2a481f1ff4be135fe1",
+      "retention": "verbatim",
+      "applicability": "Apply within the requested page/change scope; exclusions require a reason."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "ULPG-0.4.0-2-L3",
+      "source_section": "2",
+      "section_line": 3,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "1319284e3f3d6559e440a17a277fe9cbbd26f2da1c90f14cfc58e60c593ba0af",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-2-L4",
+      "source_section": "2",
+      "section_line": 4,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "84652a964fda93b929aef00b46844a434bd4190102f5ea151d263c3d52314515",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-2-L5",
+      "source_section": "2",
+      "section_line": 5,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "86dda7e5b36742cec89166b2ce6912e9aa1808cdac6425531bb7f18b371be6bd",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-2-L11",
+      "source_section": "2",
+      "section_line": 11,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "565feaf84949e60c08772a7bb2b10d70cac29ee786348cab1cd6f933f76d93cc",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-3-L21",
+      "source_section": "3",
+      "section_line": 21,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "b1ea57ef317094fbc4320b223c955957ec355a534d3b12f509de4ffa4e050027",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-3-L22",
+      "source_section": "3",
+      "section_line": 22,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "4da061014bc76540d22cdf7ccfd0a1c281ec2955be45c7cfb2a45aef833abf9d",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-3-L23",
+      "source_section": "3",
+      "section_line": 23,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "e80dc71c208989832a3b9e95b513fe2c1d5fd2168b1dad915d3281577066108c",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-3-L24",
+      "source_section": "3",
+      "section_line": 24,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "0f6e3f665213e50eefdd59cf9acae71bda119464a35e9afeab3744ad0884ba83",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-3-L25",
+      "source_section": "3",
+      "section_line": 25,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "8001dda2af6a608377225ae781acbed521594e1ead8492a198d3cccc24634500",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.1-L7",
+      "source_section": "4.1",
+      "section_line": 7,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "10afbced40eaa851039d225371b9d6cddacc4ce5fb32613a17090bc88f63ec2f",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.1-L8",
+      "source_section": "4.1",
+      "section_line": 8,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "18941d8a731bd45b636b6281881fddbb6f2c7886fd3e0fc422da5b25b1fa8ad0",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.1-L9",
+      "source_section": "4.1",
+      "section_line": 9,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "879a6eb8c671ce32b34440d7b9e3b1ce12de46ff8be15412137e74029ae29fe3",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.1-L10",
+      "source_section": "4.1",
+      "section_line": 10,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "963543f71a624ba013938839a16c4dcd49cf3b70c1127bc305c4903016c19a4b",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.1-L11",
+      "source_section": "4.1",
+      "section_line": 11,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "01e4db4e9054a47580f5675e89ecfbc03986ca2b40b473f24b0a765617deab58",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.2-L15",
+      "source_section": "4.2",
+      "section_line": 15,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "1e85031c60ec2906af4f4c6c529722ded8acb3d393986ec17577a79722c3da52",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.2-L19",
+      "source_section": "4.2",
+      "section_line": 19,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "4f80f2992605a70f37646165cfa8c106138878e91acb0265a053c8fd26d529b9",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.2-L20",
+      "source_section": "4.2",
+      "section_line": 20,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "d7d74891aa149eff22214722c3667feb29be93d45b6ff6e3fc972c314761c991",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.2-L21",
+      "source_section": "4.2",
+      "section_line": 21,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "bb5da248e3de69257f4393d0279c981a20fa507e91c64900f6f1455433427e60",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.2-L22",
+      "source_section": "4.2",
+      "section_line": 22,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "b3c75aa1ce644dfcf4dcd9755203a4a36728c27faabc258d6187ade9bd78c03d",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.3-L28",
+      "source_section": "4.3",
+      "section_line": 28,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "3d1fe406037a0128f07d4c002427f93d2f77d04ef8ea885217c52488185d5d22",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.3-L29",
+      "source_section": "4.3",
+      "section_line": 29,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "6c349f800912c9227afa55922459a3e049af3af015e961a23e7fa6a4f23f7c7b",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.3-L30",
+      "source_section": "4.3",
+      "section_line": 30,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "5fb89a610a3b732c742fb8f3a4e350b445b0e34fd27bfdc313c737657238c12d",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.4-L36",
+      "source_section": "4.4",
+      "section_line": 36,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "4c4a68e65a293944fc8a75d94eb615a51cccc7de74f02c1508762658620cdd02",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.4-L37",
+      "source_section": "4.4",
+      "section_line": 37,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "6665d3abc5390737f598d964e9c13b53b17f52edbf0f35074b491108d9122ad6",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.5-L51",
+      "source_section": "4.5",
+      "section_line": 51,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "165a74f45e97335470eb2ede312e64d957aba86c5647e577ff428a7877a99e6f",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.5-L52",
+      "source_section": "4.5",
+      "section_line": 52,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "fa53a35f0ba1228d91bfd03c85372b411abf094a5068500332feb2cca71937a4",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.5-L53",
+      "source_section": "4.5",
+      "section_line": 53,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "aaa867803d512e67e19b28b6e66b92615b10c7c28dada68fc1457ed58c854a77",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.6-L61",
+      "source_section": "4.6",
+      "section_line": 61,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "73ad37f5cb77df68564322ee60d7673279032b7737d1c64f43b3842f0954c6d9",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.6-L62",
+      "source_section": "4.6",
+      "section_line": 62,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "237e97fd01d8dd5620af0d25d5b7e07a55b0cec10a6753a3871dee47ab9844e6",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.6-L63",
+      "source_section": "4.6",
+      "section_line": 63,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "eea28bb03a6875b2eabdee81f6309f2c64208b47221f1a2f2cf1c628b7da133a",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.6-L64",
+      "source_section": "4.6",
+      "section_line": 64,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "8468968ec5e9be8ceed12baee917c849f67b8b2aaebc4390e57cda44220514cc",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-4.6-L65",
+      "source_section": "4.6",
+      "section_line": 65,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "dbc9baa8105d999182a343841c5c03555d0dc52e40b05e58caa64e7484951dc8",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.1-L5",
+      "source_section": "5.1",
+      "section_line": 5,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "7182bc2e57eb3dc92ed006cb1e16491e14284354b4bcce4b50f63c3592cad56d",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.1-L7",
+      "source_section": "5.1",
+      "section_line": 7,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "5b2c8e5d60621791e9fce9106ef9b609e3655770aca06216990cfc14d60ffb21",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.1-L8",
+      "source_section": "5.1",
+      "section_line": 8,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "66cb0960579ba8b6758b9553d6d7a1099b3666774caef7a3dcc6d69463bb8a4a",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.1-L9",
+      "source_section": "5.1",
+      "section_line": 9,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "e7a4acfa36223e8003c4dcd6c2cde1f074059bfdc5fa33a326eaf0ee88c26552",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.1-L10",
+      "source_section": "5.1",
+      "section_line": 10,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "9949ffd448853f53fe27c7a8d7a69b12bbbef24c83b25f8a78fbfb8ababe3027",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.1-L11",
+      "source_section": "5.1",
+      "section_line": 11,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "dfc2cc350b4d6d48a0cb6620d2fe278a2fbaa45fdf4a19d8ef044c545773957c",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.2-L24",
+      "source_section": "5.2",
+      "section_line": 24,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "a549f7a3f4798c14cec1b6d322de5237ac573e69ddb838c32add56cefc8946cc",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.2-L25",
+      "source_section": "5.2",
+      "section_line": 25,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "c7d020d47c9cf52827f43516676d4a27c399098b9ac9b204438b9082282b9d90",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-5.2-L26",
+      "source_section": "5.2",
+      "section_line": 26,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "a35979607b1da318c1dcac6ed5bad60ad1f41d501ee02f7a90d527c4111e202a",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6-L17",
+      "source_section": "6",
+      "section_line": 17,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "742d0c2e74e847e00f51f7809759ca3cff1e8761a2b91f13ab7baa8c8e840920",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6-L18",
+      "source_section": "6",
+      "section_line": 18,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "cc2a0de0eae3798ea01c379ef39a8b3cc49c400f497b5b59452be1f289e2dd88",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6-L19",
+      "source_section": "6",
+      "section_line": 19,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "b444292c373b47059e3dd81107688c6fc87a17373624557afac5b65710b37657",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6-L20",
+      "source_section": "6",
+      "section_line": 20,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "7f80fdae93cdb1d7c8a6113444c5473e2f7601cface976da9a097be3831922a6",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6-L21",
+      "source_section": "6",
+      "section_line": 21,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "7c33d5b8e8b39b91adde413d27e5d8d1530d1d6b9b68c6d33b7e166c12b76bcd",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6.1-L27",
+      "source_section": "6.1",
+      "section_line": 27,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "97c120acfa9ba127b60ee54aed442bb299377bbd3874384e0fb97e548e2f1ed0",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6.1-L28",
+      "source_section": "6.1",
+      "section_line": 28,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "0e536f5bd04d16a0b11f2e60c993347f80b7887f4745b66d14b41fc47cfdc708",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6.1-L29",
+      "source_section": "6.1",
+      "section_line": 29,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "2204033183d12906ed7fe9e5cb2d60b28ca4c68fb72b40b835e3902214451fc4",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-6.1-L30",
+      "source_section": "6.1",
+      "section_line": 30,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "b2bf6a062cae876763491a9b99575ad884059e8ebb24ab851da932be80b84d0a",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.1-L5",
+      "source_section": "7.1",
+      "section_line": 5,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "3eca74547f147506862a345b198dd5668bf482e013aede0d6204518b79bd243f",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.1-L6",
+      "source_section": "7.1",
+      "section_line": 6,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "160376fcecdfaf91034d2093426f3b2e28da52e779d6a54465c9c18782a4eb0f",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.1-L7",
+      "source_section": "7.1",
+      "section_line": 7,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "20a4aa15542d349366596667c0344c77e5d63caea60114c6957d0c86d01c658d",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.1-L8",
+      "source_section": "7.1",
+      "section_line": 8,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "729aaecea407aa4043c57520e034151c2509bc39ce02fd034f255b86713c42da",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.2-L12",
+      "source_section": "7.2",
+      "section_line": 12,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "f113d9d745fd9d73910e68b07bfbf6e0a2a5f69e9825fe62e69cf58a3518e9d0",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.2-L14",
+      "source_section": "7.2",
+      "section_line": 14,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "4a332c63ebbe6a4ae05e2a1380716afda1cb88c96adddb43fd20c6b59bea990e",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.2-L15",
+      "source_section": "7.2",
+      "section_line": 15,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "a0083c5a508ced81bcf39b2189490b257659a8282aa2b13d1c4a6f48d1d2cc48",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.3-L21",
+      "source_section": "7.3",
+      "section_line": 21,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "5adb1ff4cc0e6a0c75e6c3b72bd2c6b6f2b85d59922f6e8fcd82afa76874dba3",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.3-L22",
+      "source_section": "7.3",
+      "section_line": 22,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "586f0baa8b6ff1f327fd4a722237d568ed4b2b5103116385aa10b3d07a94ab83",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.3-L23",
+      "source_section": "7.3",
+      "section_line": 23,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "29128c230683229097c3ff1b7462c165e8f84e5b191c106df03d2dc47ac46ec2",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-7.3-L25",
+      "source_section": "7.3",
+      "section_line": 25,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "541d403114e1f9c2487f50900bcf42358a0bdec843ad5c9996d3f6cde1cc1d16",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L7",
+      "source_section": "8.1",
+      "section_line": 7,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "129db276ae5a821bec3c6ef99deb4209b2ed5bbd526dd2e35e3e714708948f3b",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L8",
+      "source_section": "8.1",
+      "section_line": 8,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "697e46c76b5d7419b4003d204a5cad516b6839d85448c1257c5de418d8eee468",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L9",
+      "source_section": "8.1",
+      "section_line": 9,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "f468a2353f07c761983a65e0345e6f5791379ce8a23a759e2feae536d56bcbe9",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L10",
+      "source_section": "8.1",
+      "section_line": 10,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "4d0deb6e00c9852c30d4cbe95ca9698a3389c9665ba04a6e4f818511ffee8fb1",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L11",
+      "source_section": "8.1",
+      "section_line": 11,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "6f3cffa7b20687ee0e87c50e1dbb1ae34138cbb2c2c65110825a6b62491fd56a",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L12",
+      "source_section": "8.1",
+      "section_line": 12,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "409229bd27195f0ceea64de98e54a02a135f254f7d32934a739f568bcec9cfdd",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.1-L13",
+      "source_section": "8.1",
+      "section_line": 13,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "22d675f933dfb72ec32bbbabb73268b7a1a3d5e437d173ea3dcaec77706c2c39",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L19",
+      "source_section": "8.2",
+      "section_line": 19,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "a7385e68ddf315a8df73a553c523032e39d4ffe3a857e59e9d5310784faf2e33",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L20",
+      "source_section": "8.2",
+      "section_line": 20,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "7e051e20a6241509e478549ce6225e1aa3e28e9f39d92d6a23bf7dee99a489a4",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L21",
+      "source_section": "8.2",
+      "section_line": 21,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "87f25950338e61d74645f2302f0ed8175a7494545fa0faf3ca00e5397101fd93",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L22",
+      "source_section": "8.2",
+      "section_line": 22,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "1f768a2fb0afb7b461479459632d59c6f63433d4550863b44e5f5445061e82bb",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L23",
+      "source_section": "8.2",
+      "section_line": 23,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "31f2497d8f51c1350ee8616052bcb24da97d36a7ba2021b4eaa32fce6f4866ef",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L24",
+      "source_section": "8.2",
+      "section_line": 24,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "a98947517ad5d2bb37d5d1f619edd14342d537848fa25680ec2b28a8f1e8d9ac",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.2-L25",
+      "source_section": "8.2",
+      "section_line": 25,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "98661461f9140d42f8820d5ec51a851eccff5ba0976da8bd581ce0320bea9983",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.3-L29",
+      "source_section": "8.3",
+      "section_line": 29,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "d85ca559c2ac6b1500977bb1f3c147610911cb1b6ce8ad6672abc56d193bd460",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.3-L30",
+      "source_section": "8.3",
+      "section_line": 30,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "ba14208400875077f6ca4b82d878a8568fc7c9de29ec6cf0c9c6700ae6238082",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-8.3-L31",
+      "source_section": "8.3",
+      "section_line": 31,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "6e30ece087a0bea064eb8a2fb3e14b5dacd4a294d328dfa26079820ea8f4fab8",
+      "authority": "modules/landing-pages/entry-and-navigation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9-L5",
+      "source_section": "9",
+      "section_line": 5,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "e2a4e04610690b793c51af5ee5c21e8245152f90cb963514ebb67a0c90ca32bf",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9-L6",
+      "source_section": "9",
+      "section_line": 6,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "33de3bca71f05bf53ca0ec78444e8696ea3c9b574a4cdb4866ac4af470c42821",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9-L7",
+      "source_section": "9",
+      "section_line": 7,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "6d7d62d9276af13a3cdfff8aa479462dd640c887d9f8020810b36195464cb19e",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9-L8",
+      "source_section": "9",
+      "section_line": 8,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "f2edfbe2eccea66ef457cb31ac9f29536296f207daa7e41dee7d65e55bfb08c7",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9-L9",
+      "source_section": "9",
+      "section_line": 9,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "e849ed653be7efffc961d1d03267de108c8865a6f41c27e80c010994db1aa709",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9.1-L13",
+      "source_section": "9.1",
+      "section_line": 13,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "340d320ab44f03733f5ddaac57feda567950ba9e8832f3ea459d5d8bbdd8f1cb",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9.1-L14",
+      "source_section": "9.1",
+      "section_line": 14,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "3b5ec05f3be98edfb32303ff4d903e868fb69fbfb01d11c7d1f8c3f0407ad8ca",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-9.1-L15",
+      "source_section": "9.1",
+      "section_line": 15,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "89956fdd3c171c1555bedd349dad5b589c6a5259c1d56903a984e946c4481e30",
+      "authority": "modules/landing-pages/content-and-trust.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.1-L5",
+      "source_section": "10.1",
+      "section_line": 5,
+      "levels": [
+        "MUST",
+        "SHOULD"
+      ],
+      "line_sha256": "67c4c7c0d708aa43bf1800ee1f80c872336a26ea6c8fd6b1092cb69a667a4889",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.1-L9",
+      "source_section": "10.1",
+      "section_line": 9,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "16afcea5c87f5720806510fb176f6065922354bc83c348ab7925390030424d36",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.1-L10",
+      "source_section": "10.1",
+      "section_line": 10,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "31732f63712969bba580e1e3a39edf2c49c4d47a4c30ace68392a125f18a8a64",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.1-L11",
+      "source_section": "10.1",
+      "section_line": 11,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "b4d279ce0274f6b020d19ee399e11246bc8f54d898f3330814f0dae6d000f465",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.2-L17",
+      "source_section": "10.2",
+      "section_line": 17,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "0171e903e0f558f31903d90d9b46a877fdf559b1972c5967e857103fc2b91679",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.2-L18",
+      "source_section": "10.2",
+      "section_line": 18,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "7166ae4a735213a94f8d0669c10f35eb43158b191e11ac35c46e88a4dc26b832",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.2-L19",
+      "source_section": "10.2",
+      "section_line": 19,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "c982d18d74112ad1b6df29e4bd40d38c2121feace88f6a57643d87bcd9f5c4e2",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.2-L20",
+      "source_section": "10.2",
+      "section_line": 20,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "8b884e5e772b76fd46d3ea06ef9d3ce25cbb6623977fb135a4825b887f3985f9",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.2-L21",
+      "source_section": "10.2",
+      "section_line": 21,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "576a83a1f573bb380bf6218a5e74d01716d9e780f1812aa7f3c2754d54565d90",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-10.2-L22",
+      "source_section": "10.2",
+      "section_line": 22,
+      "levels": [
+        "MAY",
+        "MUST"
+      ],
+      "line_sha256": "b82fa72d73fed30f388591d6df3450b97e5cedfbace1ef4e2172ca34708226e5",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11-L5",
+      "source_section": "11",
+      "section_line": 5,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "c91d317f45cf54e9edc5bb61d187aa230758b99c007f6ddbd0b23bdc06717406",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11-L6",
+      "source_section": "11",
+      "section_line": 6,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "22e8e06da83fdf313f2fd4b983a499cc743e887be07a4ff8aa4e80bdc361d8a2",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11-L7",
+      "source_section": "11",
+      "section_line": 7,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "65d101aebb56e79bc3c963eeb4f01218f511707a6f8d971fc814ffdd784539c3",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11-L8",
+      "source_section": "11",
+      "section_line": 8,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "d50fe3873025961eb820af7970866ae9014a3b4544829189a95bf947fcb6b58a",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11-L9",
+      "source_section": "11",
+      "section_line": 9,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "ff6821d5dcf2b4610bbb6ec569c54f00a7ff4ef57a5d69b9d57c79918868fd4f",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11-L10",
+      "source_section": "11",
+      "section_line": 10,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "5ad27eff131f9a83e366f60dc96acf14124c524656ef904c368e715d7474de46",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11.1-L14",
+      "source_section": "11.1",
+      "section_line": 14,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "c5fc970de2409d391622c8bce388a7a91a8c64c131a719bc6e3c53ac4214a4ad",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11.1-L15",
+      "source_section": "11.1",
+      "section_line": 15,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "9b835e83d6e9463aa7e9a80867a445033a846e8a88703df19ef524b9d0d8fb11",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11.1-L16",
+      "source_section": "11.1",
+      "section_line": 16,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "ae16c8d02b76dc48fbb891aa62bc8103dd25cfddfec224c54403a84799b3293a",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-11.1-L17",
+      "source_section": "11.1",
+      "section_line": 17,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "941bb63ed8bde513a759d4e02a7aecb79a52f9f9e3d37a41da514396b4e1a096",
+      "authority": "modules/landing-pages/interaction-and-demonstrations.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.1-L13",
+      "source_section": "12.1",
+      "section_line": 13,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "56ff3c458f29943460a25b2d644e52f7d574b3da424333c9e1ab26be81d7c8ef",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.1-L14",
+      "source_section": "12.1",
+      "section_line": 14,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "3412ba8acd02aeb445848f422dcafff980c5c03b7e4cd063e2c804fef526933b",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.1-L15",
+      "source_section": "12.1",
+      "section_line": 15,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "ed8cdc17b8073138ca5b2cc10ab8e44c45b2d7ee7f75b360af3d14ed7aa6971c",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.1-L16",
+      "source_section": "12.1",
+      "section_line": 16,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "6851c63f86d904dadf7f2cae27f074fab58966ec588e9829f93adeec93d5d0eb",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.1-L17",
+      "source_section": "12.1",
+      "section_line": 17,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "8a4efae41e4d30e84bba4c6052e845ade182704dd487128eba7c6f9b415aeea3",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L21",
+      "source_section": "12.2",
+      "section_line": 21,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "55ce7b76a2c39056f76a4fffc7f93321a9517742846094d7265b06b0cc9648fa",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L23",
+      "source_section": "12.2",
+      "section_line": 23,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "e1358b3308b862c7d6389a8b6f3138d4368438bcf21b939d7d3c559fcf440dc0",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L24",
+      "source_section": "12.2",
+      "section_line": 24,
+      "levels": [
+        "MUST"
+      ],
+      "line_sha256": "c8d433b23c2278215f4ce08ba1a433994db3adc02cff2aa2dd4a1f9938b8c0e1",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L25",
+      "source_section": "12.2",
+      "section_line": 25,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "4c0f52494d24d7f92cdc1df3880c2da31bb2a03621bb625747c04e7ef7f681fc",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L26",
+      "source_section": "12.2",
+      "section_line": 26,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "0a73ab92818ac6058e21df23a93bd96a08d50ea9b82ded1cc1a3462acb433e29",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L27",
+      "source_section": "12.2",
+      "section_line": 27,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "c6a6aed6f73f08df5ec309a2025599349c0ed965ee9639bb15318066a20ade0e",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L28",
+      "source_section": "12.2",
+      "section_line": 28,
+      "levels": [
+        "SHOULD",
+        "MUST"
+      ],
+      "line_sha256": "d7ce91bcd4ecdc940661d7ef80dc282cac20b910c1c29f38994841742cd2281c",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-12.2-L29",
+      "source_section": "12.2",
+      "section_line": 29,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "0ca3d58ca16ddd934be16de1220d616364997d455303dbc91ed7b20d7c3d15c4",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-13-L5",
+      "source_section": "13",
+      "section_line": 5,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "a172ae4007451c20c374952060b53531354c36697f9d2d6adba7505f6dc39e52",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-13-L6",
+      "source_section": "13",
+      "section_line": 6,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "2fe3708f459480e5f1195b07480b7bf1d9617f9bed4f845830db0118106f0c6b",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-13-L7",
+      "source_section": "13",
+      "section_line": 7,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "7853508972186c794cff8baddfd23b40d675f554a1110b3b23b0fb912864a082",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-13-L8",
+      "source_section": "13",
+      "section_line": 8,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "94d790cea0390f7a308e54ea48fc630339233f47c03d652f6a0ec2b7bb963017",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-13-L9",
+      "source_section": "13",
+      "section_line": 9,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "d71b62f5dccd2cafeb277a101fe2afdb8f7ee3806f91c46cb77a5cb1da52a738",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-13-L10",
+      "source_section": "13",
+      "section_line": 10,
+      "levels": [
+        "MAY"
+      ],
+      "line_sha256": "605bcb54156a6d5976a1a3b8bb3920febcc2aa90edc25e9fc04343080cd7a3bd",
+      "authority": "modules/landing-pages/technical-quality.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-16-L3",
+      "source_section": "16",
+      "section_line": 3,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "c163ed6c60792163a14630b752b02259e1076d32a1af05a032e6aade4711a881",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-16-L5",
+      "source_section": "16",
+      "section_line": 5,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "16e9e0ed012dd7ff7c4ef7964b6af022701fa8ea2f78b0f1a550a0e84373c282",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L6",
+      "source_section": "16",
+      "section_line": 6,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "c6f243fadacd655f28b1dc50c5d9965b70a0a4bfcce716817ba81aaae653ceef",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L7",
+      "source_section": "16",
+      "section_line": 7,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "6c29189729fcc2d4b37e8a669afd75edbcc5287ecd057c097c08dfeaab014698",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L8",
+      "source_section": "16",
+      "section_line": 8,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "0a7d2665cada3508d2e1f46b20ec321ba2990a0c01e6305006a7e37a13ccf9d0",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L9",
+      "source_section": "16",
+      "section_line": 9,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "3499c65e85fbd827c63c606e1a5a86d1cac3396803bdd24dd247b9e600ece47d",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L10",
+      "source_section": "16",
+      "section_line": 10,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "26c561136233d030754d58605f65e846480f3499ceb19ee93fefdb3bd3800fac",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L11",
+      "source_section": "16",
+      "section_line": 11,
+      "levels": [
+        "MUST NOT"
+      ],
+      "line_sha256": "4d61c9e785c3b712b625327ac00fa63ba6b78629e950c59cfe9f4b14f6ef43ae",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": true
+    },
+    {
+      "id": "ULPG-0.4.0-16-L13",
+      "source_section": "16",
+      "section_line": 13,
+      "levels": [
+        "SHOULD"
+      ],
+      "line_sha256": "3d11b6582da7ef4efadb16848490dbba69fcacb0f87b5c181ccd3ce999a0e26b",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    },
+    {
+      "id": "ULPG-0.4.0-17.2-L19",
+      "source_section": "17.2",
+      "section_line": 19,
+      "levels": [
+        "MUST",
+        "MUST NOT"
+      ],
+      "line_sha256": "c7052aa72aa0b3dae3934e0cc3dddd07e209a77064246d65daec7367e54f6732",
+      "authority": "modules/landing-pages/validation.md",
+      "inherited_level": false
+    }
+  ],
+  "behavioral_non_regression": "unverified",
+  "ddm_baseline_cases_sha256": "34944b1b56b46f37470cf637b9963c468a972435168eb8068f5840719816f4f6"
+}
