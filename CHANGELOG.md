@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.3.0 — 2026-10-24
+
+Adds optional landing-page decision guidance. The six-step method, system-selection priority, conditional object-map gate, evidence levels and independence from WebHIG are unchanged.
+
+- **Communication.** Adds first-viewport priorities, progressive information depth and representation choices without fixed layouts, forced CTAs or concealed decision-critical details.
+- **Audience prompts.** Adds a small conditional reference with visitor questions, evidence and pitfalls; examples do not prescribe industry templates or palettes.
+- **Validation.** Adds purpose-specific comprehension, findability, factual evidence, informed-action and activation checks. Brief exposure tests are optional; aesthetics do not establish conversion or retention.
+- **Evals.** Preserves the original ten cases and adds seven marketing cases. Documents a paired baseline/candidate protocol and separate evidence levels. Behavioural comparisons remain unrun; no release-level non-regression or user-outcome claim is made.
+- **Packaging.** Registers the new reference, permits additional consecutive evaluation cases while requiring the current minimum of seventeen, and updates release metadata and hashes. Source snapshots retain their original dates and verification limits; no upstream refresh is claimed.
+
 ## 2.2.5 — 2026-10-18
 
 Reference maintenance; the six-step workflow, conditional object-map gate, pattern/identity separation, evidence levels, and WCAG 2.2 AA default are unchanged.

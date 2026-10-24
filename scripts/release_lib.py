@@ -36,6 +36,7 @@ INCLUDE_FILES = (
     "references/acceptance-and-validation.md",
     "references/accessibility.md",
     "references/ai-interfaces.md",
+    "references/audience-and-page-patterns.md",
     "references/modern-design.md",
     "references/routing.md",
     "references/sources.md",
@@ -274,8 +275,8 @@ def validate_release(root: Path) -> list[str]:
         if not isinstance(cases, list):
             errors.append("evals/evals.json evals must be an array")
             cases = []
-        if len(cases) != 10:
-            errors.append(f"expected 10 evaluation cases, found {len(cases)}")
+        if len(cases) < 17:
+            errors.append(f"expected at least 17 evaluation cases, found {len(cases)}")
         ids = []
         for case in cases:
             if not isinstance(case, dict):
@@ -301,8 +302,8 @@ def validate_release(root: Path) -> list[str]:
                 errors.append(f"evaluation {case.get('id')} puts grader text in the task prompt")
             if "invocation" in case and not isinstance(case.get("invocation"), str):
                 errors.append(f"evaluation {case.get('id')} invocation must be a string")
-        if ids != list(range(1, 11)):
-            errors.append(f"evaluation ids must be 1 through 10 in order, found {ids}")
+        if ids != list(range(1, len(cases) + 1)):
+            errors.append(f"evaluation ids must be consecutive from 1 in order, found {ids}")
         logo = next((case for case in cases if isinstance(case, dict) and case.get("id") == 10), None)
         if isinstance(logo, dict):
             if logo.get("prompt") != "Design a logo for my bakery.":

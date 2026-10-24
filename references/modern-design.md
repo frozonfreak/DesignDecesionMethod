@@ -22,12 +22,36 @@ When a change affects purpose, hierarchy, composition, density, or responsive be
 - **Content hierarchy:** Identify what must be understood first, what supports a decision, and what can be disclosed later. A reading experience may prioritize narrative; an operator may prioritize the current object and its state.
 - **Composition and density:** Choose structure from content and tasks. Consider editorial sections, split views, master/detail, canvases, comparison tables or focused flows. Neither minimalism nor density is a universal objective. Whitespace must support grouping and reading rather than conceal necessary information.
 - **Typography:** Reuse the selected system's scale or define a coherent role-based scale for a documented bespoke direction. Specify hierarchy and reading fit; account for language, text expansion, font support and zoom. Do not equate large headings with modernity.
-- **Colour and surfaces:** Define semantic roles and state distinctions through the selected system. Make meaning readable without colour alone. Include supported themes where required; do not invent a dark-mode requirement.
+- **Colour and surfaces:** Define surface, text, action, status and feedback roles through the selected system. Make meaning readable without colour alone and validate contrast against applicable interface requirements. Industry conventions can inform context, but do not prescribe palettes: farming software need not be green and banking need not be blue. Retain a coherent, accessible existing brand under the system-selection rules. Include supported themes where required; do not invent a dark-mode requirement.
 - **Imagery:** Decide whether imagery establishes identity, explains content, supplies evidence or is unnecessary. Avoid filler illustrations; provide useful text alternatives and media fallbacks. Do not fabricate product evidence or testimonials.
 - **Motion:** State a purpose such as showing continuity, change or feedback. Avoid mandatory entrance animations, scroll hijacking and essential hover-only content. Apply project HIG/platform requirements for reduced motion and performance; do not invent budgets.
 - **Responsive behaviour:** Adapt hierarchy and controls to available space, input and task. Preserve essential capabilities, current state and context. Consider text scaling, keyboard, touch, pointer and relevant platform conventions. Specify multi-pane collapse or alternate layouts when applicable rather than shrinking the desktop view.
 
 Retain an established coherent visual system or explicit brand/platform brief, and follow the system-selection table in `SKILL.md` otherwise. A bespoke editorial or brand direction is valid when its tokens, components and behaviour are documented and reusable. Utility CSS and component libraries do not supply the missing design decisions automatically. Do not mix competing visual identities merely to show framework coverage.
+
+## Communication and landing-page decisions
+
+Use this method-authored heuristic when a brief involves marketing communication, a landing page or a content-led introduction. Scale it to the requested change; it is not a mandatory section template or conversion checklist.
+
+Identify whether visitors need to understand, read, browse, evaluate, sign up, purchase or contact someone. Mixed purposes can branch. Rank their actual questions: who is this for, what does it offer, how does it work, what distinguishes it, what supports the claims, what does it cost, and what happens next? Use `references/audience-and-page-patterns.md` only when domain prompts would help.
+
+Treat the first viewport as a priority region, not a fixed canvas. Make essential audience, offer and distinguishing information readily discoverable, with a next action where the purpose calls for one. A reading page need not have a transactional CTA. On mobile, a large demonstration can follow the first viewport if essential context and relevant actions remain easy to reach. Avoid fixed fold heights, text/image ratios, section counts and headline word quotas.
+
+Build depth around successive questions: immediate orientation, evaluation, decision, then supporting reference. These are information priorities, not four required sections. Keep price, prerequisites, risks, limitations and recovery at the point where they affect a decision; progressive disclosure must not conceal them.
+
+Choose a representation for the question it answers:
+
+| Representation | Useful when | Evidence and limits |
+|---|---|---|
+| Actual product screenshot | Showing a software workflow or interface capability | Use a true, relevant screen; label concepts as proposals, and avoid illegible decorative screens |
+| Photography | Showing product detail, people, place or contextual identity | Verify relevance and usage rights; stock imagery cannot establish product capability |
+| Diagram | Explaining relationships, sequence or a connected workflow | Match actual relationships and distinguish proposed from supported behaviour |
+| Table | Comparing plans, specifications or alternatives | Use comparable attributes and expose material costs, exclusions and unknowns |
+| Chart | Explaining measured trends or differences | Require source data, units, periods and appropriate uncertainty; never invent metrics |
+| Video | Demonstrating change over time or a process that still images cannot explain well | Provide applicable captions, alternatives and loading fallbacks; do not make essential facts video-only |
+| Text | Explaining nuance, conditions or a story directly | Use prose when media adds no useful information |
+
+Use the existing object-map gate when audience branches, plans, products or roles change navigation or structure. A copy-only hero adjustment with unchanged structure skips the map with the existing one-line reason. Apply AI-specific guidance only if the actual feature involves AI. Define relevant outcomes using `references/acceptance-and-validation.md`; aesthetics alone cannot establish conversion or retention.
 
 ## Extend for specialized requirements
 

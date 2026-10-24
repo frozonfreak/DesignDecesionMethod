@@ -16,7 +16,7 @@ The opening points above are also published as a page from the `docs/` folder: h
 
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
-Current release: 2.2.5.
+Current release: 2.3.0.
 
 ## Contents
 
@@ -25,6 +25,7 @@ design-decision-method/
 ├── SKILL.md                          core procedure
 ├── references/
 │   ├── modern-design.md              purpose-based presentation, specialist extension
+│   ├── audience-and-page-patterns.md optional marketing questions and evidence prompts
 │   ├── routing.md                    which guidance for which problem
 │   ├── visual-systems.md             currency snapshot and adoption checks
 │   ├── accessibility.md              WCAG 2.2 AA baseline and checks
@@ -82,15 +83,22 @@ DDM can work with other applicable interface guidelines. When a project has no i
 
 ## Check it
 
-The Agent Skills specification documents this format check, for a folder named `design-decision-method`. It was not run for this release. A narrower host validator must not be used to reject portable fields such as `compatibility` and `metadata`.
+The Agent Skills specification documents this format check, for a folder named `design-decision-method`. The `skills-ref` tool was unavailable for 2.3.0, so this check was not run. The installed skill-creator quick validator was attempted and rejected the pre-existing `compatibility` field; it is narrower than the portable format. That result is not treated as a reason to remove existing portable metadata. The repository's release and integrity checks passed, and both archives were generated; these are package checks, not behavioural evidence.
 
 ```
 skills-ref validate ./design-decision-method
 ```
 
-`evals/evals.json` holds ten prompts. Give the performing agent only the `prompt` field. Do not include `expected_output` or `expectations`; those are grader-only. Run each prompt in a separate context. For a with-method and without-method comparison, use the same brief, model, and tools, and save the outputs. Case 10, "Design a logo for my bakery.", is an automatic-trigger test: do not mention this method in that prompt. This checks whether the method stays unused for a standalone logo. It does not measure usability or time saved.
+`evals/evals.json` holds seventeen prompts: the original ten and seven communication/landing-page cases. Give the performing agent only the `prompt` field. Do not include `expected_output` or `expectations`; those are grader-only. Run each prompt in a separate context. Case 10, "Design a logo for my bakery.", is an automatic-trigger test: do not mention or force-load this method in that prompt. Keep normal skill discovery available to test whether the method stays unused. This does not measure usability or time saved.
 
-The ten cases have not been run for 2.2.5; no behavioural evaluation results or with-method/without-method comparison are reported. Running those existing cases in separate contexts and saving outputs is the next evaluation priority before expanding the method. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
+The original ten cases have not been run for 2.2.5, and all seventeen remain unrun for 2.3.0. No behavioural comparison, non-regression claim or user-outcome result is reported. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
+
+For the planned baseline/candidate comparison:
+
+1. Preserve a 2.2.5 package and run the original ten cases in independent contexts before evaluating the candidate. Save the actual outputs and grade against the original expectations.
+2. Run all seventeen cases against both 2.2.5 and 2.3.0, reusing baseline outputs only when model, settings, prompt, context, tools and scoring conditions match. Give each performer a fresh context, the same raw brief and only the skill release under test; keep grader expectations hidden. For case 10, test automatic discovery rather than explicit invocation.
+3. Grade process correctness, information sufficiency, WebHIG independence, system preservation, actionable reasoning, unnecessary process and evidence honesty. Record model/settings, available tools, loaded reference scope, output token counts (or label a length proxy), and verbosity overhead. Distinguish a with-method/without-method study from this version comparison.
+4. Investigate every original-case regression individually; do not average it away. New cases must add useful decisions without extra irrelevant maps, forced CTAs, brand changes or fabricated claims. Save per-case output, grading rationale and tested/untested status in the ignored output directory configured in `.gitignore` or outside the package. Behavioural observations do not establish end-user usability or conversion.
 
 From the repository root, after Python 3 is available:
 

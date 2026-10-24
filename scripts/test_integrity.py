@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 
+import json
 import shutil
 import sys
 import tempfile
 import zipfile
 from pathlib import Path
 
-from release_lib import INCLUDE_FILES, MANIFEST_NAME, SKILL_DIR, validate_release
+from release_lib import INCLUDE_FILES, MANIFEST_NAME, SKILL_DIR, validate_release, write_manifest
 from package_release import archive_bytes
 
 
@@ -50,6 +51,32 @@ def main() -> int:
         require(
             any("routing.md" in error for error in missing_errors),
             "a missing file was not named in the errors",
+        )
+
+        evaluations = temp / "evaluations"
+        copy_release(root, evaluations)
+        eval_path = evaluations / "evals" / "evals.json"
+        eval_doc = json.loads(eval_path.read_text(encoding="utf-8"))
+        extra = dict(eval_doc["evals"][-1], id=len(eval_doc["evals"]) + 1)
+        eval_doc["evals"].append(extra)
+        eval_path.write_bytes((json.dumps(eval_doc, indent=2) + "\n").encode("utf-8"))
+        write_manifest(evaluations)
+        require(not validate_release(evaluations), "an additional consecutive evaluation was rejected")
+
+        eval_doc["evals"][-1]["id"] = eval_doc["evals"][-2]["id"]
+        eval_path.write_bytes((json.dumps(eval_doc, indent=2) + "\n").encode("utf-8"))
+        write_manifest(evaluations)
+        require(
+            any("ids must be consecutive" in error for error in validate_release(evaluations)),
+            "a duplicate evaluation id was accepted",
+        )
+
+        eval_doc["evals"] = eval_doc["evals"][:10]
+        eval_path.write_bytes((json.dumps(eval_doc, indent=2) + "\n").encode("utf-8"))
+        write_manifest(evaluations)
+        require(
+            any("expected at least 17" in error for error in validate_release(evaluations)),
+            "missing landing-page evaluations were accepted",
         )
 
         payload = archive_bytes(root)

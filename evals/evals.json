@@ -118,6 +118,92 @@
       "expectations": [
         "Does not run the object-map gate or produce a decision record"
       ]
+    },
+    {
+      "id": 11,
+      "prompt": "Specify a landing page for farm-work SaaS. Retain its established violet and cream brand. Field staff record daily work on Android phones; managers use those entries in weekly reports. Offline entry is not supported. Real product screenshots are available; no ROI data is supplied.",
+      "expected_output": "Task-first communication connects field entry to reporting, preserves the brand and exposes connectivity limits without invented proof.",
+      "files": [],
+      "expectations": [
+        "Makes audience and connected workflow readily understandable, using real product evidence",
+        "Retains violet and cream rather than prescribing agricultural green",
+        "Does not invent offline support, ROI or testimonials",
+        "Applies the object-map gate according to structural relevance before layout",
+        "Proposes comprehension or findability checks without claiming measured outcomes"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Design a content-heavy landing page introducing an independent history journal. Retain its serif typography and monochrome identity. Visitors read long essays and browse themed collections. No accounts, sales or mailing list. Some introductions need several paragraphs to explain their context.",
+      "expected_output": "Supports reading and discovery with progressive depth and the existing identity, without arbitrary conversion requirements.",
+      "files": [],
+      "expectations": [
+        "Preserves serif and monochrome identity and meaningful contextual content",
+        "Does not impose a CTA, signup, headline word quota or fixed section count",
+        "Uses hierarchy and deeper routes fitted to reading and discovery",
+        "Defines comprehension or discovery checks with honest evidence levels"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Review the information hierarchy of a private physiotherapy service landing page. Existing branding stays. The supplied brief says visits cost 80 pounds, referral is required, this is not an emergency service, and cancellation within 24 hours incurs the full fee. Booking happens on an external provider. Suggest a hierarchy; do not invent clinical claims.",
+      "expected_output": "Keeps consequential service conditions at the booking decision and makes the external handoff clear, with proportionate review findings.",
+      "files": [],
+      "expectations": [
+        "Keeps price, referral requirement, emergency limitation and cancellation fee accessible at the decision point",
+        "Does not hide critical conditions in optional supporting detail",
+        "Explains the external booking handoff without inventing provider behaviour or clinical outcomes",
+        "Uses keep/change/defer review labels and distinguishes proposed checks from actual observations"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Plan a B2B software site for practitioners and procurement reviewers. Practitioners explore workflows; procurement compares plans, supported integrations and security limitations. Products belong to multiple plans, and visitors can reach a product from either audience route. Navigation is being redesigned. Retain the existing design system; missing pricing and integration details must remain unknown.",
+      "expected_output": "Maps the relationships before navigation and supports distinct audience questions without inventing commercial or technical facts.",
+      "files": [],
+      "expectations": [
+        "Produces or reuses a verified map of products, plans and relevant relationships before routes or layout",
+        "Supports both audience journeys and shared product destinations",
+        "Retains the existing system and uses comparable information for evaluation",
+        "Marks unknown prices, integrations and security facts rather than inventing them"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Change only this farm-software hero headline: 'The future of farming is here.' The verified offer is daily work logging and weekly reporting. Keep the current audience, violet brand, layout, links and behaviour. Give a clearer headline; no page redesign.",
+      "expected_output": "Delivers a focused truthful headline revision and skips structural work with a brief reason.",
+      "files": [],
+      "expectations": [
+        "Supplies clear copy grounded in daily logging and weekly reporting",
+        "Records Map: skipped with a reason tied to unchanged structure",
+        "Preserves layout, links, behaviour and brand",
+        "Avoids a full-page specification, forced CTA or invented capabilities"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Review a banking product landing page that uses an established accessible terracotta and cream brand. The brief explicitly retains that identity. Improve semantic action and feedback colour roles and information hierarchy. No new brand palette, unverified financial claims or conversion results are wanted.",
+      "expected_output": "Works within the existing identity and defines semantic distinctions without industry colour stereotypes or false validation claims.",
+      "files": [],
+      "expectations": [
+        "Retains terracotta and cream rather than switching banking to blue",
+        "Distinguishes semantic action, status and feedback roles with colour-independent meaning",
+        "Proposes applicable contrast checks without claiming new states were already tested",
+        "Does not invent financial benefits, research or conversion improvements"
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "Specify a landing page for an AI scheduling companion. It proposes meeting times and drafts invitations; sending requires explicit user approval. Suggestions can be wrong. Only a labelled concept illustration is available, with no real screenshots, testimonials, accuracy figures or retention data. Keep those evidence limits visible.",
+      "expected_output": "Communicates proposal versus execution and uncertainty using honest concept media and proportionate AI guidance.",
+      "files": [],
+      "expectations": [
+        "Separates proposed times and draft invitations from sending with explicit approval",
+        "Communicates uncertainty and relevant limitations without numerical confidence invention",
+        "Labels concept imagery and does not present it as real product proof",
+        "Does not fabricate screenshots, testimonials, accuracy or retention results",
+        "Defines comprehension and informed-action checks without claiming actual user outcomes"
+      ]
     }
   ]
 }
