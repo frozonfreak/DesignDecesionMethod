@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.4.1 — 2026-11-06
+
+Reference maintenance. The six-step workflow, conditional object-map gate, system-selection order, ULPG integration, and WCAG 2.2 AA default are unchanged.
+
+- **Sources.** Reviewed 19 October–6 November 2026. GOV.UK Frontend remains 6.6.0, and Language navigation remains Trial. Carbon's recorded release moves from 11.118.0 to 11.120.0, including the intervening 11.119.0; v11 stays active and v12 stays preview. Compose Material 3 stable remains 1.4.0; the recorded prerelease moves from 1.5.0-beta01 to 1.5.0-rc01. The official Material Web page says that library is in maintenance and does not implement Expressive.
+- **Apple.** The what's-new page adds 28 October announcements for macOS touch, gestures, pointing devices, and app icons. Those entries route specialist lookup. Linked guidance was not reviewed. The Liquid Glass URL returned an HTML shell last modified on 5 November; its rendered guidance remains unverified.
+- **Accessibility.** WCAG 2.2 is still the 12 December 2024 Recommendation. The WCAG 3 introduction states an update date of 25 September 2026 and remains an incomplete draft that does not replace WCAG 2.2. Errata were not reviewed.
+- **Not incorporated.** ULPG has no commit after the imported 0.4.0 revision. WebHIG v1.16.0 was not copied. Trace2Flow is still the 11 September 2026 submission, and the conditional action-review check is unchanged. No behavioural evaluation was run.
+
 ## 2.4.0 — 2026-10-24
 
 Integrates ULPG v0.4.0 as a first-class, conditionally loaded landing-page module (integration revision 1).

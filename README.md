@@ -16,7 +16,7 @@ The opening points above are also published as a page from the `docs/` folder: h
 
 The agent procedure routes UI work across OOUX, GOV.UK, Carbon, Material 3, platform guidelines, and a project's own rules. When relationships shape structure, it requires a short object map and decision record before layout, and it ends with an honest validation status. It does not rank those sources, copy their branding, or claim research or compliance it has not done. This README is for people. The agent reads `SKILL.md`.
 
-Current release: 2.4.0.
+Current release: 2.4.1.
 
 ## Contents
 
@@ -53,7 +53,7 @@ The original seventeen cases remain unchanged in evals/evals.json. `evals/landin
 
 ## Install
 
-The skill follows the open Agent Skills format. Copy the whole folder, keeping the name `design-decision-method`, into your agent's skills directory. The `name` in `SKILL.md` must match that directory name. Paths below were checked on 2026-10-05 against the cited docs. They can change, so confirm them again before relying on them.
+The skill follows the open Agent Skills format. Copy the whole folder, keeping the name `design-decision-method`, into your agent's skills directory. The `name` in `SKILL.md` must match that directory name. Paths below were checked on 2026-10-05 against the cited docs. Cursor's project and user directories were checked again on 2026-11-06 and still match. The other rows were not re-opened. Paths can change, so confirm them again before relying on them.
 
 | Agent | Where to put `design-decision-method/` | Verification |
 |---|---|---|
@@ -101,7 +101,7 @@ skills-ref validate ./design-decision-method
 
 `evals/evals.json` holds seventeen prompts: the original ten and seven communication/landing-page cases. Give the performing agent only the `prompt` field. Do not include `expected_output` or `expectations`; those are grader-only. Run each prompt in a separate context. Case 10, "Design a logo for my bakery.", is an automatic-trigger test: do not mention or force-load this method in that prompt. Keep normal skill discovery available to test whether the method stays unused. This does not measure usability or time saved.
 
-The original ten cases have not been run for 2.2.5, all seventeen remain unrun for 2.3.0, and paired comparisons against 2.4.0 remain unrun. No behavioural comparison, non-regression claim or user-outcome result is reported. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
+The original ten cases have not been run for 2.2.5, all seventeen remain unrun for 2.3.0, and paired comparisons against 2.4.0 remain unrun. Release 2.4.1 is a source-record refresh and was not part of that comparison. No behavioural comparison, non-regression claim or user-outcome result is reported. A package check cannot show whether an object map happened before layout, or whether a task is usable. Report proposed, heuristic, automated, manual, and user-research evidence separately.
 
 For the planned baseline/candidate comparison:
 

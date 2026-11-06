@@ -1,19 +1,19 @@
 {
-  "version": "2.4.0",
-  "updated": "2026-10-24",
+  "version": "2.4.1",
+  "updated": "2026-11-06",
   "modules": {
     "landing-pages": {
       "version": "0.4.0",
       "integration_revision": 1
     }
   },
-  "canonical_sha256": "6e734611b47ab5e9ae3d460292d7238d7cc4db65ee5dfc0e65a76e6c1fcab157",
+  "canonical_sha256": "caebfe1934cdf9e3cae23962030a2bec288ce2fef555918b565d737af30bf4a9",
   "algorithm": "SHA-256 of sorted relative UTF-8 paths, NUL, exact file bytes, NUL; excludes manifest",
   "files": {
-    "CHANGELOG.md": "a173547d96d24a8b011b11a7bdd2f24545cd654e652cd9ed0af3c94d661c3fee",
+    "CHANGELOG.md": "bbcefa28c38f8ca49d2378cf6c5802189583339aa193cbc5236e8551c53f6e07",
     "LICENSE": "04cc7f554dfcc8d63ec42721dce4c549c092c051a17005ef5708677731ecf682",
-    "README.md": "d18c23a7063e4dca707198f000a216107ed0d28054bc375ac65e52dc812d1c71",
-    "SKILL.md": "bed652bf7bdfc271c05116e9f06d067385b2a07c141d62763e655d9fb86cb0f0",
+    "README.md": "d8a5122fd941cfe22178745a57b59cfafcf407837c778099127c834cc730176f",
+    "SKILL.md": "9247309180ae581b9672070f905800822edeaf2836664876f732b2f9dc4450cf",
     "agents/openai.yaml": "39407aabd0d553c81405fa0e27dda00d5b7ce23c3680bfb700531ea15db6f631",
     "assets/design-record-template.md": "be75e618e0ae6d25e2e1c0dd55f0f2933ba0948f27550e0eedc7bdba113d974d",
     "evals/evals.json": "c7fc13e8c4398892f8794b1966c10f1a01626cd1a64251a709991b664fa3d7dc",
@@ -43,7 +43,7 @@
     "references/audience-and-page-patterns.md": "1f80b99705cfc3ed6fe58f3472af13dc1affb07da61cd9ee37594b156a557d08",
     "references/modern-design.md": "5e35952e20b1b8ec525d14684384dc7d8dc19ada73fb7c4441e297e1b102c1b1",
     "references/routing.md": "b99773a1717efedd3b8c8bcd05a979d2d20a02b983e8b0a87f3770c0335004f3",
-    "references/sources.md": "544eed8e42f32ea0770c9599cb1d0d76e99156c60922e99d7a4677b59db3ce97",
-    "references/visual-systems.md": "4da4984935bca6b424a66c3e222b5e4f6d0642c5e9973e49b50c0322fb42cc68"
+    "references/sources.md": "9014c19e355e80bc54af8d6d4d557f97954a253207a47e0192321267b760d40c",
+    "references/visual-systems.md": "5d264b700ed15e2746a9ec5f654e155f99dc06e19be0c3d3f57b34cc25c0025b"
   }
 }

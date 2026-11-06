@@ -50,6 +50,16 @@ Older material checked on 2026-10-18: GOV.UK's August entry, lifecycle definitio
 
 The WCAG and Liquid Glass records retain their 2026-10-05 access dates and verification limits; they were not re-reviewed here. Legal applicability was not verified. WCAG 2.2 AA remains the default web baseline.
 
+## Provenance of the 2026-11-06 refresh
+
+The dated records are in `references/visual-systems.md`. The upstream-change window is 19 October–6 November 2026, following the 2.4.0 release. The six-step method, object-map gate, system-selection order, ULPG integration revision, and WCAG 2.2 AA default are unchanged. No implementation was exercised.
+
+Accessed on 2026-11-06: the GOV.UK Frontend releases list, still 6.6.0, and the Language navigation page, still Trial; Carbon 11.119.0 and 11.120.0 release notes and the release-schedule status table at tag v11.120.0 (v11 active, v12 preview); the Compose Material 3 release table, with stable 1.4.0 and release candidate 1.5.0-rc01; the official Material Web page, which says the library is in maintenance and Expressive is not implemented on Web; Apple's what's-new page, including the 28 October announcements and the still-listed 13 October Widgets and Live Activities entries; the WCAG 2.2 recommendation status; the WCAG 3 introduction. The Liquid Glass URL returned an HTML shell whose guidance body was not reviewed. The Trace2Flow abstract page still shows only version 1, submitted 2026-09-11. Full methods and results were not reviewed.
+
+Not opened in this window: HAX, ARIA APG, OOUX, ORCA, Apple's linked specialist pages, the WCAG 2.2 errata page, and the ULPG source files. ULPG `main` remains `a42a2faa0b097639f96e4a3e9c3d399084ebadcf`. WebHIG tag v1.16.0 exists, dated 2026-11-04, with the tag message "Release v1.16.0: field metrics and scroll-driven motion." Those requirements were not opened or copied. The 2026-10-05 project-page decision records still name Web HIG Quick Reference v1.12.5 because that was the version used then. Legal applicability was not verified.
+
+Cursor skill directories were checked against https://cursor.com/docs/skills on 2026-11-06. The recorded project and user paths still match. Claude Code, Gemini CLI, Codex, and Claude.ai paths were not re-opened.
+
 ## Evals
 
 `evals/evals.json` ships test prompts. The performing agent receives only each case's `prompt`. `expected_output` and `expectations` are for the grader. Case 10 is an automatic-trigger test: do not name or invoke this method in that prompt. Presence of the file is not evidence that the cases have run. Report actual run scope and results separately, and do not imply a comparison or user-study outcome.
